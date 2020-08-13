@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">My Wedding</string>
     <string name="register_form_name_details">User Details</string>
+    <string name="register_form_partner_details">Partner Details</string>
+    <string name="btn_groom">Groom</string>
+    <string name="btn_bride">Bride</string>
 </resources>
