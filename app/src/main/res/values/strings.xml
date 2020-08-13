@@ -4,4 +4,9 @@
     <string name="register_form_partner_details">Partner Details</string>
     <string name="btn_groom">Groom</string>
     <string name="btn_bride">Bride</string>
+    <string name="register_form_wedding_details">Wedding Details</string>
+    <string name="main_logo_des">The Wedding Planner</string>
+    <string name="main_des">Plan the most colorful event of your life</string>
+    <string name="main_tap_here">Tap here to start your journey</string>
+    <string name="main_btn">Register Here</string>
 </resources>
