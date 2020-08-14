@@ -12,4 +12,22 @@
     <string name="main_des">Plan the most colorful event of your life</string>
     <string name="main_tap_here">Tap here to start your journey</string>
     <string name="main_btn">Register Here</string>
+    <string name="sub_menu_btn_all">Budget List</string>
+    <string name="sub_menu_btn_paid">Paid List</string>
+    <string name="add_budget_details">Details of the Budget</string>
+    <string name="add_budget_details_name">Name</string>
+    <string name="add_budget_details_amount">Amount</string>
+    <string name="add_budget_details_specialNotes">Special Notes</string>
+    <string name="add_budget_details_category">Category</string>
+    <string-array name="budget_categories">
+        <item>Refreshments</item>
+        <item>Flowers and Decors</item>
+        <item>Reception</item>
+        <item>Jewellery</item>
+        <item>Music and Entertainment</item>
+    </string-array>
+    <string name="add_budget_details_balance">Balance Payable</string>
+    <string name="add_payment_details">Payments Made</string>
+    <string name="add_payment_details_amount">Paid Amount</string>
+    <string name="add_payment_details_date">Last Payment Date</string>
 </resources>

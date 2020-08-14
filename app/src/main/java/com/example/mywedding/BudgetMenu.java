@@ -14,6 +14,7 @@ public class BudgetMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_budget_menu);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         btn_budget_list = findViewById(R.id.btn_budget);
         btn_paid_list = findViewById(R.id.btn_paid);

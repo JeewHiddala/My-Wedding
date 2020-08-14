@@ -9,17 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EditBudget"></activity>
-        <activity android:name=".AddBudget" />
-        <activity android:name=".PaidList" />
-        <activity android:name=".BudgetList"
-            android:parentActivityName=".BudgetMenu"/>
-        <activity android:name=".BudgetMenu" />
+        <activity android:name=".ViewBudget"></activity>
+        <activity android:name=".EditBudget"
+            android:parentActivityName=".ViewBudget"/>
+        <activity
+            android:name=".AddBudget"
+            android:parentActivityName=".BudgetList" />
+        <activity
+            android:name=".PaidList"
+            android:parentActivityName=".BudgetMenu" />
+        <activity
+            android:name=".BudgetList"
+            android:parentActivityName=".BudgetMenu" />
+        <activity
+            android:name=".BudgetMenu"
+            android:parentActivityName=".Registration" />
         <activity
             android:name=".Registration"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"> <!--hides the action bar-->
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"> <!-- hides the action bar -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
