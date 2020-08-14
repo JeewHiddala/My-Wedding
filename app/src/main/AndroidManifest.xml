@@ -12,7 +12,8 @@
         <activity android:name=".EditBudget"></activity>
         <activity android:name=".AddBudget" />
         <activity android:name=".PaidList" />
-        <activity android:name=".BudgetList" />
+        <activity android:name=".BudgetList"
+            android:parentActivityName=".BudgetMenu"/>
         <activity android:name=".BudgetMenu" />
         <activity
             android:name=".Registration"

@@ -5,165 +5,195 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Registration"
-    android:background="@color/bgPink">
+    android:background="@color/bgPalePink">
 
     <EditText
         android:id="@+id/editTextTextPersonName"
-        android:layout_width="275dp"
+        android:layout_width="290dp"
         android:layout_height="38dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="Name"
+        android:hint="@string/register_form_details_name"
         android:inputType="textPersonName"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.083" />
+        app:layout_constraintVertical_bias="0.07" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
-        android:layout_width="275dp"
+        android:layout_width="290dp"
         android:layout_height="38dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/register_form_details_email"
         android:inputType="text"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
-        app:layout_constraintVertical_bias="0.02" />
+        app:layout_constraintVertical_bias="0.012" />
 
     <EditText
         android:id="@+id/editTextNumber"
-        android:layout_width="275dp"
+        android:layout_width="290dp"
         android:layout_height="38dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="Contact Number"
+        android:hint="@string/register_form_details_contact"
         android:inputType="number"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
-        app:layout_constraintVertical_bias="0.018" />
+        app:layout_constraintVertical_bias="0.011" />
 
     <EditText
         android:id="@+id/editTextNumber2"
-        android:layout_width="275dp"
+        android:layout_width="290dp"
         android:layout_height="38dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="Name"
+        android:hint="@string/register_form_details_name"
         android:inputType="number"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.424" />
+        app:layout_constraintVertical_bias="0.44" />
 
     <EditText
         android:id="@+id/editTextNumber5"
-        android:layout_width="275dp"
+        android:layout_width="290dp"
         android:layout_height="38dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="Name"
+        android:hint="@string/register_form_details_name"
         android:inputType="number"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintVertical_bias="0.819" />
 
     <EditText
         android:id="@+id/editTextNumber3"
-        android:layout_width="275dp"
+        android:layout_width="290dp"
         android:layout_height="38dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/register_form_details_email"
         android:inputType="number"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.52" />
 
     <EditText
         android:id="@+id/editTextNumber4"
-        android:layout_width="275dp"
+        android:layout_width="290dp"
         android:layout_height="38dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="Contact Number"
+        android:hint="@string/register_form_details_contact"
         android:inputType="number"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.578" />
+        app:layout_constraintVertical_bias="0.601" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="290dp"
+        android:layout_height="38dp"
+        android:background="@drawable/input_field"
+        android:ems="10"
+        android:hint="Date"
+        android:inputType="date"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber5"
+        app:layout_constraintVertical_bias="0.111" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:text="@string/register_form_name_details"
+        android:textColor="@color/justBlack"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.622" />
+        app:layout_constraintVertical_bias="0.304" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:text="@string/register_form_partner_details"
+        android:textColor="@color/justBlack"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/editTextNumber2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.027"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
@@ -172,39 +202,46 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:text="@string/register_form_wedding_details"
+        android:textColor="@color/justBlack"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.727" />
+        app:layout_constraintVertical_bias="0.744" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/groom1"
         android:layout_width="89dp"
         android:layout_height="34dp"
+        android:background="@drawable/btn_groom_bride"
         android:text="@string/btn_groom"
-        android:textSize="10sp"
+        android:textAllCaps="false"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.378"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.328" />
+        app:layout_constraintVertical_bias="0.318" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/bride1"
         android:layout_width="89dp"
         android:layout_height="34dp"
+        android:background="@drawable/btn_groom_bride"
         android:text="@string/btn_bride"
-        android:textSize="10sp"
+        android:textAllCaps="false"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.655"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.329" />
+        app:layout_constraintVertical_bias="0.319" />
 
     <Button
         android:id="@+id/btn_login"
@@ -212,52 +249,46 @@
         android:layout_height="35dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
+        android:background="@drawable/register_btn"
         android:text="Register"
-        android:textSize="12sp"
+        android:textAllCaps="false"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintVertical_bias="0.98" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/groom2"
         android:layout_width="89dp"
         android:layout_height="34dp"
+        android:background="@drawable/btn_groom_bride"
         android:text="@string/btn_groom"
-        android:textSize="10sp"
+        android:textAllCaps="false"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.378"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.666" />
+        app:layout_constraintVertical_bias="0.683" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/bride2"
         android:layout_width="89dp"
         android:layout_height="34dp"
+        android:background="@drawable/btn_groom_bride"
         android:text="@string/btn_bride"
-        android:textSize="10sp"
+        android:textAllCaps="false"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.655"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.667" />
-
-    <EditText
-        android:id="@+id/editTextDate"
-        android:layout_width="273dp"
-        android:layout_height="36dp"
-        android:ems="10"
-        android:inputType="date"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber5"
-        app:layout_constraintVertical_bias="0.129" />
+        app:layout_constraintVertical_bias="0.681" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,4 +8,6 @@
     <color name="bgPink">#CCF0CCF8</color>
     <color name="justBlack">#000000</color>
     <color name="fontPink">#FA71CD</color>
+    <color name="bgPalePink">#FADAEA</color>
+    <color name="navPink">#FB4BC1</color>
 </resources>

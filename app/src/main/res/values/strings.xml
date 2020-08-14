@@ -5,6 +5,9 @@
     <string name="btn_groom">Groom</string>
     <string name="btn_bride">Bride</string>
     <string name="register_form_wedding_details">Wedding Details</string>
+    <string name="register_form_details_name">Name</string>
+    <string name="register_form_details_email">Email</string>
+    <string name="register_form_details_contact">Contact Number</string>
     <string name="main_logo_des">The Wedding Planner</string>
     <string name="main_des">Plan the most colorful event of your life</string>
     <string name="main_tap_here">Tap here to start your journey</string>
