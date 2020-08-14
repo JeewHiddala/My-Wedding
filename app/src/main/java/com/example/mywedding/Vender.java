@@ -16,14 +16,15 @@ public class Vender extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vender);
 
-        btn1 = (Button) findViewById(R.id.vl1);
-        btn2 = (Button) findViewById(R.id.com1);
+        btn1 = (Button) findViewById(R.id.vendlijh);
+        btn2 = (Button) findViewById(R.id.complijh);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
 
+        //
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

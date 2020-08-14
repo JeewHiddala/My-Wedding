@@ -11,7 +11,7 @@ public class ViewVender extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_vender);
 
-        //Back Button
+        //Back Button in android
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }

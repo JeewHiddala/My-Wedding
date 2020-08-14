@@ -95,7 +95,7 @@
         android:layout_height="40dp"
         android:backgroundTint="#02FFFFFF"
         android:fontFamily="@font/source_sans_pro_semibold"
-        android:text="Entertainments"
+        android:text="Entertainment"
         android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textSize="18sp"

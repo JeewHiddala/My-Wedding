@@ -12,7 +12,7 @@ public class VenderPaidList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vender_paid_list);
 
-        //Back Button
+        //Back Button in android
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }

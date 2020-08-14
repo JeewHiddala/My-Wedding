@@ -40,13 +40,6 @@ public class VenderList extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(VenderList.this, AddVender.class);
                 startActivity(intent);
-
-                //Toast
-                Context context = getApplicationContext();
-                CharSequence message ="You are Vender Adding ";
-                int duration = Toast.LENGTH_SHORT;
-                Toast toast = Toast.makeText(context,message,duration);
-                toast.show();
             }
         });
 
@@ -55,7 +48,6 @@ public class VenderList extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(VenderList.this, ViewVender.class);
                 startActivity(intent);
-
             }
         });
     }
