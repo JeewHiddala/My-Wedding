@@ -12,4 +12,11 @@
     <string name="main_des">Plan the most colorful event of your life</string>
     <string name="main_tap_here">Tap here to start your journey</string>
     <string name="main_btn">Register Here</string>
+    <string-array name="names">
+        <item>Beautician</item>
+        <item>Entertainments</item>
+        <item>Flora</item>
+        <item>Hotel</item>
+        <item>Photography</item>
+    </string-array>
 </resources>
