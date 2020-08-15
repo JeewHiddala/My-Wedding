@@ -2,10 +2,12 @@ package com.example.mywedding;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class Registration extends AppCompatActivity {
     Button btn_register;
@@ -25,8 +27,14 @@ public class Registration extends AppCompatActivity {
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Registration.this,BudgetMenu.class);
+                Intent intent = new Intent(Registration.this, Home.class);
                 startActivity(intent);
+
+                Context context = getApplicationContext();
+                int duration = Toast.LENGTH_SHORT;
+                CharSequence message = "Registered";
+                Toast toast = Toast.makeText(context, message, duration);
+                toast.show();
             }
         });
     }

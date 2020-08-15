@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditBudget"
+    tools:context=".ViewBudget"
     android:background="@color/bgPalePink"
     android:padding="5dp">
 
@@ -24,16 +24,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.012" />
 
-    <EditText
+    <TextView
         android:id="@+id/edit_budget_name"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="Budget For Refreshments"
-        android:inputType="textPersonName"
+        android:text="Budget For Refreshments"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
+        android:paddingTop="8dp"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,16 +42,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.116" />
 
-    <EditText
+    <TextView
         android:id="@+id/edit_budget_amount"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="65000"
+        android:text="65000"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
+        android:paddingTop="8dp"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,16 +61,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.222" />
 
-    <EditText
+    <TextView
         android:id="@+id/edit_specialNote"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="Only for soft drinks"
-        android:inputType="textPersonName"
+        android:text="Only for soft drinks"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
+        android:paddingTop="8dp"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,16 +79,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.349" />
 
-    <EditText
-        android:id="@+id/edit_specialNote3"
+    <TextView
+        android:id="@+id/edit_specialNote2"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="Refreshments"
+        android:text="Refreshments"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
+        android:paddingTop="8dp"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,16 +98,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.473" />
 
-    <EditText
+    <TextView
         android:id="@+id/edit_paidAmount"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="25000"
-        android:inputType="number"
+        android:text="25000"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
+        android:paddingTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -113,16 +115,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.683" />
 
-    <EditText
+    <TextView
         android:id="@+id/edit_LastPaymentDate"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
         android:hint="12 May 2020"
-        android:inputType="date"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
+        android:paddingTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"

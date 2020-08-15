@@ -3,20 +3,18 @@ package com.example.mywedding;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
 
-public class EditBudget extends AppCompatActivity {
+public class ViewBudget extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_budget);
+        setContentView(R.layout.activity_view_budget);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
@@ -24,27 +22,20 @@ public class EditBudget extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_save,menu);
+        inflater.inflate(R.menu.menu,menu);
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    public boolean onOptionsItemSelected(@NonNull MenuItem item){
         int id = item.getItemId();
 
-        if(id == R.id.done){
-            Intent intent = new Intent(EditBudget.this,ViewBudget.class);
+        if (id == R.id.edit){
+            Intent intent = new Intent(ViewBudget.this,EditBudget.class);
             startActivity(intent);
-
-            Context context = getApplicationContext();
-            CharSequence message = "Changes Saved";
-            int duration = Toast.LENGTH_SHORT;
-            Toast toast = Toast.makeText(context, message, duration);
-            toast.show();
         }
 
         if(id == android.R.id.home){
-            Intent intent = new Intent(EditBudget.this,ViewBudget.class);
+            Intent intent = new Intent(ViewBudget.this,BudgetList.class);
             startActivity(intent);
         }
         return true;

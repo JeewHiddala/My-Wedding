@@ -3,14 +3,16 @@ package com.example.mywedding;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Button;
 
-public class PaidList extends AppCompatActivity {
+public class VenderPaidList extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_paid_list);
+        setContentView(R.layout.activity_vender_paid_list);
 
+        //Back Button in android
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }
