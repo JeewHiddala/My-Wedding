@@ -161,7 +161,6 @@
         android:background="@drawable/input_field"
         android:fontFamily="@font/source_sans_pro_semibold"
         android:textColor="@color/justBlack"
-        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.413"

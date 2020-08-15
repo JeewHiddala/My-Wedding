@@ -14,5 +14,8 @@ public class VenderPaidList extends AppCompatActivity {
 
         //Back Button in android
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        //App bar name
+        getSupportActionBar().setTitle(R.string.appbar_name_paid_vendor_list);
     }
 }

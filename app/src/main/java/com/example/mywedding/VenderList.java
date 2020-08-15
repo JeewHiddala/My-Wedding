@@ -29,6 +29,9 @@ public class VenderList extends AppCompatActivity {
 
         //View Button
         btnView = (Button) findViewById(R.id.btn_hoteldjh);
+
+        //App bar name
+        getSupportActionBar().setTitle(R.string.appbar_name_vendor_list);
     }
 
     @Override

@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/source_sans_pro_semibold"
-        android:text="Vender Details"
+        android:text="Vendor Details"
         android:textColor="@color/justBlack"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
