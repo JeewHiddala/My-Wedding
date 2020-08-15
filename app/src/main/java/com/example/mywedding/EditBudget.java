@@ -19,6 +19,7 @@ public class EditBudget extends AppCompatActivity {
         setContentView(R.layout.activity_edit_budget);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(R.string.app_name_editBudget);
     }
 
     @Override

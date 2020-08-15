@@ -24,6 +24,7 @@ public class AddBudget extends AppCompatActivity implements AdapterView.OnItemSe
         setContentView(R.layout.activity_add_budget);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(R.string.app_name_addBudget);
 
         categorySpinner = findViewById(R.id.category);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.budget_categories,android.R.layout.simple_spinner_item);

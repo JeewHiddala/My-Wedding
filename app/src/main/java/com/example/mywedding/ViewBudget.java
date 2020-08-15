@@ -17,6 +17,7 @@ public class ViewBudget extends AppCompatActivity {
         setContentView(R.layout.activity_view_budget);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(R.string.app_name_viewBudget);
     }
 
     @Override

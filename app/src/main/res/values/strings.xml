@@ -1,5 +1,14 @@
 <resources>
     <string name="app_name">My Wedding</string>
+    <string name="app_name_addBudget">Add Budget</string>
+    <string name="app_name_editBudget">Edit Budget</string>
+    <string name="app_name_viewBudget">View Budget</string>
+    <string name="app_name_Budget">Budget</string>
+    <string name="app_name_budgetList">Budget List</string>
+    <string name="app_name_settings">Settings</string>
+    <string name="app_name_profileManagement">Profile Management</string>
+    <string name="app_name_registration">Create Profile</string>
+    <string name="app_name_paidList">Paid List</string>
     <string name="register_form_name_details">User Details</string>
     <string name="register_form_partner_details">Partner Details</string>
     <string name="btn_groom">Groom</string>

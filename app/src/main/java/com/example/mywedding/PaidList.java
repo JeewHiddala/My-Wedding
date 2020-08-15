@@ -12,5 +12,6 @@ public class PaidList extends AppCompatActivity {
         setContentView(R.layout.activity_paid_list);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(R.string.app_name_paidList);
     }
 }

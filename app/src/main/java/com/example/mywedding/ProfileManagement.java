@@ -20,6 +20,7 @@ public class ProfileManagement extends AppCompatActivity {
         setContentView(R.layout.activity_profile_management);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(R.string.app_name_profileManagement);
     }
 
     @Override
