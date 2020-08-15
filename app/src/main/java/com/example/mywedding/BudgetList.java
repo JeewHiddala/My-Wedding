@@ -17,7 +17,9 @@ public class BudgetList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_budget_list);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(R.string.app_name_budgetList);
 
         btn_add = findViewById(R.id.btn_add_budget);
         nav = findViewById(R.id.btn_nav);
