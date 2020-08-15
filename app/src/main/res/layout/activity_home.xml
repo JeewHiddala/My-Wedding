@@ -235,7 +235,7 @@
             android:textStyle="normal|bold" />
 
         <ImageButton
-            android:id="@+id/budgeiBtn1"
+            android:id="@+id/budgetBtn1"
             android:layout_width="184dp"
             android:layout_height="102dp"
             android:layout_weight="1"

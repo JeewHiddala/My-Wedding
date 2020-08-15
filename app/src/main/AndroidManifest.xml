@@ -15,6 +15,7 @@
         <activity
             android:name=".TaskList"
             android:parentActivityName=".TaskMenu" />
+        <activity android:name=".Home"></activity>
         <activity android:name=".ViewBudget"></activity>
         <activity android:name=".EditBudget"
             android:parentActivityName=".ViewBudget"/>
