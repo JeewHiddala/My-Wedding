@@ -2,8 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:title="Edit"
-        android:icon="@drawable/ic_baseline_edit_24"
-        android:id="@+id/edit"
+        android:title="Done"
+        android:icon="@drawable/ic_baseline_done_24"
+        android:id="@+id/done"
         app:showAsAction="ifRoom"/>
 </menu>

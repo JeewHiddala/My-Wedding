@@ -9,12 +9,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".TaskMenu"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".TaskList"
+            android:parentActivityName=".TaskMenu" />
+        <activity android:name=".Settings"></activity>
+        <activity android:name=".ProfileManagement" />
+        <activity android:name=".Home"></activity>
+        <activity android:name=".ViewBudget"/>
+        <activity android:name=".EditBudget"
+            android:parentActivityName=".ViewBudget"/>
+        <activity
+            android:name=".AddBudget"
+            android:parentActivityName=".BudgetList" />
+        <activity
+            android:name=".PaidList"
+            android:parentActivityName=".BudgetMenu" />
+        <activity
+            android:name=".BudgetList"
+            android:parentActivityName=".BudgetMenu" />
         <activity android:name=".Vender">
 
         </activity>
         <activity android:name=".VenderList"
             android:parentActivityName=".Vender"
-        />
+            />
         <activity android:name=".VenderPaidList"
             android:parentActivityName=".Vender"/>
         <activity android:name=".ViewVender"
@@ -25,13 +46,9 @@
         </activity>
         <activity android:name=".AddVender"
             android:parentActivityName=".VenderList"/>
-        <activity android:name=".EditBudget" />
-        <activity android:name=".AddBudget" />
-        <activity android:name=".PaidList" />
         <activity
-            android:name=".BudgetList"
-            android:parentActivityName=".BudgetMenu" />
-        <activity android:name=".BudgetMenu" />
+            android:name=".BudgetMenu"
+            android:parentActivityName=".Home" />
         <activity
             android:name=".Registration"
             android:parentActivityName=".MainActivity" />
@@ -43,8 +60,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+
 
         <meta-data
             android:name="preloaded_fonts"
