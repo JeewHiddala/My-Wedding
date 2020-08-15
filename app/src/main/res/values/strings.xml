@@ -30,4 +30,7 @@
     <string name="add_payment_details">Payments Made</string>
     <string name="add_payment_details_amount">Paid Amount</string>
     <string name="add_payment_details_date">Last Payment Date</string>
+    <string name="about">Copyright @ My Wedding</string>
+    <string name="about_line2">The Wedding Planner All rights reserved</string>
+    <string name="about_line3">Team Droid(G5.10)</string>
 </resources>

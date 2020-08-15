@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class BudgetMenu extends AppCompatActivity {
-    Button btn_budget_list, btn_paid_list;
+    Button btn_budget_list, btn_paid_list, btn_settings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +18,7 @@ public class BudgetMenu extends AppCompatActivity {
 
         btn_budget_list = findViewById(R.id.btn_budget);
         btn_paid_list = findViewById(R.id.btn_paid);
+//        btn_settings = findViewById(R.id.btn_settings);
     }
 
     @Override
@@ -38,5 +39,13 @@ public class BudgetMenu extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+/*        btn_settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(BudgetMenu.this,Settings.class);
+                startActivity(intent);
+            }
+        });*/
     }
 }
