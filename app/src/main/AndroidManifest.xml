@@ -9,16 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".editGuest"></activity>
-        <activity android:name=".addGuest">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".viewGuest">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".allGuests" />
-        <activity android:name=".guestPage1"></activity>
+        <activity android:name=".editGuest" />
+        <activity android:name=".addGuest">
+
+        </activity>
+        <activity android:name=".allGuests" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity android:name=".guestPage1" />
         <activity android:name=".EditBudget" />
         <activity android:name=".AddBudget" />
         <activity android:name=".PaidList" />
