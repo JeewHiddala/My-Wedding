@@ -24,6 +24,9 @@ public class EditVender extends AppCompatActivity implements AdapterView.OnItemS
 
        //Back Button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        //App bar name
+        getSupportActionBar().setTitle(R.string.appbar_name_edit_vendor);
     }
 
     @Override
@@ -48,15 +51,23 @@ public class EditVender extends AppCompatActivity implements AdapterView.OnItemS
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        Intent intent= new Intent(EditVender.this, ViewVender.class);
-        startActivity(intent);
 
-        //Toast
-        Context context =getApplicationContext();
-        CharSequence message = "Details Saved";
-        int duration = Toast.LENGTH_SHORT;
-        Toast toast = Toast.makeText(context,message,duration);
-        toast.show();
+        if(id == R.id.done) {
+            Intent intent = new Intent(EditVender.this, ViewVender.class);
+            startActivity(intent);
+
+            //Toast
+            Context context = getApplicationContext();
+            CharSequence message = "Details Saved";
+            int duration = Toast.LENGTH_SHORT;
+            Toast toast = Toast.makeText(context, message, duration);
+            toast.show();
+        }
+
+        if(id == android.R.id.home){
+            Intent intent = new Intent(EditVender.this, VenderList.class);
+            startActivity(intent);
+        }
 
         return super.onOptionsItemSelected(item);
     }

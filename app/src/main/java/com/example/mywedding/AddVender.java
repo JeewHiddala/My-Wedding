@@ -32,6 +32,9 @@ public class AddVender extends AppCompatActivity implements AdapterView.OnItemSe
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         categoryadd.setAdapter(myAdapter);
         categoryadd.setOnItemSelectedListener(this);
+
+        //App bar name
+        getSupportActionBar().setTitle(R.string.appbar_name_add_vendor);
     }
 
     @Override
