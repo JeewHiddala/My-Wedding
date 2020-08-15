@@ -30,6 +30,22 @@
         <activity
             android:name=".BudgetList"
             android:parentActivityName=".BudgetMenu" />
+        <activity android:name=".Vender">
+
+        </activity>
+        <activity android:name=".VenderList"
+            android:parentActivityName=".Vender"
+            />
+        <activity android:name=".VenderPaidList"
+            android:parentActivityName=".Vender"/>
+        <activity android:name=".ViewVender"
+            android:parentActivityName=".VenderList"/>
+        <activity android:name=".EditVender"
+            android:parentActivityName=".ViewVender">
+
+        </activity>
+        <activity android:name=".AddVender"
+            android:parentActivityName=".VenderList"/>
         <activity
             android:name=".BudgetMenu"
             android:parentActivityName=".Home" />
@@ -45,6 +61,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
 
         <meta-data
             android:name="preloaded_fonts"
