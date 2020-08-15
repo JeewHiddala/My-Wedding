@@ -40,4 +40,6 @@
     <string name="about">Copyright @ My Wedding</string>
     <string name="about_line2">The Wedding Planner All rights reserved</string>
     <string name="about_line3">Team Droid(G5.10)</string>
+    <string name="budget_menu_des">See all the budget plans here!</string>
+    <string name="budget_menu_des2">See all the paid budgets here!</string>
 </resources>
