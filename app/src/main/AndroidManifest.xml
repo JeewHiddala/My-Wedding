@@ -62,13 +62,8 @@
         <activity android:name=".guestPage1" >
 
         </activity>
-        <activity android:name=".EditBudget" />
-        <activity android:name=".AddBudget" />
-        <activity android:name=".PaidList" />
-        <activity
-            android:name=".BudgetList"
-            android:parentActivityName=".BudgetMenu" />
-        <activity android:name=".BudgetMenu" />
+
+
         <activity
             android:name=".Registration"
             android:parentActivityName=".MainActivity" />
