@@ -12,6 +12,13 @@
     <string name="main_des">Plan the most colorful event of your life</string>
     <string name="main_tap_here">Tap here to start your journey</string>
     <string name="main_btn">Register Here</string>
+    <string-array name="names">
+        <item>Beautician</item>
+        <item>Entertainments</item>
+        <item>Flora</item>
+        <item>Hotel</item>
+        <item>Photography</item>
+    </string-array>
     <string name="sub_menu_btn_all">Budget List</string>
     <string name="sub_menu_btn_paid">Paid List</string>
     <string name="add_budget_details">Details of the Budget</string>
