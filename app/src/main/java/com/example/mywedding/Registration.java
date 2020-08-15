@@ -27,7 +27,7 @@ public class Registration extends AppCompatActivity {
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Registration.this,BudgetMenu.class);
+                Intent intent = new Intent(Registration.this, Home.class);
                 startActivity(intent);
 
                 Context context = getApplicationContext();
