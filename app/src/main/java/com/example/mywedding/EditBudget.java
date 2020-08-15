@@ -3,6 +3,8 @@ package com.example.mywedding;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 
 public class EditBudget extends AppCompatActivity {
 
@@ -11,4 +13,5 @@ public class EditBudget extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_budget);
     }
+
 }

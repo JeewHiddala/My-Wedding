@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Vender">
+
         </activity>
         <activity android:name=".VenderList"
             android:parentActivityName=".Vender"
@@ -19,7 +20,9 @@
         <activity android:name=".ViewVender"
             android:parentActivityName=".VenderList"/>
         <activity android:name=".EditVender"
-            android:parentActivityName=".ViewVender"/>
+            android:parentActivityName=".ViewVender">
+
+        </activity>
         <activity android:name=".AddVender"
             android:parentActivityName=".VenderList"/>
         <activity android:name=".EditBudget" />
@@ -40,6 +43,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
         <meta-data
