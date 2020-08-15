@@ -9,18 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".CompleteTask"></activity>
         <activity
             android:name=".TaskMenu"
             android:parentActivityName=".Home" />
         <activity
             android:name=".TaskList"
             android:parentActivityName=".TaskMenu" />
-        <activity android:name=".Settings"></activity>
+        <activity
+            android:name=".CompleteTask"
+            android:parentActivityName=".TaskMenu" />
+        <activity android:name=".Settings" />
         <activity android:name=".ProfileManagement" />
-        <activity android:name=".Home"></activity>
-        <activity android:name=".ViewBudget"/>
-        <activity android:name=".EditBudget"
-            android:parentActivityName=".ViewBudget"/>
+        <activity android:name=".Home" />
+        <activity android:name=".ViewBudget" />
+        <activity
+            android:name=".EditBudget"
+            android:parentActivityName=".ViewBudget" />
         <activity
             android:name=".AddBudget"
             android:parentActivityName=".BudgetList" />
