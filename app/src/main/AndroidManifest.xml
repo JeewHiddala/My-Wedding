@@ -10,15 +10,28 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".EditTask"
+            android:parentActivityName=".ViewTask"></activity>
+        <activity
+            android:name=".ViewTask"
+            android:parentActivityName=".TaskList"/>
+        <activity
+            android:name=".AddTask"
+            android:parentActivityName=".TaskList" />
+        <activity
+            android:name=".CompleteTask"
+            android:parentActivityName=".TaskMenu" />
+        <activity
             android:name=".TaskMenu"
             android:parentActivityName=".Home" />
         <activity
             android:name=".TaskList"
             android:parentActivityName=".TaskMenu" />
-        <activity android:name=".Home"></activity>
-        <activity android:name=".ViewBudget"></activity>
-        <activity android:name=".EditBudget"
-            android:parentActivityName=".ViewBudget"/>
+        <activity android:name=".Home" />
+        <activity android:name=".ViewBudget" />
+        <activity
+            android:name=".EditBudget"
+            android:parentActivityName=".ViewBudget" />
         <activity
             android:name=".AddBudget"
             android:parentActivityName=".BudgetList" />
