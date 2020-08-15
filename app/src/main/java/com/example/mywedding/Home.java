@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class Home extends AppCompatActivity {
 
-    ImageButton btn_tasks, btn_budget,btn_vendor;
+    ImageButton btn_tasks, btn_budget,btn_vendor,btn_guest;
 
 
     @Override
@@ -23,7 +23,7 @@ public class Home extends AppCompatActivity {
         btn_tasks = findViewById(R.id.taskBtn1);
         btn_budget = findViewById(R.id.budgetBtn1);
         btn_vendor = findViewById(R.id.vendorsBtn1);
-
+        btn_guest = findViewById(R.id.guestBtn1);
     }
 
 
@@ -55,6 +55,13 @@ public class Home extends AppCompatActivity {
                 }
             });
 
+            btn_guest.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(Home.this,guestPage1.class);
+                    startActivity(intent);
+                }
+            });
 
 
 
