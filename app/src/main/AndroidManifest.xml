@@ -9,21 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".viewGuest">
+        <activity android:name=".dashBoard">
 
         </activity>
+        <activity android:name=".Uninvitedlist">
+
+        </activity>
+        <activity android:name=".viewGuest" />
         <activity android:name=".editGuest" />
-        <activity android:name=".addGuest">
+        <activity android:name=".addGuest" />
+        <activity android:name=".allGuests"></activity>
+        <activity android:name=".guestPage1" >
 
         </activity>
-        <activity android:name=".allGuests" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
-        <activity android:name=".guestPage1" />
         <activity android:name=".EditBudget" />
         <activity android:name=".AddBudget" />
         <activity android:name=".PaidList" />
@@ -33,7 +31,13 @@
         <activity android:name=".BudgetMenu" />
         <activity
             android:name=".Registration"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar"> <!-- hides the action bar -->

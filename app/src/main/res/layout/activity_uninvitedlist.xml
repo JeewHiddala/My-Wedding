@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgPalePink"
-    tools:context=".allGuests">
+    tools:context=".Uninvitedlist">
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/uninvitedguestbtn3"
         android:layout_width="43dp"
         android:layout_height="37dp"
         android:background="#FFFFFF"
@@ -21,7 +21,7 @@
         app:srcCompat="@drawable/ic_baseline_delete_outline_24" />
 
     <ImageButton
-        android:id="@+id/imageButton7"
+        android:id="@+id/uninvitedguestbtn1"
         android:layout_width="43dp"
         android:layout_height="37dp"
         android:background="#FFFFFF"
@@ -34,7 +34,7 @@
         app:srcCompat="@drawable/ic_baseline_delete_outline_24" />
 
     <EditText
-        android:id="@+id/allguestName3"
+        android:id="@+id/uninvitedguestName3"
         android:layout_width="309dp"
         android:layout_height="37dp"
         android:layout_marginStart="16dp"
@@ -52,9 +52,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.28" />
-
     <EditText
-        android:id="@+id/allguestName1"
+        android:id="@+id/uninvitedguestName1"
         android:layout_width="307dp"
         android:layout_height="38dp"
         android:layout_marginStart="16dp"
@@ -73,7 +72,7 @@
         app:layout_constraintVertical_bias="0.069" />
 
     <EditText
-        android:id="@+id/allguestName2"
+        android:id="@+id/uninvitedguestName2"
         android:layout_width="307dp"
         android:layout_height="37dp"
         android:layout_marginStart="16dp"
@@ -93,7 +92,7 @@
         app:layout_constraintVertical_bias="0.176" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/uninvitedguestbtn2"
         android:layout_width="43dp"
         android:layout_height="37dp"
         android:background="#FFFFFF"
@@ -104,21 +103,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.178"
         app:srcCompat="@drawable/ic_baseline_delete_outline_24" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/justWhite"
-        android:clickable="true"
-        android:onClick="addGuest"
-        app:backgroundTint="@color/justWhite"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.901"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.925"
-        app:srcCompat="@drawable/ic_baseline_add_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
