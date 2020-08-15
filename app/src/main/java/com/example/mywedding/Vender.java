@@ -18,6 +18,9 @@ public class Vender extends AppCompatActivity {
 
         btn1 = (Button) findViewById(R.id.vendlijh);
         btn2 = (Button) findViewById(R.id.complijh);
+
+        //Back Button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override

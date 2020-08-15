@@ -23,7 +23,7 @@ public class ViewVender extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater=getMenuInflater();
-        inflater.inflate(R.menu.editmenu,menu);
+        inflater.inflate(R.menu.menu,menu);
         return true;
     }
 
@@ -31,8 +31,12 @@ public class ViewVender extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if(id == R.id.editbtnjh) {
+        if(id == R.id.edit) {
             Intent intent = new Intent(ViewVender.this, EditVender.class);
+            startActivity(intent);
+        }
+        if(id == android.R.id.home) {
+            Intent intent = new Intent(ViewVender.this, VenderList.class);
             startActivity(intent);
         }
 

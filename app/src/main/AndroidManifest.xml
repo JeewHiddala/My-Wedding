@@ -30,7 +30,7 @@
         <activity
             android:name=".BudgetList"
             android:parentActivityName=".BudgetMenu" />
-        <activity android:name=".Vender">
+        <activity android:name=".Vender" android:parentActivityName=".Home">
 
         </activity>
         <activity android:name=".VenderList"
@@ -39,7 +39,7 @@
         <activity android:name=".VenderPaidList"
             android:parentActivityName=".Vender"/>
         <activity android:name=".ViewVender"
-            android:parentActivityName=".VenderList"/>
+            />
         <activity android:name=".EditVender"
             android:parentActivityName=".ViewVender">
 

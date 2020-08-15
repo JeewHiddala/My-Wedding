@@ -24,14 +24,6 @@ public class EditVender extends AppCompatActivity implements AdapterView.OnItemS
 
        //Back Button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        //spinner
-        Spinner editcategory = (Spinner)findViewById(R.id.categoryjh);
-
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(EditVender.this,android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.names));
-        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        editcategory.setAdapter(myAdapter);
-        editcategory.setOnItemSelectedListener(this);
     }
 
     @Override
@@ -48,7 +40,7 @@ public class EditVender extends AppCompatActivity implements AdapterView.OnItemS
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater=getMenuInflater();
-        inflater.inflate(R.menu.editmenu,menu);
+        inflater.inflate(R.menu.menu_save,menu);
         return true;
     }
 
@@ -61,7 +53,7 @@ public class EditVender extends AppCompatActivity implements AdapterView.OnItemS
 
         //Toast
         Context context =getApplicationContext();
-        CharSequence message = "Details Edited Successfully";
+        CharSequence message = "Details Saved";
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context,message,duration);
         toast.show();

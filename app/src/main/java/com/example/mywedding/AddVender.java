@@ -49,7 +49,7 @@ public class AddVender extends AppCompatActivity implements AdapterView.OnItemSe
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater=getMenuInflater();
-        inflater.inflate(R.menu.menu,menu);
+        inflater.inflate(R.menu.menu_save,menu);
         return true;
     }
 
@@ -58,7 +58,7 @@ public class AddVender extends AppCompatActivity implements AdapterView.OnItemSe
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if(id == R.id.donebtnjh) {
+        if(id == R.id.done) {
             Intent intentadd = new Intent(AddVender.this, VenderList.class);
             startActivity(intentadd);
 
