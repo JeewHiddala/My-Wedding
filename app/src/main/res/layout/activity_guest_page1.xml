@@ -5,25 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgPalePink"
+    android:onClick="uninvited"
     tools:context=".guestPage1">
 
     <TextView
         android:id="@+id/textView18"
-        android:layout_width="131dp"
-        android:layout_height="59dp"
-        android:text="See all the invitees here!"
+        android:layout_width="112dp"
+        android:layout_height="60dp"
+        android:text="@string/cap2pg1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintHorizontal_bias="0.21"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.518" />
+        app:layout_constraintVertical_bias="0.517" />
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="202dp"
-        android:layout_height="56dp"
-        android:text="See all the pending invitations here!"
+        android:layout_width="147dp"
+        android:layout_height="58dp"
+        android:text="@string/univitedsubcappg1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.923"
@@ -35,7 +36,7 @@
         android:id="@+id/textView16"
         android:layout_width="75dp"
         android:layout_height="40dp"
-        android:text="Uninvited Guest"
+        android:text="@string/uninvitedpg1"
         android:textColor="#070707"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,7 +49,7 @@
         android:id="@+id/textView15"
         android:layout_width="73dp"
         android:layout_height="29dp"
-        android:text="All Guests"
+        android:text="@string/cap1pg1"
         android:textColor="#070707"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,19 +57,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.398" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="102dp"
-        android:layout_height="104dp"
-        android:onClick="uninvited"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.809"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.226"
-        app:srcCompat="@drawable/univited" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -82,4 +70,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.227"
         app:srcCompat="@drawable/ic_baseline_list_alt_24" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="88dp"
+        android:layout_height="98dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.777"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.231"
+        app:srcCompat="@drawable/uinvited" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
