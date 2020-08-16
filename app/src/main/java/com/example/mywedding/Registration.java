@@ -19,7 +19,7 @@ public class Registration extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.app_name_registration);
 
-        btn_register = findViewById(R.id.btn_login);
+        btn_register = findViewById(R.id.btn_update);
     }
 
     @Override
