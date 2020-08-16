@@ -34,6 +34,7 @@ public class ViewTask extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_task);
 
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.header_viewtask_name);
     }
@@ -49,7 +50,7 @@ public class ViewTask extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if(id == R.id.done){
+        if(id == R.id.edit){
             Intent intent = new Intent(ViewTask.this, EditTask.class);
             startActivity(intent);
 

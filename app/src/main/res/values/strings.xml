@@ -18,6 +18,8 @@
     <string name="header_edittask_name">Edit Task</string>
     <string name="header_taskmenu_name">Tasks</string>
     <string name="header_tasklist_name">Task List</string>
+    <string name="header_popup1_name">Add Sub Task</string>
+    <string name="header_popup2_name">Edit Sub Task</string>
     <string name="header_complete_tasklist_name">Complete Task List</string>
     <string name="header_add_task_name">Add Task</string>
     <string name="add_budget_details">Details of the Budget</string>
@@ -26,6 +28,13 @@
     <string name="add_budget_details_specialNotes">Special Notes</string>
     <string name="add_budget_details_category">Category</string>
     <string-array name="budget_categories">
+        <item>Refreshments</item>
+        <item>Flowers and Decors</item>
+        <item>Reception</item>
+        <item>Jewellery</item>
+        <item>Music and Entertainment</item>
+    </string-array>
+    <string-array name="task_categories">
         <item>Refreshments</item>
         <item>Flowers and Decors</item>
         <item>Reception</item>

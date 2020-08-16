@@ -238,7 +238,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/task_name"
+                android:id="@+id/sp_note"
                 android:layout_width="365dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="-5dp"
