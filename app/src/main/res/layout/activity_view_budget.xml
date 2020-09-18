@@ -116,7 +116,7 @@
         app:layout_constraintVertical_bias="0.683" />
 
     <TextView
-        android:id="@+id/edit_LastPaymentDate"
+        android:id="@+id/et_LastPaymentDate"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
