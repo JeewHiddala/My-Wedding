@@ -5,68 +5,68 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgPalePink"
-    tools:context=".BudgetMenu">
+    android:padding="5dp"
+    tools:context=".Vender">
 
     <Button
-        android:id="@+id/btn_budget"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
+        android:id="@+id/vendlijh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:background="@drawable/register_btn"
         android:fontFamily="@font/source_sans_pro_semibold"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
-        android:text="@string/sub_menu_btn_all"
+        android:text="Vendor List"
         android:textAllCaps="false"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintHorizontal_bias="0.197"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.48" />
+        app:layout_constraintVertical_bias="0.499" />
 
     <Button
-        android:id="@+id/btn_paid"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="5dp"
+        android:id="@+id/complijh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
         android:background="@drawable/register_btn"
         android:fontFamily="@font/source_sans_pro_semibold"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
-        android:text="@string/sub_menu_btn_paid"
+        android:text="Completed"
         android:textAllCaps="false"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/vendlijh"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.781"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.479" />
+        app:layout_constraintHorizontal_bias="0.782"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="95dp"
-        android:layout_height="108dp"
+        android:layout_width="113dp"
+        android:layout_height="100dp"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintHorizontal_bias="0.187"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.317"
-        app:srcCompat="@drawable/ic_baseline_attach_money_24" />
+        app:layout_constraintVertical_bias="0.335"
+        app:srcCompat="@drawable/ic_baseline_shopping_basket_24" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="95dp"
-        android:layout_height="108dp"
+        android:layout_width="113dp"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.756"
+        app:layout_constraintHorizontal_bias="0.812"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.315"
+        app:layout_constraintVertical_bias="0.337"
         app:srcCompat="@drawable/ic_baseline_assignment_turned_in_24" />
 
     <TextView
@@ -74,29 +74,26 @@
         android:layout_width="142dp"
         android:layout_height="51dp"
         android:fontFamily="@font/source_sans_pro_semibold"
-        android:text="@string/budget_menu_des"
+        android:text="@string/vendor_menu_jh1"
         android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.178"
+        app:layout_constraintHorizontal_bias="0.148"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.581" />
+        app:layout_constraintVertical_bias="0.614" />
 
     <TextView
         android:id="@+id/textView21"
         android:layout_width="142dp"
         android:layout_height="51dp"
         android:fontFamily="@font/source_sans_pro_semibold"
-        android:text="@string/budget_menu_des2"
+        android:text="@string/vendor_menu_jh2"
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView20"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.802"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.579" />
-
+        app:layout_constraintHorizontal_bias="0.836"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

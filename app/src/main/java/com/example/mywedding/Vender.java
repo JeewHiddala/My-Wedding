@@ -7,41 +7,44 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+public class Vender extends AppCompatActivity {
 
-public class BudgetList extends AppCompatActivity {
-    FloatingActionButton btn_add;
-    Button nav;
+    Button btn1,btn2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_budget_list);
+        setContentView(R.layout.activity_vender);
 
+        btn1 = (Button) findViewById(R.id.vendlijh);
+        btn2 = (Button) findViewById(R.id.complijh);
+
+        //Back Button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle(R.string.app_name_budgetList);
 
-        btn_add = findViewById(R.id.btn_add_budget);
-        nav = findViewById(R.id.btn_nav);
+        //App bar name
+        getSupportActionBar().setTitle(R.string.appbar_name_vendor);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        btn_add.setOnClickListener(new View.OnClickListener() {
+
+        btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(BudgetList.this,AddBudget.class);
+                Intent intent = new Intent(Vender.this, VenderList.class);
                 startActivity(intent);
             }
         });
 
-        nav.setOnClickListener(new View.OnClickListener() {
+        btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(BudgetList.this,ViewBudget.class);
+                Intent intent = new Intent(Vender.this, VenderPaidList.class);
                 startActivity(intent);
             }
         });
+
     }
 }

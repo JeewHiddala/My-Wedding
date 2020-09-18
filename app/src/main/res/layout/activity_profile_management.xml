@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".ProfileManagement"
     android:background="@color/bgPalePink"
-    android:padding="5dp"
-    tools:context=".Registration">
+    android:padding="5dp">
 
     <EditText
         android:id="@+id/editTextTextPersonName"
@@ -16,14 +16,14 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="@string/register_form_details_name"
+        android:text="Jessica"
         android:inputType="textPersonName"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.07" />
@@ -37,14 +37,14 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="@string/register_form_details_email"
+        android:text="jess@gmail.com"
         android:inputType="text"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
         app:layout_constraintVertical_bias="0.012" />
@@ -58,14 +58,14 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="@string/register_form_details_contact"
+        android:text="015879630"
         android:inputType="number"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
         app:layout_constraintVertical_bias="0.011" />
@@ -78,17 +78,17 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="@string/register_form_details_name"
+        android:text="Justin"
         android:inputType="number"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.451" />
+        app:layout_constraintVertical_bias="0.44" />
 
     <EditText
         android:id="@+id/editTextNumber5"
@@ -98,17 +98,17 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="@string/register_form_details_name"
+        android:text="Jess and Justin"
         android:inputType="number"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.84" />
+        app:layout_constraintVertical_bias="0.819" />
 
     <EditText
         android:id="@+id/editTextNumber3"
@@ -118,17 +118,17 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="@string/register_form_details_email"
+        android:text="justin11@gmail.com"
         android:inputType="number"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.534" />
+        app:layout_constraintVertical_bias="0.52" />
 
     <EditText
         android:id="@+id/editTextNumber4"
@@ -138,17 +138,17 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="@string/register_form_details_contact"
+        android:text="0254896743"
         android:inputType="number"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.617" />
+        app:layout_constraintVertical_bias="0.601" />
 
     <EditText
         android:id="@+id/etDate"
@@ -156,19 +156,17 @@
         android:layout_height="38dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="Date"
+        android:text="20 May 2020"
         android:inputType="date"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textColorLink="#FFFFFF"
         android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber5"
-        app:layout_constraintVertical_bias="0.121" />
-
+        app:layout_constraintVertical_bias="0.111" />
 
     <TextView
         android:id="@+id/textView3"
@@ -185,7 +183,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.304" />
 
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -197,7 +194,7 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/editTextNumber2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintHorizontal_bias="0.027"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
@@ -212,148 +209,70 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.772" />
+        app:layout_constraintVertical_bias="0.744" />
 
-    <!--<RadioGroup
-        android:id="@+id/radioGroup1"
-        android:layout_width="160dp"
-        android:layout_height="46dp"
-        android:background="@drawable/radio_group"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.32">
-
-        <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="1dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginBottom="1dp"
-            android:background="@drawable/radio_selector"
-            android:button="@android:color/transparent"
-            android:fontFamily="@font/source_sans_pro_semibold"
-            android:text="@string/radio_Bride"
-            android:textAlignment="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.299"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.3" />
-
-        <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="1dp"
-            android:layout_marginRight="1dp"
-            android:layout_marginBottom="1dp"
-            android:background="@drawable/radio_selector"
-            android:button="@android:color/transparent"
-            android:fontFamily="@font/source_sans_pro_semibold"
-            android:text="@string/radio_Groom"
-            android:textAlignment="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.697"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.3" />
-
-    </RadioGroup>-->
-
-    <RadioGroup
-        android:id="@+id/radioGroup2"
-        android:layout_width="319dp"
+    <Button
+        android:id="@+id/groom1"
+        android:layout_width="89dp"
         android:layout_height="34dp"
-        android:background="@drawable/radio_group"
-        android:checkedButton="@+id/groom2"
-        android:orientation="horizontal"
+        android:background="@drawable/btn_groom_bride"
+        android:text="@string/btn_groom"
+        android:textAllCaps="false"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.378"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.704">
+        app:layout_constraintVertical_bias="0.318" />
 
-        <RadioButton
-            android:id="@+id/bride2"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="1dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginBottom="1dp"
-            android:layout_weight="1"
-            android:background="@drawable/radio_selector"
-            android:button="@null"
-            android:gravity="center"
-            android:text="@string/btn_bride"
-            android:textColor="@color/justBlack" />
-
-        <RadioButton
-            android:id="@+id/groom2"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="1dp"
-            android:layout_marginRight="1dp"
-            android:layout_marginBottom="1dp"
-            android:layout_weight="1"
-            android:background="@drawable/radio_selector"
-            android:button="@null"
-            android:gravity="center"
-            android:text="@string/btn_groom"
-            android:textColor="@color/justBlack" />
-    </RadioGroup>
-
-
-    <RadioGroup
-        android:id="@+id/radioGroup1"
-        android:layout_width="319dp"
+    <Button
+        android:id="@+id/bride1"
+        android:layout_width="89dp"
         android:layout_height="34dp"
-        android:background="@drawable/radio_group"
-        android:checkedButton="@+id/bride1"
-        android:orientation="horizontal"
+        android:background="@drawable/btn_groom_bride"
+        android:text="@string/btn_bride"
+        android:textAllCaps="false"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.655"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.314">
+        app:layout_constraintVertical_bias="0.319" />
 
-        <RadioButton
-            android:id="@+id/bride1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="1dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginBottom="1dp"
-            android:layout_weight="1"
-            android:background="@drawable/radio_selector"
-            android:button="@null"
-            android:gravity="center"
-            android:text="@string/btn_bride"
-            android:textColor="@color/justBlack" />
+    <Button
+        android:id="@+id/groom2"
+        android:layout_width="89dp"
+        android:layout_height="34dp"
+        android:background="@drawable/btn_groom_bride"
+        android:text="@string/btn_groom"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.378"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.683" />
 
-        <RadioButton
-            android:id="@+id/groom1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="1dp"
-            android:layout_marginRight="1dp"
-            android:layout_marginBottom="1dp"
-            android:layout_weight="1"
-            android:background="@drawable/radio_selector"
-            android:button="@null"
-            android:gravity="center"
-            android:text="@string/btn_groom"
-            android:textColor="@color/justBlack" />
-    </RadioGroup>
+    <Button
+        android:id="@+id/bride2"
+        android:layout_width="89dp"
+        android:layout_height="34dp"
+        android:background="@drawable/btn_groom_bride"
+        android:text="@string/btn_bride"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.655"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.681" />
 
     <Button
         android:id="@+id/btn_update"
@@ -362,7 +281,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:background="@drawable/register_btn"
-        android:text="Register"
+        android:text="Update"
         android:textAllCaps="false"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -370,6 +289,6 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.98" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

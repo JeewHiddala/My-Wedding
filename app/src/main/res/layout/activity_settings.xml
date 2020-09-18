@@ -4,99 +4,98 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bgPalePink"
-    tools:context=".BudgetMenu">
+    tools:context=".Settings"
+    android:background="@color/bgPalePink">
 
     <Button
-        android:id="@+id/btn_budget"
-        android:layout_width="100dp"
+        android:id="@+id/btn_profileManagement"
+        android:layout_width="339dp"
         android:layout_height="40dp"
-        android:layout_marginStart="5dp"
-        android:background="@drawable/register_btn"
+        android:backgroundTint="#02FFFFFF"
         android:fontFamily="@font/source_sans_pro_semibold"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:text="@string/sub_menu_btn_all"
+        android:text="Profile Management"
+        android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.48" />
+        app:layout_constraintVertical_bias="0.028" />
 
     <Button
-        android:id="@+id/btn_paid"
-        android:layout_width="100dp"
+        android:id="@+id/button2"
+        android:layout_width="339dp"
         android:layout_height="40dp"
-        android:layout_marginEnd="5dp"
-        android:background="@drawable/register_btn"
+        android:backgroundTint="#02FFFFFF"
         android:fontFamily="@font/source_sans_pro_semibold"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:text="@string/sub_menu_btn_paid"
+        android:text="Backup your data"
+        android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.781"
+        app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.479" />
+        app:layout_constraintVertical_bias="0.106" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="95dp"
-        android:layout_height="108dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.215"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.317"
-        app:srcCompat="@drawable/ic_baseline_attach_money_24" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="95dp"
-        android:layout_height="108dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.756"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.315"
-        app:srcCompat="@drawable/ic_baseline_assignment_turned_in_24" />
-
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="142dp"
-        android:layout_height="51dp"
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="339dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#02FFFFFF"
         android:fontFamily="@font/source_sans_pro_semibold"
-        android:text="@string/budget_menu_des"
-        android:textAlignment="center"
+        android:text="Restore"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.178"
+        app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.581" />
+        app:layout_constraintVertical_bias="0.177" />
 
     <TextView
-        android:id="@+id/textView21"
-        android:layout_width="142dp"
-        android:layout_height="51dp"
+        android:id="@+id/textView8"
+        android:layout_width="160dp"
+        android:layout_height="25dp"
         android:fontFamily="@font/source_sans_pro_semibold"
-        android:text="@string/budget_menu_des2"
-        android:textAlignment="center"
-        android:textSize="18sp"
+        android:text="@string/about"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.802"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.579" />
+        app:layout_constraintVertical_bias="0.875" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="148dp"
+        android:layout_height="42dp"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        android:text="@string/about_line2"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.935" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        android:text="@string/about_line3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.972" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

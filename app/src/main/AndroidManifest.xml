@@ -33,11 +33,14 @@
         <activity
             android:name=".TaskList"
             android:parentActivityName=".TaskMenu" />
-        <activity android:name=".Home" />
-        <activity android:name=".ViewBudget" />
-        <activity
-            android:name=".EditBudget"
-            android:parentActivityName=".ViewBudget" />
+        <activity android:name=".Settings"
+            android:parentActivityName=".Home"></activity>
+        <activity android:name=".ProfileManagement"
+            android:parentActivityName=".Settings"/>
+        <activity android:name=".Home"></activity>
+        <activity android:name=".ViewBudget"/>
+        <activity android:name=".EditBudget"
+            android:parentActivityName=".ViewBudget"/>
         <activity
             android:name=".AddBudget"
             android:parentActivityName=".BudgetList" />
@@ -47,9 +50,40 @@
         <activity
             android:name=".BudgetList"
             android:parentActivityName=".BudgetMenu" />
+        <activity android:name=".Vender" android:parentActivityName=".Home">
+
+        </activity>
+        <activity android:name=".VenderList"
+            android:parentActivityName=".Vender"
+            />
+        <activity android:name=".VenderPaidList"
+            android:parentActivityName=".Vender"/>
+        <activity android:name=".ViewVender"
+            />
+        <activity android:name=".EditVender"
+            android:parentActivityName=".ViewVender">
+
+        </activity>
+        <activity android:name=".AddVender"
+            android:parentActivityName=".VenderList"/>
         <activity
             android:name=".BudgetMenu"
             android:parentActivityName=".Home" />
+        <activity android:name=".dashBoard">
+
+        </activity>
+        <activity android:name=".Uninvitedlist">
+
+        </activity>
+        <activity android:name=".viewGuest" />
+        <activity android:name=".editGuest" />
+        <activity android:name=".addGuest" />
+        <activity android:name=".allGuests"></activity>
+        <activity android:name=".guestPage1" >
+
+        </activity>
+
+
         <activity
             android:name=".Registration"
             android:parentActivityName=".MainActivity" />
@@ -62,6 +96,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
 
         <meta-data
             android:name="preloaded_fonts"

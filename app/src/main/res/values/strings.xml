@@ -1,5 +1,14 @@
 <resources>
     <string name="app_name">My Wedding</string>
+    <string name="app_name_addBudget">Add Budget</string>
+    <string name="app_name_editBudget">Edit Budget</string>
+    <string name="app_name_viewBudget">View Budget</string>
+    <string name="app_name_Budget">Budget</string>
+    <string name="app_name_budgetList">Budget List</string>
+    <string name="app_name_settings">Settings</string>
+    <string name="app_name_profileManagement">Profile Management</string>
+    <string name="app_name_registration">Create Profile</string>
+    <string name="app_name_paidList">Paid List</string>
     <string name="register_form_name_details">User Details</string>
     <string name="register_form_partner_details">Partner Details</string>
     <string name="btn_groom">Groom</string>
@@ -12,6 +21,13 @@
     <string name="main_des">Plan the most colorful event of your life</string>
     <string name="main_tap_here">Tap here to start your journey</string>
     <string name="main_btn">Register Here</string>
+    <string-array name="names">
+        <item>Beautician</item>
+        <item>Entertainments</item>
+        <item>Flora</item>
+        <item>Hotel</item>
+        <item>Photography</item>
+    </string-array>
     <string name="sub_menu_btn_all">Budget List</string>
     <string name="sub_menu_btn_paid">Paid List</string>
     <string name="header_viewtask_name">View Task</string>
@@ -47,4 +63,42 @@
     <string name="add_payment_details_date">Last Payment Date</string>
     <string name="txtAllTask">See all the tasks here.</string>
     <string name="txtCompleteTasks">See all the completed tasks.</string>
+    <string name="about">Copyright @ My Wedding</string>
+    <string name="about_line2">The Wedding Planner All rights reserved</string>
+    <string name="about_line3">Team Droid(G5.10)</string>
+    <string name="budget_menu_des">See all the budget plans here!</string>
+    <string name="budget_menu_des2">See all the paid budgets here!</string>
+    <string name="vendor_menu_jh1">All Vendors are waiting for You!</string>
+    <string name="vendor_menu_jh2">See all Completed task here!</string>
+    <string name="appbar_name_vendor">Vendor</string>
+    <string name="appbar_name_vendor_list">Vendor List</string>
+    <string name="appbar_name_add_vendor">Add Vendor</string>
+    <string name="appbar_name_paid_vendor_list">Paid Vendor List</string>
+    <string name="appbar_name_view_vendor">View Vendor</string>
+    <string name="appbar_name_edit_vendor">Edit Vendor</string>
+    <string name="guestpage1">Guests</string>
+    <string name="radio_Bride">Bride</string>
+    <string name="radio_Groom">Groom</string>
+
+
+    <string name="guestpageadd">Guests</string>
+    <string name="viewguest">View Guest</string>
+    <string name="editguest">Edit Guest</string>
+    <string name="dboard">Dashboard</string>
+    <string name="guestadd">Add Guest</string>
+    <string name="allguests">All Guests</string>
+    <string name="unguests">Uninvited Guests</string>
+
+
+    <string name="capOnepgadd">Details of Guests</string>
+    <string name="stateInvitaionpgadd">State of the Invitation</string>
+    <string name="cap2pgadd">Contact Details</string>
+    <string name="cap1pgedit">Details of Guests</string>
+    <string name="stateInvitaionpgedit">State of the Invitation</string>
+    <string name="cap2pgedit">Contact Details</string>
+    <string name="cap1pg1">All Guests</string>
+    <string name="cap2pg1">See all the invitees here!</string>
+    <string name="uninvitedpg1">Uninvited Guests</string>
+    <string name="univitedsubcappg1">See all the pending invitations here!</string>
+
 </resources>
