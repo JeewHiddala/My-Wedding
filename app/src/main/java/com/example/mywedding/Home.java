@@ -82,5 +82,10 @@ public class Home extends AppCompatActivity {
             });
 
     }
+            //tharuvi
+            public void Dashboard(View view){
+            Intent intent = new Intent(Home.this,dashBoard.class);
+            startActivity(intent);
+            }
 
 }

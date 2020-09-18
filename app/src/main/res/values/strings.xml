@@ -62,4 +62,26 @@
     <string name="guestpage1">Guests</string>
     <string name="radio_Bride">Bride</string>
     <string name="radio_Groom">Groom</string>
+
+
+    <string name="guestpageadd">Guests</string>
+    <string name="viewguest">View Guest</string>
+    <string name="editguest">Edit Guest</string>
+    <string name="dboard">Dashboard</string>
+    <string name="guestadd">Add Guest</string>
+    <string name="allguests">All Guests</string>
+    <string name="unguests">Uninvited Guests</string>
+
+
+    <string name="capOnepgadd">Details of Guests</string>
+    <string name="stateInvitaionpgadd">State of the Invitation</string>
+    <string name="cap2pgadd">Contact Details</string>
+    <string name="cap1pgedit">Details of Guests</string>
+    <string name="stateInvitaionpgedit">State of the Invitation</string>
+    <string name="cap2pgedit">Contact Details</string>
+    <string name="cap1pg1">All Guests</string>
+    <string name="cap2pg1">See all the invitees here!</string>
+    <string name="uninvitedpg1">Uninvited Guests</string>
+    <string name="univitedsubcappg1">See all the pending invitations here!</string>
+
 </resources>

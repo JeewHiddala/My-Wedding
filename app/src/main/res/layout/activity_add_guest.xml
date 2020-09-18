@@ -11,8 +11,9 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Details of Guests"
-        android:textColor="#000000"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        android:text="@string/capOnepgadd"
+        android:textColor="@color/justBlack"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,7 +21,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.027" />
-
 
 
     <EditText
@@ -31,9 +31,9 @@
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -77,7 +77,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.307" />
 
-    <Switch
+    <!--<Switch
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -89,18 +89,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.465"
         tools:ignore="MissingConstraints" />
+-->
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="State of the Invitation"
+        android:text="@string/stateInvitaionpgadd"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.215"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.46" />
+        app:layout_constraintVertical_bias="0.436" />
 
     <EditText
         android:id="@+id/addguestPhone"
@@ -118,21 +119,21 @@
         app:layout_constraintHorizontal_bias="0.413"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.64" />
+        app:layout_constraintVertical_bias="0.674" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Contact Details "
+        android:text="@string/cap2pgadd"
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.547" />
+        app:layout_constraintVertical_bias="0.588" />
 
     <EditText
         android:id="@+id/addguestEmail"
@@ -150,7 +151,7 @@
         app:layout_constraintHorizontal_bias="0.413"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.723" />
+        app:layout_constraintVertical_bias="0.906" />
 
     <EditText
         android:id="@+id/addguestAddress"
@@ -168,6 +169,48 @@
         app:layout_constraintHorizontal_bias="0.413"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.81" />
+        app:layout_constraintVertical_bias="0.787" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="170dp"
+        android:layout_height="44dp"
+        android:background="@drawable/radio_group"
+        android:checkedButton="@+id/groom2"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextNotes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/addguestPhone"
+        app:layout_constraintVertical_bias="0.53999996">
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Sent"
+            android:textColor="@color/justBlack" />
+
+        <RadioButton
+            android:id="@+id/groom2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Not Sent"
+            android:textColor="@color/justBlack" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

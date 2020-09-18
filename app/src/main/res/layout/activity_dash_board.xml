@@ -39,10 +39,10 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintHorizontal_bias="0.777"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.09" />
+        app:layout_constraintVertical_bias="0.087" />
 
     <ImageButton
         android:id="@+id/imageButton15"
@@ -63,6 +63,7 @@
         android:layout_marginEnd="84dp"
         android:layout_marginBottom="132dp"
         android:text="Pending"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -83,6 +84,7 @@
         android:layout_width="85dp"
         android:layout_height="34dp"
         android:text="Paid"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.751"
@@ -96,7 +98,7 @@
         android:layout_height="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.774"
+        app:layout_constraintHorizontal_bias="0.781"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.348"
@@ -108,10 +110,10 @@
         android:layout_height="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.774"
+        app:layout_constraintHorizontal_bias="0.781"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.157"
+        app:layout_constraintVertical_bias="0.168"
         app:srcCompat="@drawable/sqrdash" />
 
     <ImageButton
@@ -131,8 +133,13 @@
         android:layout_width="85dp"
         android:layout_height="34dp"
         android:text="Pending"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="437dp" />
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.778" />
 
     <ImageButton
         android:id="@+id/imageButton10"
@@ -151,8 +158,13 @@
         android:layout_width="85dp"
         android:layout_height="34dp"
         android:text="Paid"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="367dp" />
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.643" />
 
     <ImageButton
         android:id="@+id/imageButton9"
@@ -160,10 +172,10 @@
         android:layout_height="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintHorizontal_bias="0.182"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35"
+        app:layout_constraintVertical_bias="0.347"
         app:srcCompat="@drawable/sqrdash" />
 
     <TextView
@@ -171,27 +183,25 @@
         android:layout_width="85dp"
         android:layout_height="34dp"
         android:text="Inompleted Tasks"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="212dp" />
-
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="85dp"
-        android:layout_height="34dp"
-        android:text="Completed Tasks"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="107dp" />
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.355" />
 
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="109dp"
         android:layout_height="70dp"
+        android:background="@color/fontPink"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintHorizontal_bias="0.182"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.159"
+        app:layout_constraintVertical_bias="0.17"
         app:srcCompat="@drawable/sqrdash" />
 
     <TextView
@@ -200,31 +210,52 @@
         android:layout_height="wrap_content"
         android:text="Tasks and Subtasks"
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="54dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.085" />
 
     <TextView
         android:id="@+id/textView20"
         android:layout_width="85dp"
         android:layout_height="34dp"
+        android:background="@color/justWhite"
         android:text="Completed Tasks"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="107dp" />
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.189" />
 
     <TextView
         android:id="@+id/textView26"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="77dp"
+        android:layout_height="36dp"
+        android:background="@color/justWhite"
         android:text="Invited Guests"
-        tools:layout_editor_absoluteX="241dp"
-        tools:layout_editor_absoluteY="110dp" />
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.757"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.185" />
 
     <TextView
         android:id="@+id/textView27"
         android:layout_width="77dp"
         android:layout_height="43dp"
         android:text="Uninvited Guests"
-        tools:layout_editor_absoluteX="253dp"
-        tools:layout_editor_absoluteY="203dp" />
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.748"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.36" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
