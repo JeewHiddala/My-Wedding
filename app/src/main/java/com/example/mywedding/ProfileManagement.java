@@ -10,9 +10,12 @@ import android.provider.ContactsContract;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class ProfileManagement extends AppCompatActivity {
+    Button btn_update;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,34 +24,26 @@ public class ProfileManagement extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.app_name_profileManagement);
+
+        btn_update = findViewById(R.id.btn_update);
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_save,menu);
-        return true;
-    }
+    protected void onResume() {
+        super.onResume();
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
+        btn_update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =  new Intent(ProfileManagement.this,Settings.class);
+                startActivity(intent);
 
-        if(id == R.id.done){
-            Intent intent = new Intent(ProfileManagement.this,Settings.class);
-            startActivity(intent);
-
-            Context context = getApplicationContext();
-            CharSequence message = "Profile Details Updated";
-            int duration = Toast.LENGTH_SHORT;
-            Toast toast = Toast.makeText(context, message, duration);
-            toast.show();
-        }
-
-        if(id == android.R.id.home){
-            Intent intent = new Intent(ProfileManagement.this, Settings.class);
-            startActivity(intent);
-        }
-        return true;
+                Context context = getApplicationContext();
+                int duration = Toast.LENGTH_SHORT;
+                CharSequence message = "Updated Successfully";
+                Toast toast = Toast.makeText(context,message, duration);
+                toast.show();
+            }
+        });
     }
 }

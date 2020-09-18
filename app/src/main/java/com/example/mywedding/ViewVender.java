@@ -18,6 +18,9 @@ public class ViewVender extends AppCompatActivity {
 
         //Back Button in android
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        //App bar name
+        getSupportActionBar().setTitle(R.string.appbar_name_view_vendor);
     }
 
     @Override

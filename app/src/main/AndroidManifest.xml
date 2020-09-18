@@ -15,8 +15,10 @@
         <activity
             android:name=".TaskList"
             android:parentActivityName=".TaskMenu" />
-        <activity android:name=".Settings"></activity>
-        <activity android:name=".ProfileManagement" />
+        <activity android:name=".Settings"
+            android:parentActivityName=".Home"></activity>
+        <activity android:name=".ProfileManagement"
+            android:parentActivityName=".Settings"/>
         <activity android:name=".Home"></activity>
         <activity android:name=".ViewBudget"/>
         <activity android:name=".EditBudget"
