@@ -51,5 +51,15 @@
     <string name="about_line3">Team Droid(G5.10)</string>
     <string name="budget_menu_des">See all the budget plans here!</string>
     <string name="budget_menu_des2">See all the paid budgets here!</string>
+    <string name="vendor_menu_jh1">All Vendors are waiting for You!</string>
+    <string name="vendor_menu_jh2">See all Completed task here!</string>
+    <string name="appbar_name_vendor">Vendor</string>
+    <string name="appbar_name_vendor_list">Vendor List</string>
+    <string name="appbar_name_add_vendor">Add Vendor</string>
+    <string name="appbar_name_paid_vendor_list">Paid Vendor List</string>
+    <string name="appbar_name_view_vendor">View Vendor</string>
+    <string name="appbar_name_edit_vendor">Edit Vendor</string>
     <string name="guestpage1">Guests</string>
+    <string name="radio_Bride">Bride</string>
+    <string name="radio_Groom">Groom</string>
 </resources>
