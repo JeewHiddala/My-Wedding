@@ -60,4 +60,6 @@
     <string name="appbar_name_view_vendor">View Vendor</string>
     <string name="appbar_name_edit_vendor">Edit Vendor</string>
     <string name="guestpage1">Guests</string>
+    <string name="radio_Bride">Bride</string>
+    <string name="radio_Groom">Groom</string>
 </resources>
