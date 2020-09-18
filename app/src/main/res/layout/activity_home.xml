@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="220dp"
         android:background="@color/navPink"
-        android:divider="@drawable/welcome">
+        android:divider="@drawable/welcomepage">
 
 
         <ImageButton
@@ -118,6 +118,7 @@
             android:layout_width="130dp"
             android:layout_height="match_parent"
             android:background="@color/bgPalePink"
+            android:onClick="Dashboard"
             app:srcCompat="@drawable/icons8_dashboard_96" />
 
         <TextView

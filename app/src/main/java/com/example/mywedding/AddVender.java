@@ -15,28 +15,32 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class AddBudget extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    Spinner categorySpinner;
+public class AddVender extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_budget);
+        setContentView(R.layout.activity_add_vender);
 
+        //Back Button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle(R.string.app_name_addBudget);
 
-        categorySpinner = findViewById(R.id.category);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.budget_categories,android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        categorySpinner.setAdapter(adapter);
-        categorySpinner.setOnItemSelectedListener(this);
+        //spinner
+        Spinner categoryadd = (Spinner)findViewById(R.id.categoryjh);
+
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(AddVender.this,android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.names));
+        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        categoryadd.setAdapter(myAdapter);
+        categoryadd.setOnItemSelectedListener(this);
+
+        //App bar name
+        getSupportActionBar().setTitle(R.string.appbar_name_add_vendor);
     }
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         String text = adapterView.getItemAtPosition(i).toString();
-        Toast.makeText(adapterView.getContext(), text, Toast.LENGTH_SHORT).show();
+        Toast.makeText(adapterView.getContext(),text,Toast.LENGTH_SHORT).show();//Toast
     }
 
     @Override
@@ -44,32 +48,36 @@ public class AddBudget extends AppCompatActivity implements AdapterView.OnItemSe
 
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
+        MenuInflater inflater=getMenuInflater();
         inflater.inflate(R.menu.menu_save,menu);
         return true;
     }
 
+    //Button  action on AppBar
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if(id == R.id.done){
-            Intent intent = new Intent(AddBudget.this,BudgetList.class);
-            startActivity(intent);
+        if(id == R.id.done) {
+            Intent intentadd = new Intent(AddVender.this, VenderList.class);
+            startActivity(intentadd);
 
+            //Toast
             Context context = getApplicationContext();
-            CharSequence message = "Budget Added";
+            CharSequence message = "Details added Successfully";
             int duration = Toast.LENGTH_SHORT;
             Toast toast = Toast.makeText(context, message, duration);
             toast.show();
         }
 
         if(id == android.R.id.home){
-            Intent intent = new Intent(AddBudget.this,BudgetList.class);
+            Intent intent = new Intent(AddVender.this, VenderList.class);
             startActivity(intent);
         }
-        return true;
+
+       return super.onOptionsItemSelected(item);
     }
 }

@@ -9,15 +9,15 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-public class ViewBudget extends AppCompatActivity {
+public class viewGuest extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_budget);
+        setContentView(R.layout.activity_view_guest);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle(R.string.app_name_viewBudget);
+        getSupportActionBar().setTitle(R.string.viewguest);
     }
 
     @Override
@@ -27,18 +27,20 @@ public class ViewBudget extends AppCompatActivity {
         return true;
     }
 
-    public boolean onOptionsItemSelected(@NonNull MenuItem item){
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
         if (id == R.id.edit){
-            Intent intent = new Intent(ViewBudget.this,EditBudget.class);
+            Intent intent = new Intent(viewGuest.this,editGuest.class);
             startActivity(intent);
         }
 
+
         if(id == android.R.id.home){
-            Intent intent = new Intent(ViewBudget.this,BudgetList.class);
+            Intent intent = new Intent(viewGuest.this,allGuests.class);
             startActivity(intent);
         }
+
         return true;
     }
 }

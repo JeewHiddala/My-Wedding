@@ -16,6 +16,7 @@ public class Settings extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(R.string.app_name_settings);
 
         btn_profile = findViewById(R.id.btn_profileManagement);
     }

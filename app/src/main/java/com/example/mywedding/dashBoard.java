@@ -4,14 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class PaidList extends AppCompatActivity {
+public class dashBoard extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_paid_list);
+        setContentView(R.layout.activity_dash_board);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle(R.string.app_name_paidList);
+        getSupportActionBar().setTitle(R.string.dboard);
     }
 }

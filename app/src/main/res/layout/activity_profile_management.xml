@@ -151,7 +151,7 @@
         app:layout_constraintVertical_bias="0.601" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/etDate"
         android:layout_width="290dp"
         android:layout_height="38dp"
         android:background="@drawable/input_field"
@@ -273,5 +273,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.681" />
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="88dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/register_btn"
+        android:text="Update"
+        android:textAllCaps="false"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
