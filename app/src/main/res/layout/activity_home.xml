@@ -26,7 +26,7 @@
             android:layout_marginBottom="500dp"
             android:layout_weight="1"
             android:backgroundTint="@color/navPink"
-            app:srcCompat="@drawable/icons8_settings_64__1_" />
+            app:srcCompat="@drawable/icons8_gear_64" />
 
         <LinearLayout
             android:layout_width="240dp"
@@ -115,10 +115,10 @@
 
         <ImageButton
             android:id="@+id/dashboardBtn1"
-            android:layout_width="130dp"
+            android:layout_width="117dp"
             android:layout_height="match_parent"
             android:background="@color/bgPalePink"
-            app:srcCompat="@drawable/icons8_dashboard_96" />
+            app:srcCompat="@drawable/icons8_prototype_80" />
 
         <TextView
             android:id="@+id/dashboard1"
@@ -153,7 +153,7 @@
             android:layout_height="102dp"
             android:layout_weight="1"
             android:background="@color/bgPalePink"
-            app:srcCompat="@drawable/icons8_tasklist_96" />
+            app:srcCompat="@drawable/icons8_survey_80" />
 
         <TextView
             android:id="@+id/task1"
@@ -190,7 +190,7 @@
             android:layout_height="102dp"
             android:layout_weight="1"
             android:background="@color/bgPalePink"
-            app:srcCompat="@drawable/icons8_list_96" />
+            app:srcCompat="@drawable/icons8_people_80" />
 
         <TextView
             android:id="@+id/guests1"
@@ -240,7 +240,7 @@
             android:layout_height="102dp"
             android:layout_weight="1"
             android:background="@color/bgPalePink"
-            app:srcCompat="@drawable/icons8_money_bag_96" />
+            app:srcCompat="@drawable/icons8_debt_80" />
     </LinearLayout>
 
     <LinearLayout
@@ -276,7 +276,7 @@
             android:layout_height="102dp"
             android:layout_weight="1"
             android:background="@color/bgPalePink"
-            app:srcCompat="@drawable/icons8_mobile_shopping_96" />
+            app:srcCompat="@drawable/icons8_small_business_80" />
     </LinearLayout>
 
 

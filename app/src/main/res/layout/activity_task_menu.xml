@@ -26,7 +26,7 @@
             android:layout_height="102dp"
             android:layout_weight="1"
             android:background="@color/bgPalePink"
-            app:srcCompat="@drawable/icons8_checklist_96" />
+            app:srcCompat="@drawable/ic_baseline_playlist_add_check_24" />
 
         <TextView
             android:id="@+id/Ctasklist1"
@@ -37,6 +37,7 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="-100dp"
             android:layout_weight="1"
+            android:fontFamily="@font/source_sans_pro_semibold"
             android:text="Complete Task List"
             android:textAlignment="center"
             android:textSize="24sp"
@@ -63,7 +64,7 @@
             android:layout_height="102dp"
             android:layout_weight="1"
             android:background="@color/bgPalePink"
-            app:srcCompat="@drawable/icons8_addlist_96" />
+            app:srcCompat="@drawable/ic_baseline_list_alt_24" />
 
         <TextView
             android:id="@+id/taskList1"
@@ -74,10 +75,38 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="-100dp"
             android:layout_weight="1"
+            android:fontFamily="@font/source_sans_pro_semibold"
             android:text="Task List"
             android:textAlignment="center"
             android:textSize="24sp"
             android:textStyle="normal|bold" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        android:text="@string/txtAllTask"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.646" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="190dp"
+        android:layout_height="53dp"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        android:text="@string/txtCompleteTasks"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

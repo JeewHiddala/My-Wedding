@@ -45,4 +45,6 @@
     <string name="add_payment_details">Payments Made</string>
     <string name="add_payment_details_amount">Paid Amount</string>
     <string name="add_payment_details_date">Last Payment Date</string>
+    <string name="txtAllTask">See all the tasks here.</string>
+    <string name="txtCompleteTasks">See all the completed tasks.</string>
 </resources>
