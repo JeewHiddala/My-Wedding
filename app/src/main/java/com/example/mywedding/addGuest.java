@@ -28,7 +28,7 @@ public class addGuest extends AppCompatActivity {
         getSupportActionBar().setTitle(R.string.guestadd);
 
 
-        aSwitch = (Switch) findViewById(R.id.switch1);
+     /*  aSwitch = (Switch) findViewById(R.id.switch1);
         aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -38,7 +38,7 @@ public class addGuest extends AppCompatActivity {
                     Toast.makeText(getBaseContext(),"Not Sent",Toast.LENGTH_SHORT).show();
                 }
             }
-        });
+        });*/
 
     }
 

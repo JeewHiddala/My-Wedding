@@ -25,6 +25,7 @@ public class editGuest extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.editguest);
 
+        /*
         aSwitch = (Switch) findViewById(R.id.switch1);
         aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -36,6 +37,8 @@ public class editGuest extends AppCompatActivity {
                 }
             }
         });
+
+         */
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
