@@ -1,5 +1,6 @@
 package com.example.mywedding;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -28,33 +29,32 @@ import android.view.MenuInflater;
 import android.content.Intent;
 import androidx.annotation.NonNull;
 
-public class AddTask extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
+public class EditTask extends AppCompatActivity implements AdapterView.OnItemSelectedListener , View.OnClickListener {
 
-    ImageButton btnDatePicker, btnSubAdd;
+    ImageButton btnDatePicker2, btnSubEdit;
     EditText txtDate;
     private int mYear, mMonth, mDay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_task);
+        setContentView(R.layout.activity_edit_task);
 
-        btnSubAdd = findViewById(R.id.addSubButton);
-
+        //sub task edit button
+        //btnSubEdit = findViewById(R.id.subbutton1);
 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle(R.string.header_add_task_name);
+        getSupportActionBar().setTitle(R.string.header_edittask_name);
 
         // Spinner element
-        Spinner spinner = (Spinner) findViewById(R.id.editTaskCategory);
+        Spinner spinner5 = (Spinner) findViewById(R.id.editTaskCategory);
 
         // Spinner click listener
-        spinner.setOnItemSelectedListener(this);
+        spinner5.setOnItemSelectedListener(this);
 
         // Spinner Drop down elements
         List<String> categories = new ArrayList<String>();
-        categories.add("Select");
         categories.add("Clothing and Accessories");
         categories.add("Decorations");
         categories.add("Health and Beauty");
@@ -68,30 +68,35 @@ public class AddTask extends AppCompatActivity implements AdapterView.OnItemSele
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         // attaching data adapter to spinner
-        spinner.setAdapter(dataAdapter);
+        spinner5.setAdapter(dataAdapter);
 
         //date picker
-        btnDatePicker=(ImageButton)findViewById(R.id.imageButton2);
+        btnDatePicker2=(ImageButton)findViewById(R.id.dateButton2);
         txtDate=(EditText)findViewById(R.id.editDate);
 
-        btnDatePicker.setOnClickListener(this);
+        btnDatePicker2.setOnClickListener(this);
+
 
     }
 
-    @Override
+
+  /*  @Override
     protected void onResume() {
         super.onResume();
-
-        btnSubAdd.setOnClickListener(new View.OnClickListener() {
+        btnSubEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AddTask.this, PopUp1.class);
+                Intent intent = new Intent(EditTask.this, ViewPopUp.class);
                 startActivity(intent);
             }
         });
-    }
 
-    @Override
+
+
+    } */
+
+
+        @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_save,menu);
@@ -103,18 +108,18 @@ public class AddTask extends AppCompatActivity implements AdapterView.OnItemSele
         int id = item.getItemId();
 
         if(id == R.id.done){
-            Intent intent = new Intent(AddTask.this,TaskList.class);
+            Intent intent = new Intent(EditTask.this,ViewTask.class);
             startActivity(intent);
 
             Context context = getApplicationContext();
-            CharSequence message = "Task Added";
+            CharSequence message = "Save Changes";
             int duration = Toast.LENGTH_SHORT;
             Toast toast = Toast.makeText(context, message, duration);
             toast.show();
         }
 
         if(id == android.R.id.home){
-            Intent intent = new Intent(AddTask.this, TaskList.class);
+            Intent intent = new Intent(EditTask.this, ViewTask.class);
             startActivity(intent);
         }
         return true;
@@ -123,25 +128,30 @@ public class AddTask extends AppCompatActivity implements AdapterView.OnItemSele
     @Override
     public void onClick(View v) {
 
-        // Get Current Date
-        final Calendar c = Calendar.getInstance();
-        mYear = c.get(Calendar.YEAR);
-        mMonth = c.get(Calendar.MONTH);
-        mDay = c.get(Calendar.DAY_OF_MONTH);
+
+                // Get Current Date
+                final Calendar c = Calendar.getInstance();
+                mYear = c.get(Calendar.YEAR);
+                mMonth = c.get(Calendar.MONTH);
+                mDay = c.get(Calendar.DAY_OF_MONTH);
 
 
-        DatePickerDialog datePickerDialog = new DatePickerDialog(this,
-                new DatePickerDialog.OnDateSetListener() {
+                DatePickerDialog datePickerDialog = new DatePickerDialog(this,
+                        new DatePickerDialog.OnDateSetListener() {
 
-                    @Override
-                    public void onDateSet(DatePicker view, int year,
-                                          int monthOfYear, int dayOfMonth) {
+                            @Override
+                            public void onDateSet(DatePicker view, int year,
+                                                  int monthOfYear, int dayOfMonth) {
 
-                        txtDate.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+                                txtDate.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
 
-                    }
-                }, mYear, mMonth, mDay);
-        datePickerDialog.show();
+                            }
+                        }, mYear, mMonth, mDay);
+                datePickerDialog.show();
+
+
+
+
     }
 
     @Override
@@ -155,5 +165,9 @@ public class AddTask extends AppCompatActivity implements AdapterView.OnItemSele
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub
     }
+
+
+
+
 
 }

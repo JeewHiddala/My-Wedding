@@ -30,6 +30,14 @@
     </string-array>
     <string name="sub_menu_btn_all">Budget List</string>
     <string name="sub_menu_btn_paid">Paid List</string>
+    <string name="header_viewtask_name">View Task</string>
+    <string name="header_edittask_name">Edit Task</string>
+    <string name="header_taskmenu_name">Tasks</string>
+    <string name="header_tasklist_name">Task List</string>
+    <string name="header_popup1_name">Add Sub Task</string>
+    <string name="header_popup2_name">Edit Sub Task</string>
+    <string name="header_complete_tasklist_name">Complete Task List</string>
+    <string name="header_add_task_name">Add Task</string>
     <string name="add_budget_details">Details of the Budget</string>
     <string name="add_budget_details_name">Name</string>
     <string name="add_budget_details_amount">Amount</string>
@@ -42,10 +50,19 @@
         <item>Jewellery</item>
         <item>Music and Entertainment</item>
     </string-array>
+    <string-array name="task_categories">
+        <item>Refreshments</item>
+        <item>Flowers and Decors</item>
+        <item>Reception</item>
+        <item>Jewellery</item>
+        <item>Music and Entertainment</item>
+    </string-array>
     <string name="add_budget_details_balance">Balance Payable</string>
     <string name="add_payment_details">Payments Made</string>
     <string name="add_payment_details_amount">Paid Amount</string>
     <string name="add_payment_details_date">Last Payment Date</string>
+    <string name="txtAllTask">See all the tasks here.</string>
+    <string name="txtCompleteTasks">See all the completed tasks.</string>
     <string name="about">Copyright @ My Wedding</string>
     <string name="about_line2">The Wedding Planner All rights reserved</string>
     <string name="about_line3">Team Droid(G5.10)</string>

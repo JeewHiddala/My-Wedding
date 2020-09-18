@@ -27,68 +27,38 @@ import android.content.Context;
 import android.view.MenuInflater;
 import android.content.Intent;
 import androidx.annotation.NonNull;
+import androidx.drawerlayout.widget.DrawerLayout;
 
-public class AddTask extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
+import android.util.DisplayMetrics;
 
-    ImageButton btnDatePicker, btnSubAdd;
+
+public class ViewPopUp extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
+
+    ImageButton btnDatePicker4;
     EditText txtDate;
     private int mYear, mMonth, mDay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_task);
-
-        btnSubAdd = findViewById(R.id.addSubButton);
-
-
+        setContentView(R.layout.activity_view_pop_up);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle(R.string.header_add_task_name);
+        getSupportActionBar().setTitle(R.string.header_popup2_name);
 
-        // Spinner element
-        Spinner spinner = (Spinner) findViewById(R.id.editTaskCategory);
+        DisplayMetrics dm = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(dm);
 
-        // Spinner click listener
-        spinner.setOnItemSelectedListener(this);
+        int width = dm.widthPixels;
+        int height = dm.heightPixels;
 
-        // Spinner Drop down elements
-        List<String> categories = new ArrayList<String>();
-        categories.add("Select");
-        categories.add("Clothing and Accessories");
-        categories.add("Decorations");
-        categories.add("Health and Beauty");
-        categories.add("Food and Beverages");
-        categories.add("Transport");
-
-        // Creating adapter for spinner
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
-
-        // Drop down layout style - list view with radio button
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        // attaching data adapter to spinner
-        spinner.setAdapter(dataAdapter);
+        getWindow().setLayout((int)(width*.9), (int)(height*.7));
 
         //date picker
-        btnDatePicker=(ImageButton)findViewById(R.id.imageButton2);
+        btnDatePicker4=(ImageButton)findViewById(R.id.imageButton3);
         txtDate=(EditText)findViewById(R.id.editDate);
 
-        btnDatePicker.setOnClickListener(this);
-
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        btnSubAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(AddTask.this, PopUp1.class);
-                startActivity(intent);
-            }
-        });
+        btnDatePicker4.setOnClickListener(this);
     }
 
     @Override
@@ -103,18 +73,18 @@ public class AddTask extends AppCompatActivity implements AdapterView.OnItemSele
         int id = item.getItemId();
 
         if(id == R.id.done){
-            Intent intent = new Intent(AddTask.this,TaskList.class);
+            Intent intent = new Intent(ViewPopUp.this,EditTask.class);
             startActivity(intent);
 
             Context context = getApplicationContext();
-            CharSequence message = "Task Added";
+            CharSequence message = "Save Changes";
             int duration = Toast.LENGTH_SHORT;
             Toast toast = Toast.makeText(context, message, duration);
             toast.show();
         }
 
         if(id == android.R.id.home){
-            Intent intent = new Intent(AddTask.this, TaskList.class);
+            Intent intent = new Intent(ViewPopUp.this, EditTask.class);
             startActivity(intent);
         }
         return true;
@@ -155,5 +125,8 @@ public class AddTask extends AppCompatActivity implements AdapterView.OnItemSele
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub
     }
+
+
+
 
 }
