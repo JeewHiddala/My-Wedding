@@ -12,15 +12,30 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.example.mywedding.Database.DBHelper;
+import com.example.mywedding.Models.BudgetModel;
 
 import java.util.Calendar;
 
-public class EditBudget extends AppCompatActivity {
-    EditText et_LastPayment;
+public class EditBudget extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    EditText et_LastPayment, et_name, et_amount, et_notes, et_paid;
+    Spinner spin_category;
     DatePickerDialog datePickerDialog;
+    DBHelper dbHelper;
+    Context context;
+    String selectedCategory, selectedRadio, category;
+    RadioGroup radioGroup;
+    RadioButton radioButton, radioButton1, radioButton2;
+    int selectedId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +45,67 @@ public class EditBudget extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.app_name_editBudget);
 
-        et_LastPayment = findViewById(R.id.et_LastPaymentDate);
+        context = this;
+        dbHelper = new DBHelper(context);
 
+        //data from the intent extra
+        final String id = getIntent().getStringExtra("ID_EXTRA");
+        System.out.println(id);
+        BudgetModel budgetModel = dbHelper.getSingleBudget(Integer.parseInt(id));
+
+        spin_category = findViewById(R.id.spCategory);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.budget_categories,android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        spin_category.setAdapter(adapter);
+
+        //fetching value of the spinner from the database
+        selectedCategory = budgetModel.getCategory();
+        System.out.println(selectedCategory);
+
+        if(selectedCategory != null){
+            int spinnerPosition = adapter.getPosition(selectedCategory);
+            System.out.println(spinnerPosition);
+            spin_category.setSelection(spinnerPosition);
+        }
+
+        spin_category.setOnItemSelectedListener(this);
+
+
+        et_name = findViewById(R.id.txt_BudgetName);
+        et_amount = findViewById(R.id.txt_BudgetAmount);
+        et_notes = findViewById(R.id.txt_specialNote);
+        et_paid = findViewById(R.id.txt_paidAmount);
+        et_LastPayment = findViewById(R.id.txt_LastPaymentDate);
+        radioGroup = findViewById(R.id.radStatusEdit);
+        radioButton1 = findViewById(R.id.radPendingEdit);
+        radioButton2 = findViewById(R.id.radPaidEdit);
+
+        selectedRadio = budgetModel.getStatus();
+        System.out.println(selectedCategory);
+
+        if(selectedRadio.equals("Pending")){
+            radioButton1.setChecked(true);
+        } else {
+            radioButton2.setChecked(true);
+        }
+
+
+//        radioButton = findViewById(Integer.parseInt(selectedRadio));
+
+
+//        selectedId = radioGroup.getCheckedRadioButtonId();
+//        radioButton = findViewById(selectedId);
+
+
+        //printing values to the view
+        et_name.setText(budgetModel.getBudgetName());
+        et_amount.setText(String.valueOf(budgetModel.getAmount()));
+        et_notes.setText(budgetModel.getNotes());
+        et_paid.setText(String.valueOf(budgetModel.getPaidAmount()));
+        et_LastPayment.setText(budgetModel.getPaidDate());
+
+        //Implementing Date Picker
         et_LastPayment.setInputType(InputType.TYPE_NULL);
         et_LastPayment.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,24 +136,68 @@ public class EditBudget extends AppCompatActivity {
     }
 
     @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        //showing the selected item from the spinner as a toast
+        category = adapterView.getItemAtPosition(i).toString();
+        Toast.makeText(adapterView.getContext(), category, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
+        int itemIdNav = item.getItemId();
 
-        if(id == R.id.done){
-            Intent intent = new Intent(EditBudget.this,ViewBudget.class);
-            startActivity(intent);
+        if(itemIdNav == R.id.done){
 
-            Context context = getApplicationContext();
-            CharSequence message = "Changes Saved";
-            int duration = Toast.LENGTH_SHORT;
-            Toast toast = Toast.makeText(context, message, duration);
-            toast.show();
+            //getting selected radio button from the radio group
+            selectedId = radioGroup.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId);
+
+            String id = getIntent().getStringExtra("ID_EXTRA");
+
+            String name = et_name.getText().toString();
+            Double amount = Double.parseDouble(et_amount.getText().toString());
+            String notes = et_notes.getText().toString();
+            Double paid = Double.parseDouble(et_paid.getText().toString());
+            String lastPaid = et_LastPayment.getText().toString();
+            String status = radioButton.getText().toString();
+
+            BudgetModel bModel = new BudgetModel(Integer.parseInt(id), name, amount, notes, category, paid, lastPaid, status);
+
+            long val = dbHelper.updateBudget(bModel);
+            System.out.println(val);
+
+            if(val>0){
+                Toast.makeText(context, "Changes Saved", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, BudgetList.class);
+                startActivity(intent);
+            } else {
+                Toast.makeText(context, "Something went wrong", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, EditBudget.class);
+                startActivity(intent);
+            }
+
+//            startActivity(new Intent(EditBudget.this, BudgetList.class));
+//            Intent intent = new Intent(EditBudget.this,ViewBudget.class);
+//            startActivity(intent);
+//
+//            Context context = getApplicationContext();
+//            CharSequence message = "Changes Saved";
+//            int duration = Toast.LENGTH_SHORT;
+//            Toast toast = Toast.makeText(context, message, duration);
+//            toast.show();
         }
 
-        if(id == android.R.id.home){
-            Intent intent = new Intent(EditBudget.this,ViewBudget.class);
+        if(itemIdNav == android.R.id.home){
+            Intent intent = new Intent(EditBudget.this,BudgetList.class);
             startActivity(intent);
         }
         return true;
+    }
+
+
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
     }
 }

@@ -313,11 +313,11 @@
 
 
     <RadioGroup
-        android:id="@+id/radioGroup1"
+        android:id="@+id/radStatus"
         android:layout_width="319dp"
         android:layout_height="34dp"
         android:background="@drawable/radio_group"
-        android:checkedButton="@+id/bride1"
+        android:checkedButton="@+id/radPending"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -327,7 +327,7 @@
         app:layout_constraintVertical_bias="0.314">
 
         <RadioButton
-            android:id="@+id/bride1"
+            android:id="@+id/radPending"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="1dp"
@@ -341,7 +341,7 @@
             android:textColor="@color/justBlack" />
 
         <RadioButton
-            android:id="@+id/groom1"
+            android:id="@+id/radPaid"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="1dp"

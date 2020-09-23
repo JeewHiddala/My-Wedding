@@ -70,6 +70,48 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
         app:layout_constraintVertical_bias="0.011" />
 
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="319dp"
+        android:layout_height="34dp"
+        android:background="@drawable/radio_group"
+        android:checkedButton="@+id/groom2"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.678">
+
+        <RadioButton
+            android:id="@+id/bride2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/btn_bride"
+            android:textColor="@color/justBlack" />
+
+        <RadioButton
+            android:id="@+id/groom2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/btn_groom"
+            android:textColor="@color/justBlack" />
+    </RadioGroup>
+
     <EditText
         android:id="@+id/editTextNumber2"
         android:layout_width="290dp"
@@ -150,6 +192,49 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.601" />
 
+    <RadioGroup
+        android:id="@+id/radStatus"
+        android:layout_width="319dp"
+        android:layout_height="34dp"
+        android:background="@drawable/radio_group"
+        android:checkedButton="@+id/radPending"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.314">
+
+        <RadioButton
+            android:id="@+id/radPending"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/btn_bride"
+            android:textColor="@color/justBlack" />
+
+        <RadioButton
+            android:id="@+id/radPaid"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/btn_groom"
+            android:textColor="@color/justBlack" />
+    </RadioGroup>
+
     <EditText
         android:id="@+id/etDate"
         android:layout_width="290dp"
@@ -213,66 +298,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.744" />
-
-    <Button
-        android:id="@+id/groom1"
-        android:layout_width="89dp"
-        android:layout_height="34dp"
-        android:background="@drawable/btn_groom_bride"
-        android:text="@string/btn_groom"
-        android:textAllCaps="false"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.378"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.318" />
-
-    <Button
-        android:id="@+id/bride1"
-        android:layout_width="89dp"
-        android:layout_height="34dp"
-        android:background="@drawable/btn_groom_bride"
-        android:text="@string/btn_bride"
-        android:textAllCaps="false"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.655"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.319" />
-
-    <Button
-        android:id="@+id/groom2"
-        android:layout_width="89dp"
-        android:layout_height="34dp"
-        android:background="@drawable/btn_groom_bride"
-        android:text="@string/btn_groom"
-        android:textAllCaps="false"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.378"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.683" />
-
-    <Button
-        android:id="@+id/bride2"
-        android:layout_width="89dp"
-        android:layout_height="34dp"
-        android:background="@drawable/btn_groom_bride"
-        android:text="@string/btn_bride"
-        android:textAllCaps="false"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.655"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.681" />
 
     <Button
         android:id="@+id/btn_update"

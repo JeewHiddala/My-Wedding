@@ -41,6 +41,7 @@
         <item>Reception</item>
         <item>Jewellery</item>
         <item>Music and Entertainment</item>
+        <item>Other</item>
     </string-array>
     <string name="add_budget_details_balance">Balance Payable</string>
     <string name="add_payment_details">Payments Made</string>
@@ -83,5 +84,7 @@
     <string name="cap2pg1">See all the invitees here!</string>
     <string name="uninvitedpg1">Uninvited Guests</string>
     <string name="univitedsubcappg1">See all the pending invitations here!</string>
+    <string name="btn_Pending">Pending</string>
+    <string name="btn_paid">Paid</string>
 
 </resources>
