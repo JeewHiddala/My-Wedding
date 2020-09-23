@@ -7,6 +7,7 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -25,13 +26,13 @@ import com.example.mywedding.Database.DBHelper;
 import java.util.Calendar;
 
 public class AddBudget extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    Spinner categorySpinner;
-    EditText etName, etAmount, etNotes, etPaid, etPayDate;
-    String category;
-    DatePickerDialog datePickerDialog;
-    RadioGroup radioGroup;
-    RadioButton radioButton;
-    int selectedId;
+    private Spinner categorySpinner;
+    private EditText etName, etAmount, etNotes, etPaid, etPayDate;
+    private String category;
+    private DatePickerDialog datePickerDialog;
+    private RadioGroup radioGroup;
+    private RadioButton radioButton;
+    private int selectedId;
 
 
     @Override
@@ -39,6 +40,7 @@ public class AddBudget extends AppCompatActivity implements AdapterView.OnItemSe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_budget);
 
+        //app bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.app_name_addBudget);
 
@@ -77,7 +79,7 @@ public class AddBudget extends AppCompatActivity implements AdapterView.OnItemSe
             }
         });
 
-        radioGroup = findViewById(R.id.radStatus);
+        radioGroup = findViewById(R.id.radUserStatus);
     }
 
     @Override
@@ -109,18 +111,27 @@ public class AddBudget extends AppCompatActivity implements AdapterView.OnItemSe
             selectedId = radioGroup.getCheckedRadioButtonId();
             radioButton = findViewById(selectedId);
 
-            DBHelper dbHelper = new DBHelper(this);
+            //checking whether budget amount and name is empty
+            if(TextUtils.isEmpty(etAmount.getText())){
+                Toast.makeText(this, "Please enter budget amount", Toast.LENGTH_SHORT).show();
+                etAmount.setError("Budget Amount is required!");
+            } else if(TextUtils.isEmpty(etName.getText())){
+                Toast.makeText(this, "Please enter budget name", Toast.LENGTH_SHORT).show();
+                etAmount.setError("Budget Name is required!");
+            } else{
+                DBHelper dbHelper = new DBHelper(this);
 
-            long val = dbHelper.addBudget(etName.getText().toString(), etAmount.getText().toString(), etNotes.getText().toString(), category, etPaid.getText().toString(), etPayDate.getText().toString(), radioButton.getText().toString());
+                long val = dbHelper.addBudget(etName.getText().toString(), etAmount.getText().toString(), etNotes.getText().toString(), category, etPaid.getText().toString(), etPayDate.getText().toString(), radioButton.getText().toString());
 
-            if(val>0){
-                Toast.makeText(this, "Successfully Added", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(AddBudget.this,BudgetList.class);
-                startActivity(intent);
-            } else {
-                Toast.makeText(this, "Something went wrong", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(AddBudget.this,AddBudget.class);
-                startActivity(intent);
+                if (val > 0) {
+                    Toast.makeText(this, "Successfully Added", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(AddBudget.this, BudgetList.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(this, "Something went wrong", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(AddBudget.this, AddBudget.class);
+                    startActivity(intent);
+                }
             }
 
 //            Intent intent = new Intent(AddBudget.this,BudgetList.class);

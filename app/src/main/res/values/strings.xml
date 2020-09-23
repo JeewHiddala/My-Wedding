@@ -86,5 +86,6 @@
     <string name="univitedsubcappg1">See all the pending invitations here!</string>
     <string name="btn_Pending">Pending</string>
     <string name="btn_paid">Paid</string>
+    <string name="mainPage_btn">Proceed</string>
 
 </resources>

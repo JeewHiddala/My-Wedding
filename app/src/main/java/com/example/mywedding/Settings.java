@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class Settings extends AppCompatActivity {
-    Button btn_profile;
+    private Button btn_profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

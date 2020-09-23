@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.mywedding.Models.BudgetModel;
+import com.example.mywedding.Models.UserModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +21,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        //Creating budget table
         String SQL_CREATE_ENTRIES =
                 "CREATE TABLE " + BudgetMaster.Budget.TABLE_NAME + "(" +
                         BudgetMaster.Budget._ID + " INTEGER PRIMARY KEY," +
@@ -31,6 +33,22 @@ public class DBHelper extends SQLiteOpenHelper {
                         BudgetMaster.Budget.COLUMN_NAME_DATE + " TEXT," +
                         BudgetMaster.Budget.COLUMN_NAME_STATUS + " TEXT)";
         db.execSQL(SQL_CREATE_ENTRIES);
+
+        //Creating User table
+        String SQL_CREATE_ENTRIES2 =
+                "CREATE TABLE " + UserMaster.User.TABLE_NAME + "(" +
+                        UserMaster.User._ID + " INTEGER PRIMARY KEY," +
+                        UserMaster.User.COLUMN_NAME_USERNAME + " TEXT," +
+                        UserMaster.User.COLUMN_NAME_USEREMAIL + " TEXT," +
+                        UserMaster.User.COLUMN_NAME_USERCONTACT + " TEXT," +
+                        UserMaster.User.COLUMN_NAME_USERSTATUS + " TEXT," +
+                        UserMaster.User.COLUMN_NAME_PARTNERNAME + " TEXT," +
+                        UserMaster.User.COLUMN_NAME_PARTNEREMAIL + " TEXT," +
+                        UserMaster.User.COLUMN_NAME_PARTNERCONTACT + " TEXT," +
+                        UserMaster.User.COLUMN_NAME_PARTNERSTATUS + " TEXT," +
+                        UserMaster.User.COLUMN_NAME_WEDDINGNAME + " TEXT," +
+                        UserMaster.User.COLUMN_NAME_WEDDINGDATE + " TEXT)";
+        db.execSQL(SQL_CREATE_ENTRIES2);
     }
 
     @Override
@@ -38,7 +56,104 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
-    //adding function
+    //adding function of the user
+    public long addUser(String uName, String uEmail, String uContact, String uStatus, String pName, String pEmail, String pContact, String pStatus, String wName, String wDate){
+        SQLiteDatabase db = getWritableDatabase();
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(UserMaster.User.COLUMN_NAME_USERNAME, uName);
+        contentValues.put(UserMaster.User.COLUMN_NAME_USEREMAIL, uEmail);
+        contentValues.put(UserMaster.User.COLUMN_NAME_USERCONTACT, uContact);
+        contentValues.put(UserMaster.User.COLUMN_NAME_USERSTATUS, uStatus);
+        contentValues.put(UserMaster.User.COLUMN_NAME_PARTNERNAME, pName);
+        contentValues.put(UserMaster.User.COLUMN_NAME_PARTNEREMAIL, pEmail);
+        contentValues.put(UserMaster.User.COLUMN_NAME_PARTNERCONTACT, pContact);
+        contentValues.put(UserMaster.User.COLUMN_NAME_PARTNERSTATUS, pStatus);
+        contentValues.put(UserMaster.User.COLUMN_NAME_WEDDINGNAME, wName);
+        contentValues.put(UserMaster.User.COLUMN_NAME_WEDDINGDATE, wDate);
+
+        long newRow = db.insert(UserMaster.User.TABLE_NAME, null,contentValues);
+        return newRow;
+    }
+
+    public UserModel getUserDetails(int id){
+        SQLiteDatabase db = getWritableDatabase();
+        Cursor cursor = db.query(UserMaster.User.TABLE_NAME, new String[]{
+                UserMaster.User._ID,
+                UserMaster.User.COLUMN_NAME_USERNAME,
+                UserMaster.User.COLUMN_NAME_USEREMAIL,
+                UserMaster.User.COLUMN_NAME_USERCONTACT,
+                UserMaster.User.COLUMN_NAME_USERSTATUS,
+                UserMaster.User.COLUMN_NAME_PARTNERNAME,
+                UserMaster.User.COLUMN_NAME_PARTNEREMAIL,
+                UserMaster.User.COLUMN_NAME_PARTNERCONTACT,
+                UserMaster.User.COLUMN_NAME_PARTNERSTATUS,
+                UserMaster.User.COLUMN_NAME_WEDDINGNAME,
+                UserMaster.User.COLUMN_NAME_WEDDINGDATE},
+                UserMaster.User._ID + " =1",
+                null,
+                null,
+                null,
+                null,
+                null);
+
+        UserModel user;
+
+        //checking the availability of data
+        if(cursor != null){
+            cursor.moveToFirst();
+
+            //creating user object
+            user = new UserModel(
+                    cursor.getInt(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getString(3),
+                    cursor.getString(4),
+                    cursor.getString(5),
+                    cursor.getString(6),
+                    cursor.getString(7),
+                    cursor.getString(8),
+                    cursor.getString(9),
+                    cursor.getString(10)
+
+            );
+            return user;
+        }
+        //closing the connection
+        db.close();
+
+        return null;
+    }
+
+    //function to update user details
+    public long updateUser(UserModel user){
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        //setting content values
+        values.put(UserMaster.User.COLUMN_NAME_USERNAME, user.getUserName());
+        values.put(UserMaster.User.COLUMN_NAME_USEREMAIL, user.getUserEmail());
+        values.put(UserMaster.User.COLUMN_NAME_USERCONTACT, user.getUserContact());
+        values.put(UserMaster.User.COLUMN_NAME_USERSTATUS, user.getUserStatus());
+        values.put(UserMaster.User.COLUMN_NAME_PARTNERNAME, user.getPartnerName());
+        values.put(UserMaster.User.COLUMN_NAME_PARTNEREMAIL, user.getPartnerEmail());
+        values.put(UserMaster.User.COLUMN_NAME_PARTNERCONTACT, user.getPartnerContact());
+        values.put(UserMaster.User.COLUMN_NAME_PARTNERSTATUS, user.getPartnerStatus());
+        values.put(UserMaster.User.COLUMN_NAME_WEDDINGNAME, user.getWeddingName());
+        values.put(UserMaster.User.COLUMN_NAME_WEDDINGDATE, user.getWeddingDate());
+
+        //update query
+        long status = db.update(UserMaster.User.TABLE_NAME, values, UserMaster.User._ID + " =?",
+                new String[]{String.valueOf(user.getId())});
+
+        //closing the connection
+        db.close();
+
+        return status;
+    }
+
+    //adding function of the budget
     public long addBudget(String name, String amount, String notes, String category, String paid, String date, String status){
         SQLiteDatabase db = getWritableDatabase();
 
@@ -55,7 +170,7 @@ public class DBHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
-    //count table records
+    //count budget table records
     public int countBudgets(){
         SQLiteDatabase db = getReadableDatabase();
 
@@ -97,14 +212,14 @@ public class DBHelper extends SQLiteOpenHelper {
         return budget;
     }
 
-    //Deleting item
+    //Deleting item from the budget table
     public void deleteBudget(int id){
         SQLiteDatabase db = getWritableDatabase();
         db.delete(BudgetMaster.Budget.TABLE_NAME, BudgetMaster.Budget._ID + " =?", new String[]{String.valueOf(id)});
         db.close();
     }
 
-    //selecting an item
+    //selecting an item from the budget
     public BudgetModel getSingleBudget(int id){
         SQLiteDatabase db = getWritableDatabase();
         Cursor cursor = db.query(BudgetMaster.Budget.TABLE_NAME, new String[]{
@@ -140,10 +255,14 @@ public class DBHelper extends SQLiteOpenHelper {
             );
             return budget;
         }
+
+        //closing the database connection
+        db.close();
+
         return null;
     }
 
-    //updating function
+    //updating function of the budget table
     public long updateBudget(BudgetModel model){
         SQLiteDatabase db = getWritableDatabase();
         ContentValues contentValues = new ContentValues();

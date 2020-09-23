@@ -30,7 +30,7 @@
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:textSize="14sp"
@@ -47,7 +47,7 @@
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:textSize="14sp"
@@ -64,7 +64,7 @@
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:textSize="14sp"
@@ -118,7 +118,7 @@
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.801" />
+        app:layout_constraintVertical_bias="0.829" />
 
     <TextView
         android:id="@+id/textView11"
@@ -221,11 +221,11 @@
 
 
     <RadioGroup
-        android:id="@+id/radStatus"
+        android:id="@+id/radUserStatus"
         android:layout_width="319dp"
         android:layout_height="34dp"
         android:background="@drawable/radio_group"
-        android:checkedButton="@+id/radPaid"
+        android:checkedButton="@+id/radUserGroom"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -235,7 +235,7 @@
         app:layout_constraintVertical_bias="0.92">
 
         <RadioButton
-            android:id="@+id/radPending"
+            android:id="@+id/radUserBride"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="1dp"
@@ -249,7 +249,7 @@
             android:textColor="@color/justBlack" />
 
         <RadioButton
-            android:id="@+id/radPaid"
+            android:id="@+id/radUserGroom"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="1dp"

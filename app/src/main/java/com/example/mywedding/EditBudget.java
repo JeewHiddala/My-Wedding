@@ -27,15 +27,15 @@ import com.example.mywedding.Models.BudgetModel;
 import java.util.Calendar;
 
 public class EditBudget extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    EditText et_LastPayment, et_name, et_amount, et_notes, et_paid;
-    Spinner spin_category;
-    DatePickerDialog datePickerDialog;
-    DBHelper dbHelper;
-    Context context;
-    String selectedCategory, selectedRadio, category;
-    RadioGroup radioGroup;
-    RadioButton radioButton, radioButton1, radioButton2;
-    int selectedId;
+    private EditText et_LastPayment, et_name, et_amount, et_notes, et_paid;
+    private Spinner spin_category;
+    private DatePickerDialog datePickerDialog;
+    private DBHelper dbHelper;
+    private Context context;
+    private String selectedCategory, selectedRadio, category;
+    private RadioGroup radioGroup;
+    private RadioButton radioButton, radioButton1, radioButton2;
+    private int selectedId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +71,6 @@ public class EditBudget extends AppCompatActivity implements AdapterView.OnItemS
 
         spin_category.setOnItemSelectedListener(this);
 
-
         et_name = findViewById(R.id.txt_BudgetName);
         et_amount = findViewById(R.id.txt_BudgetAmount);
         et_notes = findViewById(R.id.txt_specialNote);
@@ -82,28 +81,14 @@ public class EditBudget extends AppCompatActivity implements AdapterView.OnItemS
         radioButton2 = findViewById(R.id.radPaidEdit);
 
         selectedRadio = budgetModel.getStatus();
-        System.out.println(selectedCategory);
+//        System.out.println(selectedCategory);
 
+        //setting the selected radio button
         if(selectedRadio.equals("Pending")){
             radioButton1.setChecked(true);
         } else {
             radioButton2.setChecked(true);
         }
-
-
-//        radioButton = findViewById(Integer.parseInt(selectedRadio));
-
-
-//        selectedId = radioGroup.getCheckedRadioButtonId();
-//        radioButton = findViewById(selectedId);
-
-
-        //printing values to the view
-        et_name.setText(budgetModel.getBudgetName());
-        et_amount.setText(String.valueOf(budgetModel.getAmount()));
-        et_notes.setText(budgetModel.getNotes());
-        et_paid.setText(String.valueOf(budgetModel.getPaidAmount()));
-        et_LastPayment.setText(budgetModel.getPaidDate());
 
         //Implementing Date Picker
         et_LastPayment.setInputType(InputType.TYPE_NULL);
@@ -126,6 +111,13 @@ public class EditBudget extends AppCompatActivity implements AdapterView.OnItemS
                 datePickerDialog.show();
             }
         });
+
+        //printing values to the view
+        et_name.setText(budgetModel.getBudgetName());
+        et_amount.setText(String.valueOf(budgetModel.getAmount()));
+        et_notes.setText(budgetModel.getNotes());
+        et_paid.setText(String.valueOf(budgetModel.getPaidAmount()));
+        et_LastPayment.setText(budgetModel.getPaidDate());
     }
 
     @Override

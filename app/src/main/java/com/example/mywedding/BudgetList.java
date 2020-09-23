@@ -22,18 +22,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BudgetList extends AppCompatActivity {
-    FloatingActionButton btn_add;
-    Button nav;
-    TextView count;
-    DBHelper dbHelper;
-    ListView listView;
-    List<BudgetModel> budgets;
+    private FloatingActionButton btn_add;
+    private Button nav;
+    private TextView count;
+    private DBHelper dbHelper;
+    private ListView listView;
+    private List<BudgetModel> budgets;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_budget_list);
 
+        //app bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.app_name_budgetList);
 
@@ -51,7 +52,7 @@ public class BudgetList extends AppCompatActivity {
 
         //invoking method to count the budgets
         int countBudget = dbHelper.countBudgets();
-        count.setText("You have added " + countBudget + " budgets");
+        count.setText("You have added " + countBudget + " budget(s)");
 
         //onclick Dialog box
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -108,12 +109,5 @@ public class BudgetList extends AppCompatActivity {
             }
         });
 
-//        nav.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(BudgetList.this,ViewBudget.class);
-//                startActivity(intent);
-//            }
-//        });
     }
 }

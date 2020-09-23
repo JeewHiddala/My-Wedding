@@ -15,9 +15,9 @@ import com.example.mywedding.Database.DBHelper;
 import com.example.mywedding.Models.BudgetModel;
 
 public class ViewBudget extends AppCompatActivity {
-    TextView txtName, txtAmount, txtNotes, txtPaidDate, txtPaidAmount, txtCategory, txtpayableAmount;
-    DBHelper dbHelper;
-    Context context;
+    private TextView txtName, txtAmount, txtNotes, txtPaidDate, txtPaidAmount, txtCategory, txtpayableAmount, txtStatus;
+    private DBHelper dbHelper;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +45,7 @@ public class ViewBudget extends AppCompatActivity {
         txtPaidAmount = findViewById(R.id.txt_paidAmount);
         txtPaidDate = findViewById(R.id.txt_LastPaymentDate);
         txtpayableAmount = findViewById(R.id.txt_Balance);
+        txtStatus = findViewById(R.id.txt_Status);
 
         //printing values to the view
         txtName.setText(budgetModel.getBudgetName());
@@ -53,6 +54,7 @@ public class ViewBudget extends AppCompatActivity {
         txtCategory.setText(budgetModel.getCategory());
         txtPaidAmount.setText(String.valueOf(budgetModel.getPaidAmount()));
         txtPaidDate.setText(budgetModel.getPaidDate());
+        txtStatus.setText(budgetModel.getStatus() + " Budget");
 
         //printing balance payable
         txtpayableAmount.setText("LKR: " + payable(budgetModel.getAmount(), budgetModel.getPaidAmount()));
@@ -67,6 +69,7 @@ public class ViewBudget extends AppCompatActivity {
     }*/
 
 
+    //to calculate the budget payable amount
     public double payable(double value1, double value2){
         double payable = value1 - value2;
 
