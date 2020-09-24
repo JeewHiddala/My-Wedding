@@ -84,4 +84,7 @@
     <string name="uninvitedpg1">Uninvited Guests</string>
     <string name="univitedsubcappg1">See all the pending invitations here!</string>
 
+    <string name="vendorpending">Pending</string>
+    <string name="vendorcompleted">Completed</string>
+
 </resources>
