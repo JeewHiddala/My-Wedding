@@ -5,71 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgPalePink"
-    tools:context=".AddTask">
+    tools:context=".PopUp1">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/addSubButton"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:background="@drawable/icons8_plus_48"
-        android:backgroundTint="@color/justWhite"
-        android:clickable="true"
-        app:backgroundTint="@color/justWhite"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.923"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.885" />
-
-
-
-
-    <ImageButton
-        android:id="@+id/deleteButtonSub"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
-        android:backgroundTint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.734"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.884"
-        app:srcCompat="@drawable/ic_baseline_delete_outline_24" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sub Tasks"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.868" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Task Details"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.012" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/bgPalePink"
         android:orientation="vertical"
@@ -77,10 +17,10 @@
         android:paddingBottom="-100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.307"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.251">
+        app:layout_constraintVertical_bias="0.204">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -92,17 +32,17 @@
             android:paddingBottom="10dp">
 
             <TextView
-                android:id="@+id/taskName1"
+                android:id="@+id/subtaskName1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="Name"
+                android:text="Sub Task Name"
                 android:textColor="#808080"
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/task_name"
-                android:layout_width="365dp"
+                android:id="@+id/subtask_name"
+                android:layout_width="320dp"
                 android:layout_height="35dp"
                 android:background="@drawable/input_field"
                 android:ems="10"
@@ -126,52 +66,24 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:orientation="vertical"
-            android:paddingBottom="10dp">
-
-            <TextView
-                android:id="@+id/taskCategory1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="Category"
-                android:textColor="#808080"
-                android:textSize="20sp" />
-
-
-            <Spinner
-                android:id="@+id/editTaskCategory"
-                android:layout_width="364dp"
-                android:layout_height="wrap_content"
-                android:background="@android:drawable/btn_dropdown"
-                android:hint="Select"
-                android:spinnerMode="dropdown"
-                tools:visibility="visible" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:orientation="vertical"
             android:paddingBottom="5dp">
 
             <TextView
-                android:id="@+id/spNote"
+                android:id="@+id/subDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="Special Note"
+                android:text="Description"
                 android:textColor="#808080"
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/editNote"
-                android:layout_width="match_parent"
+                android:id="@+id/sub_des"
+                android:layout_width="325dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/input_field"
                 android:gravity="top|left"
-                android:hint=" Add a note here."
+                android:hint=" Add a description here."
                 android:inputType="textMultiLine"
                 android:lines="5"
                 android:overScrollMode="always"
@@ -204,14 +116,14 @@
 
             <EditText
                 android:id="@+id/editDate"
-                android:layout_width="265dp"
+                android:layout_width="250dp"
                 android:layout_height="40dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/input_field"
-                android:hint=" 20 August 2020"
+                android:hint=" 10 July 2020"
                 android:inputType="text"
                 android:textAlignment="textStart"
                 android:textColorHighlight="#A9A9A9" />
@@ -221,7 +133,7 @@
                 android:layout_width="64dp"
                 android:layout_height="45dp"
                 android:layout_alignBottom="@+id/in_date"
-                android:layout_marginLeft="280dp"
+                android:layout_marginLeft="265dp"
                 android:layout_marginTop="-62dp"
                 android:layout_marginBottom="0dp"
                 android:layout_toEndOf="@+id/in_date"
@@ -233,7 +145,5 @@
 
 
     </LinearLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

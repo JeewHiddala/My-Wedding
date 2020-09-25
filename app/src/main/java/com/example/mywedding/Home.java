@@ -29,65 +29,64 @@ public class Home extends AppCompatActivity {
     }
 
 
-    @Override
-    protected void onResume () {
-        super.onResume();
+        @Override
+        protected void onResume () {
+            super.onResume();
 
-        btn_tasks.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Home.this,TaskMenu.class);
-                startActivity(intent);
-            }
-        });
+            btn_tasks.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(Home.this,TaskMenu.class);
+                    startActivity(intent);
+                }
+            });
 
-        btn_budget.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Home.this,BudgetList.class);
-                startActivity(intent);
-            }
-        });
+            btn_budget.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(Home.this,BudgetList.class);
+                    startActivity(intent);
+                }
+            });
 
-        btn_vendor.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Home.this,Vender.class);
-                startActivity(intent);
-            }
-        });
+            btn_vendor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(Home.this,VenderList.class);
+                    startActivity(intent);
+                }
+            });
 
-        btn_guest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Home.this,guestPage1.class);
-                startActivity(intent);
-            }
-        });
+            btn_guest.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(Home.this,guestPage1.class);
+                    startActivity(intent);
+                }
+            });
 
-        btn_dashboard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Home.this,dashBoard.class);
-                startActivity(intent);
-            }
-        });
+            btn_dashboard.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(Home.this,dashBoard.class);
+                    startActivity(intent);
+                }
+            });
 
-        btn_settings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Home.this,Settings.class);
-                startActivity(intent);
-            }
-        });
+            btn_settings.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(Home.this,Settings.class);
+                    startActivity(intent);
+                }
+            });
 
     }
-
-    //tharuvi
-    public void Dashboard(View view){
-        Intent intent = new Intent(Home.this,dashBoard.class);
-        startActivity(intent);
-    }
+            //tharuvi
+            public void Dashboard(View view){
+            Intent intent = new Intent(Home.this,dashBoard.class);
+            startActivity(intent);
+            }
 
     @Override
     public void onBackPressed() {

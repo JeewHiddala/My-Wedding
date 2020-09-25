@@ -9,9 +9,24 @@
         android:roundIcon="@drawable/app_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-            <activity
-                android:name=".CompleteTask"
-                android:parentActivityName=".TaskMenu" />
+        <activity
+            android:name=".ViewPopUp"
+            android:parentActivityName=".EditTask"></activity>
+        <activity
+            android:name=".PopUp1"
+            android:parentActivityName=".AddTask" />
+        <activity
+            android:name=".EditTask"
+            android:parentActivityName=".ViewTask" />
+        <activity
+            android:name=".ViewTask"
+            android:parentActivityName=".TaskList" />
+        <activity
+            android:name=".AddTask"
+            android:parentActivityName=".TaskList" />
+        <activity
+            android:name=".CompleteTask"
+            android:parentActivityName=".TaskMenu" />
         <activity
             android:name=".TaskMenu"
             android:parentActivityName=".Home" />
