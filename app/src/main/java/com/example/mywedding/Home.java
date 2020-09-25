@@ -52,7 +52,7 @@ public class Home extends AppCompatActivity {
             btn_vendor.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(Home.this,Vender.class);
+                    Intent intent = new Intent(Home.this,VenderList.class);
                     startActivity(intent);
                 }
             });
