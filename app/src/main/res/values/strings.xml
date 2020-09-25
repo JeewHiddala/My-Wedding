@@ -49,6 +49,7 @@
         <item>Reception</item>
         <item>Jewellery</item>
         <item>Music and Entertainment</item>
+        <item>Other</item>
     </string-array>
     <string-array name="task_categories">
         <item>Refreshments</item>
@@ -100,6 +101,9 @@
     <string name="cap2pg1">See all the invitees here!</string>
     <string name="uninvitedpg1">Uninvited Guests</string>
     <string name="univitedsubcappg1">See all the pending invitations here!</string>
+    <string name="btn_Pending">Pending</string>
+    <string name="btn_paid">Paid</string>
+    <string name="mainPage_btn">Proceed</string>
 
     <string name="vendorpending">Pending</string>
     <string name="vendorcompleted">Completed</string>

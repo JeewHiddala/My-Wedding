@@ -173,11 +173,11 @@
         app:layout_constraintVertical_bias="0.81" />
 
     <RadioGroup
-        android:id="@+id/radioGroup2"
+        android:id="@+id/radPStatus"
         android:layout_width="162dp"
         android:layout_height="43dp"
         android:background="@drawable/radio_group"
-        android:checkedButton="@+id/groom2"
+        android:checkedButton="@+id/radPGroom"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -200,7 +200,7 @@
             android:textColor="@color/justBlack" />
 
         <RadioButton
-            android:id="@+id/groom2"
+            android:id="@+id/radPGroom"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="1dp"
