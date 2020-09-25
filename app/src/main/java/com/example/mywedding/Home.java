@@ -88,6 +88,8 @@ public class Home extends AppCompatActivity {
             startActivity(intent);
             }
 
+
+            //To disable the back button from the home page
     @Override
     public void onBackPressed() {
         Toast.makeText(this, "Tap Home Button to Exit", Toast.LENGTH_SHORT).show();

@@ -157,15 +157,15 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     //get a single vendor
-    public VendorModel getSingleVendor(int id){
+    public VendorModel getSingleVendor(int id) {
         SQLiteDatabase db = getWritableDatabase();          //create new object for SQLite database object
         //write database query and assign it to the cursor object
-        Cursor cursor = db.query(TABLE_NAME,new String[]{_ID,COLUMN_NAME_VNAME,COLUMN_NAME_CATEGORY,COLUMN_NAME_CONTACTNO,COLUMN_NAME_DESCRIPTION,COLUMN_NAME_STATUS,COLUMN_NAME_AMOUNT},
-                _ID + "= ?",new String[]{String.valueOf(id)},null,null,null);
+        Cursor cursor = db.query(TABLE_NAME, new String[]{_ID, COLUMN_NAME_VNAME, COLUMN_NAME_CATEGORY, COLUMN_NAME_CONTACTNO, COLUMN_NAME_DESCRIPTION, COLUMN_NAME_STATUS, COLUMN_NAME_AMOUNT},
+                _ID + "= ?", new String[]{String.valueOf(id)}, null, null, null);
 
         VendorModel vendorModel;            //create model class (VendorModel) object
 
-        if(cursor != null ){                 //check values available
+        if (cursor != null) {                 //check values available
             cursor.moveToFirst();
             vendorModel = new VendorModel(
                     cursor.getInt(0),
@@ -180,6 +180,7 @@ public class DBHelper extends SQLiteOpenHelper {
             return vendorModel;  //return vendorModel object
         }
         return null;
+    }
 
     //adding function of the user
     public long addUser(String uName, String uEmail, String uContact, String uStatus, String pName, String pEmail, String pContact, String pStatus, String wName, String wDate){
