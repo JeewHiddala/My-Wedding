@@ -160,7 +160,7 @@
         app:srcCompat="@drawable/ic_baseline_delete_outline_24" />
 
     <ImageButton
-        android:id="@+id/imageButton7"
+        android:id="@+id/delbtn"
         android:layout_width="43dp"
         android:layout_height="40dp"
         android:background="@color/bgPalePink"

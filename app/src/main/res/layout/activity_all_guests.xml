@@ -7,35 +7,10 @@
     android:background="@color/bgPalePink"
     tools:context=".allGuests">
 
-    <ImageButton
-        android:id="@+id/imageButton8"
-        android:layout_width="43dp"
-        android:layout_height="37dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.182"
-        app:srcCompat="@drawable/ic_baseline_delete_outline_24" />
-
-    <ImageButton
-        android:id="@+id/imageButton7"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.997"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.028"
-        app:srcCompat="@drawable/ic_baseline_delete_outline_24" />
 
 
+
+<!--
     <Button
         android:id="@+id/btn_glist1"
         android:layout_width="339dp"
@@ -87,20 +62,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.182" />
+-->
 
-    <ImageButton
-        android:id="@+id/imageButton6"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.106"
-        app:srcCompat="@drawable/ic_baseline_delete_outline_24" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton1"
@@ -117,5 +80,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.925"
         app:srcCompat="@drawable/ic_baseline_add_24" />
+
+    <ListView
+        android:id="@+id/guestlist"
+        android:layout_width="345dp"
+        android:layout_height="493dp"
+        android:layout_marginBottom="670dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

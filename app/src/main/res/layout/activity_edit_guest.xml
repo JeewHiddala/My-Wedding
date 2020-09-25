@@ -137,7 +137,7 @@
         app:layout_constraintVertical_bias="0.561" />
 
     <EditText
-        android:id="@+id/editguestEmail"
+        android:id="@+id/editguestAddress"
         android:layout_width="290dp"
         android:layout_height="38dp"
         android:background="@drawable/input_field"
@@ -155,7 +155,7 @@
         app:layout_constraintVertical_bias="0.723" />
 
     <EditText
-        android:id="@+id/editguestAddress"
+        android:id="@+id/editguestEmail"
         android:layout_width="290dp"
         android:layout_height="38dp"
         android:background="@drawable/input_field"
@@ -187,6 +187,7 @@
         app:layout_constraintVertical_bias="0.49">
 
         <RadioButton
+            android:id="@+id/bri"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="1dp"
@@ -213,4 +214,18 @@
             android:text="Not Sent"
             android:textColor="@color/justBlack" />
     </RadioGroup>
+
+    <ImageButton
+        android:id="@+id/updateRet"
+        android:layout_width="47dp"
+        android:layout_height="53dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="@color/fontPink"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editguestEmail"
+        app:layout_constraintVertical_bias="0.652"
+        app:srcCompat="@drawable/ic_baseline_done_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>
