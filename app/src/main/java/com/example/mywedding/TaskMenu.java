@@ -19,9 +19,10 @@ public class TaskMenu extends AppCompatActivity {
         setContentView(R.layout.activity_task_menu);
 
        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+       getSupportActionBar().setTitle(R.string.header_taskmenu_name);
 
         btn_taskList2 = findViewById(R.id.taskListBtn1);
-        btn_taskList3 = findViewById(R.id.Ctasklist);
+        btn_taskList3 = findViewById(R.id.CtasklistBtn);
     }
 
     @Override
@@ -43,8 +44,6 @@ public class TaskMenu extends AppCompatActivity {
             }
         });
     }
-
-
 
 
 }
