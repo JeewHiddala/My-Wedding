@@ -8,7 +8,7 @@ public class WeddingMaster {
     //implementation of guest table
     public static class Guests implements BaseColumns{
 
-        public static final String TABLE_NAME = "guests";
+        public static final String GTABLE_NAME = "guests";
         public static final String COLUMN_NAME_GNAME = "guestname";
         public static final String COLUMN_NAME_GENDER = "gender";
         public static final String COLUMN_NAME_NOTES = "notes";
