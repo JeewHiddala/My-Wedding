@@ -24,7 +24,7 @@ import com.example.mywedding.Database.DBHelper;
 
 public class editGuest extends AppCompatActivity {
 
-    Switch aSwitch;
+    
     EditText upGname, upGen, upNotes, upPhone, upAdd, upEmail;
 
     public String myExtra = "text";
