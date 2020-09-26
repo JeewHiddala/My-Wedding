@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Settings"
-    android:background="@color/bgPalePink">
+    android:background="@color/bgPalePink"
+    tools:context=".Settings">
 
     <Button
         android:id="@+id/btn_profileManagement"
         android:layout_width="339dp"
         android:layout_height="40dp"
+        android:background="@android:drawable/list_selector_background"
         android:backgroundTint="#02FFFFFF"
         android:fontFamily="@font/source_sans_pro_semibold"
         android:text="Profile Management"
@@ -19,7 +20,7 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.028" />
@@ -28,6 +29,7 @@
         android:id="@+id/button2"
         android:layout_width="339dp"
         android:layout_height="40dp"
+        android:background="@android:drawable/list_selector_background"
         android:backgroundTint="#02FFFFFF"
         android:fontFamily="@font/source_sans_pro_semibold"
         android:text="Backup your data"
@@ -36,15 +38,15 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.106" />
+        app:layout_constraintVertical_bias="0.115" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="339dp"
         android:layout_height="40dp"
+        android:background="@android:drawable/list_selector_background"
         android:backgroundTint="#02FFFFFF"
         android:fontFamily="@font/source_sans_pro_semibold"
         android:text="Restore"
@@ -53,10 +55,9 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.177" />
+        app:layout_constraintVertical_bias="0.204" />
 
     <TextView
         android:id="@+id/textView8"
