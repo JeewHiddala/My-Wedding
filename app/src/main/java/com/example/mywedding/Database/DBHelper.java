@@ -34,9 +34,9 @@ import java.util.List;
 
 public class DBHelper extends SQLiteOpenHelper {
     private Context context;
-    //private static final int VERSION = 1;
+    private static final int VERSION = 1;
     public static final String DATABASE_NAME = "MyWed.db";
-    private static final String TABLE_NAME = "tasks";
+    private static final String TASK_TABLE_NAME = "tasks";
     private SQLiteDatabase db;
 
     //tasks table column names
@@ -48,7 +48,7 @@ public class DBHelper extends SQLiteOpenHelper {
     private static final String COLUMN_NAME_TASKSTATUS = "task_status";
 
     public DBHelper(Context context) {
-        super(context, DATABASE_NAME, null, 1);
+        super(context, DATABASE_NAME, null, VERSION);
         this.context = context;
     }
 
@@ -95,19 +95,20 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_ENTRIES);   //run query and  create table
 
         //Creating tasks table
-        String query = "CREATE TABLE " + TABLE_NAME + " (" +
-                COLUMN_NAME_TASKID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                COLUMN_NAME_TASKNAME + " TEXT, " +
-                COLUMN_NAME_TASKCATEGORY + " TEXT, " +
-                COLUMN_NAME_NOTE + " TEXT, " +
+        String SQL_query =
+                "CREATE TABLE " + TASK_TABLE_NAME + " (" +
+                COLUMN_NAME_TASKID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                COLUMN_NAME_TASKNAME + " TEXT," +
+                COLUMN_NAME_TASKCATEGORY + " TEXT," +
+                COLUMN_NAME_NOTE + " TEXT," +
                 COLUMN_NAME_TASKDATE + " TEXT," +
-                COLUMN_NAME_TASKSTATUS + " TEXT);";
+                COLUMN_NAME_TASKSTATUS + " TEXT)";
 
-        db.execSQL(query);
+        db.execSQL(SQL_query);
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) { //helps to create a another new table
+    public void onUpgrade(@Nullable SQLiteDatabase db, int oldVersion, int newVersion) { //helps to create a another new table
         String DROP_TABLE_QUERY = "DROP TABLE IF EXISTS "+ TABLE_NAME;
         // Drop older table if existed
         db.execSQL(DROP_TABLE_QUERY);
@@ -496,7 +497,7 @@ public class DBHelper extends SQLiteOpenHelper {
         values.put(COLUMN_NAME_NOTE, task_note);
         values.put(COLUMN_NAME_TASKDATE, task_date);
         values.put(COLUMN_NAME_TASKSTATUS, task_status);
-        long result = db.insert(TABLE_NAME, null, values);
+        long result = db.insert(TASK_TABLE_NAME, null, values);
         if(result == -1) {
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
         } else {
@@ -507,7 +508,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     //read all task values
     public Cursor readAllData() {
-        String query = "SELECT * FROM " + TABLE_NAME;
+        String query = "SELECT * FROM " + TASK_TABLE_NAME;
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = null;
@@ -528,7 +529,7 @@ public class DBHelper extends SQLiteOpenHelper {
         values.put(COLUMN_NAME_TASKDATE, task_date);
         values.put(COLUMN_NAME_TASKSTATUS, task_status);
 
-        long result = db.update(TABLE_NAME, values, "task_id=?", new String[]{row_id});
+        long result = db.update(TASK_TABLE_NAME, values, "task_id=?", new String[]{row_id});
         if(result == -1) {
             Toast.makeText(context, "Failed to Update", Toast.LENGTH_SHORT).show();
         } else {
@@ -539,7 +540,7 @@ public class DBHelper extends SQLiteOpenHelper {
     //delete one task row
     public void deleteOneRow(String row_id) {
         SQLiteDatabase db = this.getWritableDatabase();
-        long result = db.delete(TABLE_NAME, "task_id=?", new String[]{row_id});
+        long result = db.delete(TASK_TABLE_NAME, "task_id=?", new String[]{row_id});
         if(result == -1) {
             Toast.makeText(context, "Failed to Delete", Toast.LENGTH_SHORT).show();
         } else {
@@ -550,7 +551,7 @@ public class DBHelper extends SQLiteOpenHelper {
     //delete all task details row
     public void deleteAllData() {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.execSQL("DELETE FROM " + TABLE_NAME);
+        db.execSQL("DELETE FROM " + TASK_TABLE_NAME);
     }
 
 }
