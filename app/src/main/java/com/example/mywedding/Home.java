@@ -65,7 +65,7 @@ public class Home extends AppCompatActivity {
             btn_guest.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(Home.this,guestPage1.class);
+                    Intent intent = new Intent(Home.this,allGuests.class);
                     startActivity(intent);
                 }
             });

@@ -18,13 +18,13 @@ import com.example.mywedding.VenderList;
 import com.example.mywedding.VendorModel;
 
 import static com.example.mywedding.Database.WeddingMaster.Vendors.COLUMN_NAME_AMOUNT;
-import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_CATEGORY;
-import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_CONTACTNO;
-import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_DESCRIPTION;
-import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_STATUS;
-import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_VNAME;
-import static com.example.mywedding.Database.weddingMaster.Vendors.TABLE_NAME;
-import static com.example.mywedding.Database.weddingMaster.Vendors._ID;
+import static com.example.mywedding.Database.WeddingMaster.Vendors.COLUMN_NAME_CATEGORY;
+import static com.example.mywedding.Database.WeddingMaster.Vendors.COLUMN_NAME_CONTACTNO;
+import static com.example.mywedding.Database.WeddingMaster.Vendors.COLUMN_NAME_DESCRIPTION;
+import static com.example.mywedding.Database.WeddingMaster.Vendors.COLUMN_NAME_STATUS;
+import static com.example.mywedding.Database.WeddingMaster.Vendors.COLUMN_NAME_VNAME;
+import static com.example.mywedding.Database.WeddingMaster.Vendors.TABLE_NAME;
+import static com.example.mywedding.Database.WeddingMaster.Vendors._ID;
 
 import com.example.mywedding.Models.BudgetModel;
 import com.example.mywedding.Models.UserModel;
@@ -35,15 +35,15 @@ import com.example.mywedding.Guest;
 
 
 
-import static android.provider.BaseColumns._ID;
-import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_ADDRESS;
-import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_EMAIL;
-import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_GENDER;
-import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_GNAME;
-import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_NOTES;
-import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_PHONE;
-import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_STATUS;
-import static com.example.mywedding.Database.WeddingMaster.Guests.GTABLE_NAME;
+//import static android.provider.BaseColumns._ID;
+//import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_ADDRESS;
+//import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_EMAIL;
+//import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_GENDER;
+//import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_GNAME;
+//import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_NOTES;
+//import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_PHONE;
+//import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_STATUS;
+//import static com.example.mywedding.Database.WeddingMaster.Guests.GTABLE_NAME;
 
 //import static com.example.mywedding.Database.WeddingMaster.Guests.TABLE_NAME;
 
@@ -100,13 +100,13 @@ public class DBHelper extends SQLiteOpenHelper {
 
         String SQL_CREATE_ENTRIES =
                 "CREATE TABLE " + TABLE_NAME +  " (" +
-                        weddingMaster.Vendors._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-                        weddingMaster.Vendors.COLUMN_NAME_VNAME + " TEXT," +
-                        weddingMaster.Vendors.COLUMN_NAME_CATEGORY + " TEXT," +
-                        weddingMaster.Vendors.COLUMN_NAME_CONTACTNO + " TEXT," +
-                        weddingMaster.Vendors.COLUMN_NAME_DESCRIPTION + " TEXT," +
-                        weddingMaster.Vendors.COLUMN_NAME_STATUS + " INTEGER," +
-                        weddingMaster.Vendors.COLUMN_NAME_AMOUNT + " TEXT)";
+                        WeddingMaster.Vendors._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                        WeddingMaster.Vendors.COLUMN_NAME_VNAME + " TEXT," +
+                        WeddingMaster.Vendors.COLUMN_NAME_CATEGORY + " TEXT," +
+                        WeddingMaster.Vendors.COLUMN_NAME_CONTACTNO + " TEXT," +
+                        WeddingMaster.Vendors.COLUMN_NAME_DESCRIPTION + " TEXT," +
+                        WeddingMaster.Vendors.COLUMN_NAME_STATUS + " INTEGER," +
+                        WeddingMaster.Vendors.COLUMN_NAME_AMOUNT + " TEXT)";
         db.execSQL(SQL_CREATE_ENTRIES);   //run query and  create table
 
         //Creating tasks table
@@ -123,15 +123,15 @@ public class DBHelper extends SQLiteOpenHelper {
 
         //Guest Table
         String SQL_CREATE_ENTRIES3 =
-                "CREATE TABLE " + GTABLE_NAME + " (" +
-                        WeddingMaster.Guests._ID + " INTEGER PRIMARY KEY," +
-                        WeddingMaster.Guests.COLUMN_NAME_GNAME + " TEXT," +
-                        WeddingMaster.Guests.COLUMN_NAME_GENDER + " TEXT," +
-                        WeddingMaster.Guests.COLUMN_NAME_NOTES + " TEXT," +
-                        WeddingMaster.Guests.COLUMN_NAME_STATUS + " INTEGER," +
-                        WeddingMaster.Guests.COLUMN_NAME_PHONE + " TEXT," +
-                        WeddingMaster.Guests.COLUMN_NAME_ADDRESS + " TEXT," +
-                        WeddingMaster.Guests.COLUMN_NAME_EMAIL + " TEXT)";
+                "CREATE TABLE " + GuestMaster.Guests.GTABLE_NAME + " (" +
+                        GuestMaster.Guests._ID + " INTEGER PRIMARY KEY," +
+                        GuestMaster.Guests.COLUMN_NAME_GNAME + " TEXT," +
+                        GuestMaster.Guests.COLUMN_NAME_GENDER + " TEXT," +
+                        GuestMaster.Guests.COLUMN_NAME_NOTES + " TEXT," +
+                        GuestMaster.Guests.COLUMN_NAME_STATUSS + " INTEGER," +
+                        GuestMaster.Guests.COLUMN_NAME_PHONE + " TEXT," +
+                        GuestMaster.Guests.COLUMN_NAME_ADDRESS + " TEXT," +
+                        GuestMaster.Guests.COLUMN_NAME_EMAIL + " TEXT)";
         db.execSQL(SQL_CREATE_ENTRIES3);
     }
 
@@ -150,12 +150,12 @@ public class DBHelper extends SQLiteOpenHelper {
 
         //create a new map of values,where column names the keys
         ContentValues values = new ContentValues();
-        values.put(weddingMaster.Vendors.COLUMN_NAME_VNAME,vendorName);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_CATEGORY,category);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_CONTACTNO,contactNo);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_DESCRIPTION,description);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_STATUS,status);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_AMOUNT,amount);
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_VNAME,vendorName);
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_CATEGORY,category);
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_CONTACTNO,contactNo);
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_DESCRIPTION,description);
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_STATUS,status);
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_AMOUNT,amount);
 
         //saving the new row, returning the primary key value of the new row
         long newRowId = db.insert(TABLE_NAME,null,values);
@@ -501,12 +501,12 @@ public class DBHelper extends SQLiteOpenHelper {
 
         //create a new map of values,where column names the keys
         ContentValues values = new ContentValues();
-        values.put(weddingMaster.Vendors.COLUMN_NAME_VNAME,vendorModel.getVendorname());
-        values.put(weddingMaster.Vendors.COLUMN_NAME_CATEGORY,vendorModel.getCategory());
-        values.put(weddingMaster.Vendors.COLUMN_NAME_CONTACTNO,vendorModel.getContactno());
-        values.put(weddingMaster.Vendors.COLUMN_NAME_DESCRIPTION,vendorModel.getDescription());
-        values.put(weddingMaster.Vendors.COLUMN_NAME_STATUS,vendorModel.getStatus());
-        values.put(weddingMaster.Vendors.COLUMN_NAME_AMOUNT,vendorModel.getAmount());
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_VNAME,vendorModel.getVendorname());
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_CATEGORY,vendorModel.getCategory());
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_CONTACTNO,vendorModel.getContactno());
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_DESCRIPTION,vendorModel.getDescription());
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_STATUS,vendorModel.getStatus());
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_AMOUNT,vendorModel.getAmount());
 
         //check affected no of rows.if status = 0,there is not affected rows.if status = 1, there is a affected row
         int status = db.update(TABLE_NAME,values,_ID +" =?",
@@ -589,15 +589,15 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(WeddingMaster.Guests.COLUMN_NAME_GNAME,guestName);
-        values.put(WeddingMaster.Guests.COLUMN_NAME_GENDER,gender);
-        values.put(WeddingMaster.Guests.COLUMN_NAME_NOTES,notes);
-        values.put(WeddingMaster.Guests.COLUMN_NAME_STATUS,status);
-        values.put(WeddingMaster.Guests.COLUMN_NAME_PHONE,phone);
-        values.put(WeddingMaster.Guests.COLUMN_NAME_ADDRESS,address);
-        values.put(WeddingMaster.Guests.COLUMN_NAME_EMAIL,eMail);
+        values.put(GuestMaster.Guests.COLUMN_NAME_GNAME,guestName);
+        values.put(GuestMaster.Guests.COLUMN_NAME_GENDER,gender);
+        values.put(GuestMaster.Guests.COLUMN_NAME_NOTES,notes);
+        values.put(GuestMaster.Guests.COLUMN_NAME_STATUSS,status);
+        values.put(GuestMaster.Guests.COLUMN_NAME_PHONE,phone);
+        values.put(GuestMaster.Guests.COLUMN_NAME_ADDRESS,address);
+        values.put(GuestMaster.Guests.COLUMN_NAME_EMAIL,eMail);
 
-        long newRowId = db.insert(GTABLE_NAME,null,values);
+        long newRowId = db.insert(GuestMaster.Guests.GTABLE_NAME,null,values);
         return newRowId;
 
     }
@@ -606,7 +606,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
         List<Guest> guests = new ArrayList();
         SQLiteDatabase db = getReadableDatabase();
-        String query = "SELECT * FROM "+ WeddingMaster.Guests.GTABLE_NAME;
+        String query = "SELECT * FROM "+ GuestMaster.Guests.GTABLE_NAME;
 
         Cursor cursor = db.rawQuery(query,null);
 
@@ -637,15 +637,15 @@ public class DBHelper extends SQLiteOpenHelper {
     //delete guests
     public void deleteGuest(int id){
         SQLiteDatabase db = getWritableDatabase();
-        db.delete(GTABLE_NAME, WeddingMaster.Guests._ID +" =?", new String[]{String.valueOf(id)});
+        db.delete(GuestMaster.Guests.GTABLE_NAME, GuestMaster.Guests._ID +" =?", new String[]{String.valueOf(id)});
         db.close();
     }
 
     //retrieve a single guest entry in the view page
     public Guest getSingleGuest(int id) {
         SQLiteDatabase db = getWritableDatabase();
-        Cursor cursor = db.query(GTABLE_NAME, new String[]{WeddingMaster.Guests._ID, WeddingMaster.Guests.COLUMN_NAME_GNAME, WeddingMaster.Guests.COLUMN_NAME_GENDER, WeddingMaster.Guests.COLUMN_NAME_NOTES,
-                WeddingMaster.Guests.COLUMN_NAME_STATUS, WeddingMaster.Guests.COLUMN_NAME_PHONE, WeddingMaster.Guests.COLUMN_NAME_ADDRESS, WeddingMaster.Guests.COLUMN_NAME_EMAIL}, WeddingMaster.Guests._ID  +"= ?", new String[]{String.valueOf(id)}, null, null, null);
+        Cursor cursor = db.query(GuestMaster.Guests.GTABLE_NAME, new String[]{GuestMaster.Guests._ID, GuestMaster.Guests.COLUMN_NAME_GNAME, GuestMaster.Guests.COLUMN_NAME_GENDER, GuestMaster.Guests.COLUMN_NAME_NOTES,
+                GuestMaster.Guests.COLUMN_NAME_STATUSS, GuestMaster.Guests.COLUMN_NAME_PHONE, GuestMaster.Guests.COLUMN_NAME_ADDRESS, GuestMaster.Guests.COLUMN_NAME_EMAIL}, GuestMaster.Guests._ID  +"= ?", new String[]{String.valueOf(id)}, null, null, null);
 
         Guest guest;
         if(cursor != null){
@@ -671,15 +671,15 @@ public class DBHelper extends SQLiteOpenHelper {
 
         ContentValues values = new ContentValues();
 
-        values.put(WeddingMaster.Guests.COLUMN_NAME_GNAME,guest.getGuestName());
-        values.put(WeddingMaster.Guests.COLUMN_NAME_GENDER,guest.getGender());
-        values.put(WeddingMaster.Guests.COLUMN_NAME_NOTES,guest.getNotes());
-        values.put(WeddingMaster.Guests.COLUMN_NAME_STATUS,guest.getStatus());
-        values.put(WeddingMaster.Guests.COLUMN_NAME_PHONE,guest.getPhone());
-        values.put(WeddingMaster.Guests.COLUMN_NAME_ADDRESS,guest.getAddress());
-        values.put(WeddingMaster.Guests.COLUMN_NAME_EMAIL,guest.geteMail());
+        values.put(GuestMaster.Guests.COLUMN_NAME_GNAME,guest.getGuestName());
+        values.put(GuestMaster.Guests.COLUMN_NAME_GENDER,guest.getGender());
+        values.put(GuestMaster.Guests.COLUMN_NAME_NOTES,guest.getNotes());
+        values.put(GuestMaster.Guests.COLUMN_NAME_STATUSS,guest.getStatus());
+        values.put(GuestMaster.Guests.COLUMN_NAME_PHONE,guest.getPhone());
+        values.put(GuestMaster.Guests.COLUMN_NAME_ADDRESS,guest.getAddress());
+        values.put(GuestMaster.Guests.COLUMN_NAME_EMAIL,guest.geteMail());
 
-        int stat = db.update(GTABLE_NAME,values, _ID +" =?", new String[]{String.valueOf(guest.getId())});
+        int stat = db.update(GuestMaster.Guests.GTABLE_NAME,values, _ID +" =?", new String[]{String.valueOf(guest.getId())});
 
         db.close();
         return stat;
