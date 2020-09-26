@@ -49,6 +49,7 @@
         <item>Reception</item>
         <item>Jewellery</item>
         <item>Music and Entertainment</item>
+        <item>Other</item>
     </string-array>
     <string-array name="task_categories">
         <item>Refreshments</item>
@@ -106,5 +107,11 @@
     <string name="taskNameHint">Task Name</string>
     <string name="taskNoteHint">Task Note</string>
     <string name="taskCategoryHint">Task Category</string>
+    <string name="btn_Pending">Pending</string>
+    <string name="btn_paid">Paid</string>
+    <string name="mainPage_btn">Proceed</string>
+
+    <string name="vendorpending">Pending</string>
+    <string name="vendorcompleted">Completed</string>
 
 </resources>

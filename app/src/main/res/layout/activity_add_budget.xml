@@ -25,12 +25,12 @@
         app:layout_constraintVertical_bias="0.012" />
 
     <EditText
-        android:id="@+id/budget_name"
+        android:id="@+id/etBudgetName"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:textSize="14sp"
@@ -42,12 +42,12 @@
         app:layout_constraintVertical_bias="0.116" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/etBudgetAmount"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:textSize="14sp"
@@ -59,12 +59,12 @@
         app:layout_constraintVertical_bias="0.222" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/etBudgetNote"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:textSize="14sp"
@@ -76,7 +76,7 @@
         app:layout_constraintVertical_bias="0.349" />
 
     <Spinner
-        android:id="@+id/category"
+        android:id="@+id/spBudgetCategory"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
@@ -89,7 +89,7 @@
         app:layout_constraintVertical_bias="0.475" />
 
     <EditText
-        android:id="@+id/editTextNumber6"
+        android:id="@+id/etPaidAmount"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
@@ -105,7 +105,7 @@
         app:layout_constraintVertical_bias="0.683" />
 
     <EditText
-        android:id="@+id/editTextDate2"
+        android:id="@+id/etPaymentDate"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
@@ -118,42 +118,7 @@
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.801" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/source_sans_pro_semibold"
-        android:text="@string/add_budget_details_balance"
-        android:textColor="@color/justBlack"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.908" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/register_btn"
-        android:fontFamily="@font/source_sans_pro_semibold"
-        android:paddingLeft="15dp"
-        android:paddingTop="5dp"
-        android:paddingRight="15dp"
-        android:paddingBottom="5dp"
-        android:text="LKR._________"
-        android:textColor="@color/justBlack"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.765"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.908" />
+        app:layout_constraintVertical_bias="0.829" />
 
     <TextView
         android:id="@+id/textView11"
@@ -253,5 +218,49 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.563" />
+
+
+    <RadioGroup
+        android:id="@+id/radUserStatus"
+        android:layout_width="319dp"
+        android:layout_height="34dp"
+        android:background="@drawable/radio_group"
+        android:checkedButton="@+id/radUserGroom"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.92">
+
+        <RadioButton
+            android:id="@+id/radUserBride"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/btn_Pending"
+            android:textColor="@color/justBlack" />
+
+        <RadioButton
+            android:id="@+id/radUserGroom"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/btn_paid"
+            android:textColor="@color/justBlack" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

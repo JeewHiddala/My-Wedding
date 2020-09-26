@@ -4,16 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Home extends AppCompatActivity {
-
     ImageButton btn_tasks, btn_budget,btn_vendor,btn_guest, btn_dashboard, btn_settings;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,7 @@ public class Home extends AppCompatActivity {
             btn_budget.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(Home.this,BudgetMenu.class);
+                    Intent intent = new Intent(Home.this,BudgetList.class);
                     startActivity(intent);
                 }
             });
@@ -56,7 +56,7 @@ public class Home extends AppCompatActivity {
             btn_vendor.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(Home.this,Vender.class);
+                    Intent intent = new Intent(Home.this,VenderList.class);
                     startActivity(intent);
                 }
             });
@@ -94,5 +94,12 @@ public class Home extends AppCompatActivity {
             Intent intent = new Intent(Home.this,dashBoard.class);
             startActivity(intent);
             }
+
+
+            //To disable the back button from the home page
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "Tap Home Button to Exit", Toast.LENGTH_SHORT).show();
+    }
 
 }
