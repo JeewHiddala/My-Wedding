@@ -13,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="220dp"
         android:background="@color/navPink"
-        android:divider="@drawable/welcomepage">
+        android:divider="@drawable/welcomepage"
+        android:orientation="vertical">
 
 
         <ImageButton
@@ -36,16 +37,30 @@
             android:layout_marginRight="50dp"
             android:background="@color/navPink">
 
+                <TextView
+                    android:id="@+id/wedDate1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginRight="-180dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:text="Wedding Date : "
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
             <TextView
-                android:id="@+id/wedDate1"
+                android:id="@+id/wedDate2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="100dp"
                 android:layout_marginRight="-180dp"
                 android:layout_marginBottom="20dp"
                 android:layout_weight="1"
-                android:text="Wedding Date : 20/10/2020"
+                android:text=" 20/10/2020"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp" />
@@ -86,19 +101,19 @@
             android:layout_weight="1"
             app:srcCompat="@drawable/mywedding_logo" />
 
-        <TextView
-            android:id="@+id/bANDgName1"
-            android:layout_width="191dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="-10dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="200dp"
-            android:layout_weight="1"
-            android:text="Bride and Groom"
-            android:textAlignment="textStart"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:textStyle="normal|bold|italic" />
+            <TextView
+                android:id="@+id/brideName1"
+                android:layout_width="191dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="200dp"
+                android:layout_weight="1"
+                android:text="Bride and Groom"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="normal|bold|italic" />
 
 
     </LinearLayout>
@@ -129,6 +144,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="50dp"
             android:text="Dashboard"
+            android:textAlignment="center"
             android:textSize="24sp"
             android:textStyle="normal|bold" />
 
