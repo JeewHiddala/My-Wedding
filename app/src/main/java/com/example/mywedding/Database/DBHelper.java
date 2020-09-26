@@ -17,14 +17,14 @@ import com.example.mywedding.Vender;
 import com.example.mywedding.VenderList;
 import com.example.mywedding.VendorModel;
 
-import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_AMOUNT;
-import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_CATEGORY;
-import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_CONTACTNO;
-import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_DESCRIPTION;
-import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_STATUS;
-import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_VNAME;
-import static com.example.mywedding.Database.weddingMaster.Vendors.TABLE_NAME;
-import static com.example.mywedding.Database.weddingMaster.Vendors._ID;
+import static com.example.mywedding.Database.WeddingMaster.Vendors.COLUMN_NAME_AMOUNT;
+import static com.example.mywedding.Database.WeddingMaster.Vendors.COLUMN_NAME_CATEGORY;
+import static com.example.mywedding.Database.WeddingMaster.Vendors.COLUMN_NAME_CONTACTNO;
+import static com.example.mywedding.Database.WeddingMaster.Vendors.COLUMN_NAME_DESCRIPTION;
+import static com.example.mywedding.Database.WeddingMaster.Vendors.COLUMN_NAME_STATUS;
+import static com.example.mywedding.Database.WeddingMaster.Vendors.COLUMN_NAME_VNAME;
+import static com.example.mywedding.Database.WeddingMaster.Vendors.TABLE_NAME;
+import static com.example.mywedding.Database.WeddingMaster.Vendors._ID;
 
 import com.example.mywedding.Models.BudgetModel;
 import com.example.mywedding.Models.UserModel;
@@ -101,13 +101,13 @@ public class DBHelper extends SQLiteOpenHelper {
 
         String SQL_CREATE_ENTRIES =
                 "CREATE TABLE " + TABLE_NAME +  " (" +
-                        weddingMaster.Vendors._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-                        weddingMaster.Vendors.COLUMN_NAME_VNAME + " TEXT," +
-                        weddingMaster.Vendors.COLUMN_NAME_CATEGORY + " TEXT," +
-                        weddingMaster.Vendors.COLUMN_NAME_CONTACTNO + " TEXT," +
-                        weddingMaster.Vendors.COLUMN_NAME_DESCRIPTION + " TEXT," +
-                        weddingMaster.Vendors.COLUMN_NAME_STATUS + " INTEGER," +
-                        weddingMaster.Vendors.COLUMN_NAME_AMOUNT + " TEXT)";
+                        WeddingMaster.Vendors._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                        WeddingMaster.Vendors.COLUMN_NAME_VNAME + " TEXT," +
+                        WeddingMaster.Vendors.COLUMN_NAME_CATEGORY + " TEXT," +
+                        WeddingMaster.Vendors.COLUMN_NAME_CONTACTNO + " TEXT," +
+                        WeddingMaster.Vendors.COLUMN_NAME_DESCRIPTION + " TEXT," +
+                        WeddingMaster.Vendors.COLUMN_NAME_STATUS + " INTEGER," +
+                        WeddingMaster.Vendors.COLUMN_NAME_AMOUNT + " TEXT)";
         db.execSQL(SQL_CREATE_ENTRIES);   //run query and  create table
 
         //Creating tasks table
@@ -151,12 +151,12 @@ public class DBHelper extends SQLiteOpenHelper {
 
         //create a new map of values,where column names the keys
         ContentValues values = new ContentValues();
-        values.put(weddingMaster.Vendors.COLUMN_NAME_VNAME,vendorName);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_CATEGORY,category);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_CONTACTNO,contactNo);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_DESCRIPTION,description);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_STATUS,status);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_AMOUNT,amount);
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_VNAME,vendorName);
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_CATEGORY,category);
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_CONTACTNO,contactNo);
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_DESCRIPTION,description);
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_STATUS,status);
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_AMOUNT,amount);
 
         //saving the new row, returning the primary key value of the new row
         long newRowId = db.insert(TABLE_NAME,null,values);
@@ -502,12 +502,12 @@ public class DBHelper extends SQLiteOpenHelper {
 
         //create a new map of values,where column names the keys
         ContentValues values = new ContentValues();
-        values.put(weddingMaster.Vendors.COLUMN_NAME_VNAME,vendorModel.getVendorname());
-        values.put(weddingMaster.Vendors.COLUMN_NAME_CATEGORY,vendorModel.getCategory());
-        values.put(weddingMaster.Vendors.COLUMN_NAME_CONTACTNO,vendorModel.getContactno());
-        values.put(weddingMaster.Vendors.COLUMN_NAME_DESCRIPTION,vendorModel.getDescription());
-        values.put(weddingMaster.Vendors.COLUMN_NAME_STATUS,vendorModel.getStatus());
-        values.put(weddingMaster.Vendors.COLUMN_NAME_AMOUNT,vendorModel.getAmount());
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_VNAME,vendorModel.getVendorname());
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_CATEGORY,vendorModel.getCategory());
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_CONTACTNO,vendorModel.getContactno());
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_DESCRIPTION,vendorModel.getDescription());
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_STATUS,vendorModel.getStatus());
+        values.put(WeddingMaster.Vendors.COLUMN_NAME_AMOUNT,vendorModel.getAmount());
 
         //check affected no of rows.if status = 0,there is not affected rows.if status = 1, there is a affected row
         int status = db.update(TABLE_NAME,values,_ID +" =?",
