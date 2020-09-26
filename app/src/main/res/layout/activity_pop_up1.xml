@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgPalePink"
+    tools:context=".PopUp1">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/bgPalePink"
+        android:orientation="vertical"
+        android:paddingTop="-100dp"
+        android:paddingBottom="-100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.204">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical"
+            android:paddingTop="-10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/subtaskName1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Sub Task Name"
+                android:textColor="#808080"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/subtask_name"
+                android:layout_width="320dp"
+                android:layout_height="35dp"
+                android:background="@drawable/input_field"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.482"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.116" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/subDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Description"
+                android:textColor="#808080"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/sub_des"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_field"
+                android:gravity="top|left"
+                android:hint=" Add a description here."
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:scrollHorizontally="false"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColorHint="#A9A9A9" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical"
+            android:paddingTop="-10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/date1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Date"
+                android:textColor="#808080"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editDate"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/input_field"
+                android:hint=" 10 July 2020"
+                android:inputType="text"
+                android:textAlignment="textStart"
+                android:textColorHighlight="#A9A9A9" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="64dp"
+                android:layout_height="45dp"
+                android:layout_alignBottom="@+id/in_date"
+                android:layout_marginLeft="265dp"
+                android:layout_marginTop="-62dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toEndOf="@+id/in_date"
+                android:layout_toRightOf="@+id/in_date"
+                android:backgroundTint="#FFFFFF"
+                app:srcCompat="@android:drawable/ic_menu_today" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -214,7 +214,7 @@
         android:layout_width="319dp"
         android:layout_height="34dp"
         android:background="@drawable/radio_group"
-        android:checkedButton="@+id/offer"
+        android:checkedButton="@+id/completedjh"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -223,7 +223,7 @@
         app:layout_constraintVertical_bias="0.76">
 
         <RadioButton
-            android:id="@+id/search"
+            android:id="@+id/pendingjh"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="1dp"
@@ -232,14 +232,14 @@
             android:layout_weight="1"
             android:background="@drawable/radio_selector"
             android:button="@null"
-            android:gravity="center"
             android:fontFamily="@font/source_sans_pro_semibold"
-            android:text="Pending"
-            android:textSize="14sp"
-            android:textColor="@color/justBlack" />
+            android:gravity="center"
+            android:text="@string/vendorpending"
+            android:textColor="@color/justBlack"
+            android:textSize="14sp" />
 
         <RadioButton
-            android:id="@+id/offer"
+            android:id="@+id/completedjh"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="1dp"
@@ -248,11 +248,11 @@
             android:layout_weight="1"
             android:background="@drawable/radio_selector"
             android:button="@null"
-            android:gravity="center"
             android:fontFamily="@font/source_sans_pro_semibold"
-            android:text="Completed"
-            android:textSize="14sp"
-            android:textColor="@color/justBlack" />
+            android:gravity="center"
+            android:text="@string/vendorcompleted"
+            android:textColor="@color/justBlack"
+            android:textSize="14sp" />
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -97,7 +97,7 @@
         android:text="Edit Vendor Details"
         android:textColor="@color/justBlack"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/et_userName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toStartOf="parent"
@@ -189,19 +189,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.837" />
 
-    <EditText
+    <Spinner
         android:id="@+id/editcategoryjh"
         android:layout_width="290dp"
         android:layout_height="38dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:background="@drawable/input_field"
-        android:ems="10"
-        android:hint="Beautician"
-        android:inputType="textPersonName"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:textSize="14sp"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        android:textColor="@color/justBlack"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -214,7 +208,7 @@
         android:layout_width="319dp"
         android:layout_height="34dp"
         android:background="@drawable/radio_group"
-        android:checkedButton="@+id/offer"
+        android:checkedButton="@+id/completedjh"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -223,7 +217,7 @@
         app:layout_constraintVertical_bias="0.76">
 
         <RadioButton
-            android:id="@+id/search"
+            android:id="@+id/pendingjh"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="1dp"
@@ -233,11 +227,11 @@
             android:background="@drawable/radio_selector"
             android:button="@null"
             android:gravity="center"
-            android:text="Pending"
+            android:text="@string/vendorpending"
             android:textColor="@color/justBlack" />
 
         <RadioButton
-            android:id="@+id/offer"
+            android:id="@+id/completedjh"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="1dp"
@@ -247,7 +241,7 @@
             android:background="@drawable/radio_selector"
             android:button="@null"
             android:gravity="center"
-            android:text="Completed"
+            android:text="@string/vendorcompleted"
             android:textColor="@color/justBlack" />
     </RadioGroup>
 

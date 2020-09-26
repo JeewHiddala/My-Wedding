@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@color/bgPalePink"
     android:padding="5dp"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".VenderList">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -22,153 +22,33 @@
         app:layout_constraintVertical_bias="0.93"
         app:srcCompat="@drawable/ic_baseline_add_24" />
 
-    <Button
-        android:id="@+id/btn_hoteldjh"
-        android:layout_width="280dp"
-        android:layout_height="40dp"
-        android:backgroundTint="#02FFFFFF"
-        android:fontFamily="@font/source_sans_pro_semibold"
-        android:text="Hotel"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ListView
+        android:id="@+id/vendorlist"
+        android:layout_width="411dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="670dp"
+        app:layout_constraintBottom_toTopOf="@+id/fabtnaddjh"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.267"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.069" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp" />
 
-    <Button
-        android:id="@+id/btn_floradjh"
-        android:layout_width="280dp"
-        android:layout_height="40dp"
-        android:backgroundTint="#02FFFFFF"
-        android:fontFamily="@font/source_sans_pro_semibold"
-        android:text="Flora"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        android:textSize="18sp"
+    <TextView
+        android:id="@+id/vendorcount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="You have x Vendors"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.267"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.158" />
+        app:layout_constraintEnd_toStartOf="@+id/fabtnaddjh"
+        app:layout_constraintStart_toStartOf="parent"/>
 
-    <Button
-        android:id="@+id/beauticiandjh"
-        android:layout_width="280dp"
-        android:layout_height="40dp"
-        android:backgroundTint="#02FFFFFF"
-        android:fontFamily="@font/source_sans_pro_semibold"
-        android:text="Beautician"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.267"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
 
-    <Button
-        android:id="@+id/entertainnmentsdjh"
-        android:layout_width="280dp"
-        android:layout_height="40dp"
-        android:backgroundTint="#02FFFFFF"
-        android:fontFamily="@font/source_sans_pro_semibold"
-        android:text="Entertainment"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.267"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.344" />
-
-    <Button
-        android:id="@+id/photographydjh"
-        android:layout_width="280dp"
-        android:layout_height="40dp"
-        android:backgroundTint="#02FFFFFF"
-        android:fontFamily="@font/source_sans_pro_semibold"
-        android:text="Photography"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.282"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.428" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="43dp"
-        android:layout_height="40dp"
-        android:background="@color/bgPalePink"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.904"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.058"
-        app:srcCompat="@drawable/ic_baseline_delete_outline_24" />
-
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="43dp"
-        android:layout_height="40dp"
-        android:background="@color/bgPalePink"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.904"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.147"
-        app:srcCompat="@drawable/ic_baseline_delete_outline_24" />
-
-    <ImageButton
-        android:id="@+id/imageButton4"
-        android:layout_width="43dp"
-        android:layout_height="40dp"
-        android:background="@color/bgPalePink"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.902"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.234"
-        app:srcCompat="@drawable/ic_baseline_delete_outline_24" />
-
-    <ImageButton
-        android:id="@+id/imageButton6"
-        android:layout_width="43dp"
-        android:layout_height="40dp"
-        android:background="@color/bgPalePink"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.902"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.325"
-        app:srcCompat="@drawable/ic_baseline_delete_outline_24" />
-
-    <ImageButton
-        android:id="@+id/delbtn"
-        android:layout_width="43dp"
-        android:layout_height="40dp"
-        android:background="@color/bgPalePink"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.902"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.428"
-        app:srcCompat="@drawable/ic_baseline_delete_outline_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>
