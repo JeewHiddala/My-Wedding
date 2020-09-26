@@ -45,30 +45,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.479" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="95dp"
-        android:layout_height="108dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.215"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.317"
-        app:srcCompat="@drawable/ic_baseline_attach_money_24" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="95dp"
-        android:layout_height="108dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.756"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.315"
-        app:srcCompat="@drawable/ic_baseline_assignment_turned_in_24" />
-
     <TextView
         android:id="@+id/textView20"
         android:layout_width="142dp"
@@ -98,5 +74,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.579" />
+
+    <ImageButton
+        android:id="@+id/imgbtn_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00F44336"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.228"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.317"
+        app:srcCompat="@drawable/ic_baseline_budget_96" />
+
+    <ImageButton
+        android:id="@+id/imgbtn_paid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.758"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.319"
+        app:srcCompat="@drawable/ic_baseline_paid_96" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
