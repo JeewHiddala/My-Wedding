@@ -34,6 +34,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+
         String SQL_CREATE_ENTRIES =
                 "CREATE TABLE " + TABLE_NAME + " (" +
                         WeddingMaster.Guests._ID + " INTEGER PRIMARY KEY," +
@@ -52,8 +53,8 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
     }
-
-    public long addGuest(String guestName, String gender, String notes, int status, String phone, String address, String eMail) {
+    //adding a guest to the table
+    public long addGuest(String guestName, String gender, String notes, String status, String phone, String address, String eMail) {
 
         SQLiteDatabase db = getWritableDatabase();
 
@@ -70,6 +71,7 @@ public class DBHelper extends SQLiteOpenHelper {
         return newRowId;
 
     }
+    //the list view of guests' names
     public List<Guest> getAllGuests(){
 
         List<Guest> guests = new ArrayList();
@@ -88,7 +90,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 guest.setGuestName((cursor.getString(1)));
                 guest.setGender((cursor.getString(2)));
                 guest.setNotes((cursor.getString(3)));
-                guest.setStatus((cursor.getInt(4)));
+                guest.setStatus((cursor.getString(4)));
                 guest.setPhone((cursor.getString(5)));
                 guest.setAddress((cursor.getString(6)));
                 guest.seteMail((cursor.getString(7)));
@@ -102,14 +104,14 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
-    //delete
+    //delete guests
     public void deleteGuest(int id){
         SQLiteDatabase db = getWritableDatabase();
         db.delete(TABLE_NAME, WeddingMaster.Guests._ID +" =?", new String[]{String.valueOf(id)});
         db.close();
     }
 
-    //update
+    //retrieve a single guest entry in the view page
     public Guest getSingleGuest(int id) {
         SQLiteDatabase db = getWritableDatabase();
        Cursor cursor = db.query(TABLE_NAME, new String[]{WeddingMaster.Guests._ID, WeddingMaster.Guests.COLUMN_NAME_GNAME, WeddingMaster.Guests.COLUMN_NAME_GENDER, WeddingMaster.Guests.COLUMN_NAME_NOTES,
@@ -123,7 +125,7 @@ public class DBHelper extends SQLiteOpenHelper {
                    cursor.getString(1),
                    cursor.getString(2),
                    cursor.getString(3),
-                   cursor.getInt(4),
+                   cursor.getString(4),
                    cursor.getString(5),
                    cursor.getString(6),
                    cursor.getString(7)
@@ -133,7 +135,7 @@ public class DBHelper extends SQLiteOpenHelper {
        }
        return null;
     }
-
+    //update a single guest entry
     public int singleGuest(Guest guest){
         SQLiteDatabase db = getWritableDatabase();
 

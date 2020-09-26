@@ -31,22 +31,19 @@ public class addGuest extends AppCompatActivity implements AdapterView.OnItemSel
     String category;
     RadioButton radioButton;
 
-
-    //Switch aSwitch;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_guest);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        //the title displayed in the menu bar of add guest page
         getSupportActionBar().setTitle(R.string.guestadd);
 
         etguestname = findViewById(R.id.editTextGuestName);
        // etgender = findViewById(R.id.editTextGender);
 
-        //spinner
+        //spinner for gender
         categorySpinner = findViewById(R.id.editTextGender);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.guest_gender,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -104,9 +101,11 @@ public class addGuest extends AppCompatActivity implements AdapterView.OnItemSel
 
         if (id == R.id.done) {
 
+            //taking the value of radiobutton
             int selectedId = myRadioGroup.getCheckedRadioButtonId();
             radioButton = findViewById(selectedId);
 
+            //required fields validations
            if (TextUtils.isEmpty(etguestname.getText())) {
                 Toast.makeText(this, "Enter Guest Name", Toast.LENGTH_SHORT).show();
                 etguestname.setError("Guest Name is required");
@@ -114,11 +113,13 @@ public class addGuest extends AppCompatActivity implements AdapterView.OnItemSel
                 Toast.makeText(this, "Enter Phone Number", Toast.LENGTH_SHORT).show();
                 etphone.setError("Phone Number is Required");
             } else {
-
+               //creating database object
                 DBHelper dbhelper = new DBHelper(this);
 
+                //inserting user inputs ,using database object
                 long val = dbhelper.addGuest(etguestname.getText().toString(), category, etnotes.getText().toString(), radioButton.getText().toString(), etphone.getText().toString(), etaddress.getText().toString(), etemail.getText().toString());
 
+                //notify the user if the values are added succussfully or not
                 if (val > 0) {
                     Toast.makeText(this, "Guest Added", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(addGuest.this, allGuests.class);
@@ -142,6 +143,7 @@ public class addGuest extends AppCompatActivity implements AdapterView.OnItemSel
                 //  toast.show();
             }
 
+            //back button
             if (id == android.R.id.home) {
                 Intent intent = new Intent(addGuest.this, allGuests.class);
                 startActivity(intent);

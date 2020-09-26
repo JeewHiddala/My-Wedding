@@ -5,14 +5,14 @@ public class Guest {
     private String guestName;
     private String gender;
     private String notes;
-    private int status;
+    private String status;
     private String phone;
     private String address;
     private String eMail;
 
     public Guest() {}
 
-    public Guest(int id, String guestName, String gender, String notes, int status, String phone, String address, String eMail) {
+    public Guest(int id, String guestName, String gender, String notes, String status, String phone, String address, String eMail) {
         this.id = id;
         this.guestName = guestName;
         this.gender = gender;
@@ -23,7 +23,7 @@ public class Guest {
         this.eMail = eMail;
     }
 
-    public Guest(String guestName, String gender, String notes, int status, String phone, String address, String eMail) {
+    public Guest(String guestName, String gender, String notes, String status, String phone, String address, String eMail) {
         this.guestName = guestName;
         this.gender = gender;
         this.notes = notes;
@@ -75,11 +75,11 @@ public class Guest {
         this.notes = notes;
     }
 
-    public int getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 

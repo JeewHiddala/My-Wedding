@@ -173,7 +173,7 @@
         app:layout_constraintVertical_bias="0.81" />
 
     <RadioGroup
-        android:id="@+id/radioGroup2"
+        android:id="@+id/radioGroupst"
         android:layout_width="162dp"
         android:layout_height="43dp"
         android:background="@drawable/radio_group"
@@ -189,7 +189,7 @@
         <RadioButton
             android:id="@+id/bri"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="33dp"
             android:layout_marginLeft="1dp"
             android:layout_marginTop="1dp"
             android:layout_marginBottom="1dp"

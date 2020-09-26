@@ -25,7 +25,7 @@ public class GuestAdapter extends ArrayAdapter<Guest> {
     DBHelper dhbelper;
 
 
-    GuestAdapter(Context context, int resource, List<Guest> guests){
+    GuestAdapter(Context context, int resource, List<Guest> guests){ // assgning above mentioned variables to local variables
         super(context,resource,guests);
         this.context = context;
         this.resource = resource;
@@ -34,17 +34,24 @@ public class GuestAdapter extends ArrayAdapter<Guest> {
 
     @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {  //preview of a single list item
 
-        LayoutInflater inflater = LayoutInflater.from(context);
-        View row = inflater.inflate(resource,parent,false);
+        LayoutInflater inflater = LayoutInflater.from(context);   //creating a inflater object
+        View row = inflater.inflate(resource,parent,false); //convert the singleguest.xml file into java and save it inside the view object
 
+
+        //link xml file by include references
         TextView title = row.findViewById(R.id.guestName);
         TextView description = row.findViewById(R.id.description);
+
         ImageView imageView = row.findViewById(R.id.tick);
+
         final ImageButton delete = row.findViewById(R.id.delbtn);
         ImageButton edit = row.findViewById(R.id.editbtn);
-        //status
+
+
+        //status visibility
+
         final Guest guest = guests.get(position);
         title.setText(guest.getGuestName());
         description.setText(guest.getNotes());
@@ -90,11 +97,29 @@ public class GuestAdapter extends ArrayAdapter<Guest> {
 
 
         //status
-        if(guest.getStatus() > 0){
+       /* if(guest.getStatus() > 0){
+            imageView.setVisibility(View.VISIBLE);
+        } */
+/*
+        String status = guest.getStatus();
+        String sent = "Sent";
+
+        if(status.equals(sent)){
             imageView.setVisibility(View.VISIBLE);
         }
+*/
 
+
+
+        String status = String.valueOf(guest.getStatus());
+        String sent = "Sent";
+
+        if(status.equals(sent)){
+            imageView.setVisibility(View.VISIBLE);
+        }
         return row;
+
+
 
     }
 }

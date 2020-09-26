@@ -83,14 +83,14 @@
 
     <ListView
         android:id="@+id/guestlist"
-        android:layout_width="345dp"
-        android:layout_height="493dp"
+        android:layout_width="414dp"
+        android:layout_height="510dp"
         android:layout_marginBottom="670dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

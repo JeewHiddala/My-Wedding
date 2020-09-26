@@ -24,9 +24,8 @@ import java.util.List;
 
 public class allGuests extends AppCompatActivity {
 
-    //Button btn1;
-    //codecamp
-    private ListView listview;
+
+    private ListView listview;    //list type variable
     private List<Guest> guests;
     private DBHelper dbhelper;
     Context context;
@@ -39,16 +38,15 @@ public class allGuests extends AppCompatActivity {
 
 
         //btn1 = findViewById(R.id.btn_glist1);
-        //code camp
-
 
         listview = findViewById(R.id.guestlist);
 
         context = this;
 
-        guests = new ArrayList<>();
+        guests = new ArrayList<>();  //initialize arraylist to allocate memory for arraylist
         DBHelper dbhelper = new DBHelper(this);
-        guests = dbhelper.getAllGuests();
+
+        guests = dbhelper.getAllGuests(); //call the function in the DBHelper ,using dbhelper object and save the values using guests
         GuestAdapter adapter = new GuestAdapter(context,R.layout.single_guest,guests);
         listview.setAdapter(adapter);
 

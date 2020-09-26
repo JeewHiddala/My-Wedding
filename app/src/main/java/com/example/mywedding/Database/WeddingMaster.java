@@ -5,7 +5,7 @@ import android.provider.BaseColumns;
 public class WeddingMaster {
     public WeddingMaster() {}
 
-
+    //implementation of guest table
     public static class Guests implements BaseColumns{
 
         public static final String TABLE_NAME = "guests";

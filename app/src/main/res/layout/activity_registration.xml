@@ -269,7 +269,7 @@
     </RadioGroup>-->
 
     <RadioGroup
-        android:id="@+id/radioGroup2"
+        android:id="@+id/radioGroupst"
         android:layout_width="319dp"
         android:layout_height="34dp"
         android:background="@drawable/radio_group"

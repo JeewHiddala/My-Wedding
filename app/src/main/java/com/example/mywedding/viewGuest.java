@@ -54,7 +54,7 @@ public class viewGuest extends AppCompatActivity {
         etGuestName.setText(guest.getGuestName());
         etguestGender.setText(guest.getGender());
         etGuestNotes.setText(guest.getNotes());
-      //  etStatus.setText(guest.getStatus());
+        etStatus.setText(guest.getStatus());
         etGuestPhone.setText(guest.getPhone());
         etGuestAddress.setText(guest.getAddress());
         etEmail.setText(guest.geteMail());
