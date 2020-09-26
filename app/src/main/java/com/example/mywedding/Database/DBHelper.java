@@ -17,7 +17,7 @@ import com.example.mywedding.Vender;
 import com.example.mywedding.VenderList;
 import com.example.mywedding.VendorModel;
 
-import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_AMOUNT;
+import static com.example.mywedding.Database.WeddingMaster.Vendors.COLUMN_NAME_AMOUNT;
 import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_CATEGORY;
 import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_CONTACTNO;
 import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_DESCRIPTION;
