@@ -176,7 +176,7 @@ public class editGuest extends AppCompatActivity {
         }
 
         if(id == android.R.id.home){
-            Intent intent = new Intent(editGuest.this,viewGuest.class);
+            Intent intent = new Intent(editGuest.this,allGuests.class);
             startActivity(intent);
         }
         return true;
