@@ -100,5 +100,11 @@
     <string name="cap2pg1">See all the invitees here!</string>
     <string name="uninvitedpg1">Uninvited Guests</string>
     <string name="univitedsubcappg1">See all the pending invitations here!</string>
+    <string name="txtTasklistTitle">Task List</string>
+    <string name="radioBtnTasks">Completed</string>
+    <string name="radioBtnTasks2">Pending</string>
+    <string name="taskNameHint">Task Name</string>
+    <string name="taskNoteHint">Task Note</string>
+    <string name="taskCategoryHint">Task Category</string>
 
 </resources>

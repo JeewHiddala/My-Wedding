@@ -2,14 +2,23 @@ package com.example.mywedding;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.InputType;
+import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.PopupWindow;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -23,31 +32,49 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.DatePicker;
 import java.util.Calendar;
+import java.util.Objects;
+
 import android.content.Context;
 import android.view.MenuInflater;
 import android.content.Intent;
 import androidx.annotation.NonNull;
 
-public class AddTask extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
+import com.example.mywedding.Database.DBHelper;
+//import com.example.mywedding.Model.TaskModel;
 
-    ImageButton btnDatePicker, btnSubAdd;
-    EditText txtDate;
+public class AddTask extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    //initializing tasks values
+    ImageButton btnDatePicker, btnSubAdd, newTaskSaveButton;
+    RadioGroup radioGrp;
+    RadioButton radioBtn1;
+    EditText txtnewTask, txtNote, txtDate;
+    Spinner spinner;
     private int mYear, mMonth, mDay;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_task);
 
-        btnSubAdd = findViewById(R.id.addSubButton);
-
-
+        //btnSubAdd = findViewById(R.id.addSubButton);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.header_add_task_name);
 
+        txtnewTask = findViewById(R.id.task_name);
+        txtNote = findViewById(R.id.editNote);
+
+        //RadioGroup
+        radioGrp = (RadioGroup) findViewById(R.id.radioGroup2);
+
+        //Radio buttons
+       // completeBtn1 = findViewById(R.id.taskComplete);
+       // pendingBtn2 = findViewById(R.id.taskPending);
+
+
         // Spinner element
-        Spinner spinner = (Spinner) findViewById(R.id.editTaskCategory);
+        spinner = (Spinner) findViewById(R.id.editTaskCategory);
 
         // Spinner click listener
         spinner.setOnItemSelectedListener(this);
@@ -73,24 +100,38 @@ public class AddTask extends AppCompatActivity implements AdapterView.OnItemSele
         //date picker
         btnDatePicker=(ImageButton)findViewById(R.id.imageButton2);
         txtDate=(EditText)findViewById(R.id.editDate);
-
-        btnDatePicker.setOnClickListener(this);
-
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        btnSubAdd.setOnClickListener(new View.OnClickListener() {
+        txtDate.setInputType(InputType.TYPE_NULL);
+        btnDatePicker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AddTask.this, PopUp1.class);
-                startActivity(intent);
+
+                // Get Current Date
+                final Calendar c = Calendar.getInstance();
+                mYear = c.get(Calendar.YEAR);
+                mMonth = c.get(Calendar.MONTH);
+                mDay = c.get(Calendar.DAY_OF_MONTH);
+
+                //date picker dialog box
+                DatePickerDialog datePickerDialog = new DatePickerDialog(AddTask.this,
+                        new DatePickerDialog.OnDateSetListener() {
+
+                            @Override
+                            public void onDateSet(DatePicker view, int year,
+                                                  int monthOfYear, int dayOfMonth) {
+
+                                txtDate.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
+
+                            }
+                        }, mYear, mMonth, mDay);
+                datePickerDialog.show();
             }
         });
+
+
+
     }
 
+    //Save button in menubar
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -103,16 +144,34 @@ public class AddTask extends AppCompatActivity implements AdapterView.OnItemSele
         int id = item.getItemId();
 
         if(id == R.id.done){
-            Intent intent = new Intent(AddTask.this,TaskList.class);
-            startActivity(intent);
 
-            Context context = getApplicationContext();
-            CharSequence message = "Task Added";
-            int duration = Toast.LENGTH_SHORT;
-            Toast toast = Toast.makeText(context, message, duration);
-            toast.show();
+            // get selected radio button from radioGroup
+            int selectedId = radioGrp.getCheckedRadioButtonId();
+            // find the radiobutton by returned id
+            radioBtn1 = (RadioButton) findViewById(selectedId);
+
+            //checking whether task name and date is empty
+            if(TextUtils.isEmpty(txtnewTask.getText())){
+                Toast.makeText(this, "Please Enter Task Name", Toast.LENGTH_SHORT).show();
+                txtnewTask.setError("Task Name is required!");
+            } else if(TextUtils.isEmpty(txtDate.getText())){
+                Toast.makeText(this, "Please Enter Task Date", Toast.LENGTH_SHORT).show();
+                txtDate.setError("Task Date is required!");
+            } else {
+
+                //get string values of tasks data from table
+                DBHelper myDB = new DBHelper(AddTask.this);
+                myDB.insertNewTask(txtnewTask.getText().toString().trim(),
+                        spinner.getSelectedItem().toString().trim(),
+                        txtNote.getText().toString().trim(),
+                        txtDate.getText().toString().trim(),
+                        radioBtn1.getText().toString().trim());
+                Intent intent = new Intent(AddTask.this, TaskList.class);
+                startActivity(intent);
+
+            }
+
         }
-
         if(id == android.R.id.home){
             Intent intent = new Intent(AddTask.this, TaskList.class);
             startActivity(intent);
@@ -120,29 +179,7 @@ public class AddTask extends AppCompatActivity implements AdapterView.OnItemSele
         return true;
     }
 
-    @Override
-    public void onClick(View v) {
 
-        // Get Current Date
-        final Calendar c = Calendar.getInstance();
-        mYear = c.get(Calendar.YEAR);
-        mMonth = c.get(Calendar.MONTH);
-        mDay = c.get(Calendar.DAY_OF_MONTH);
-
-
-        DatePickerDialog datePickerDialog = new DatePickerDialog(this,
-                new DatePickerDialog.OnDateSetListener() {
-
-                    @Override
-                    public void onDateSet(DatePicker view, int year,
-                                          int monthOfYear, int dayOfMonth) {
-
-                        txtDate.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
-
-                    }
-                }, mYear, mMonth, mDay);
-        datePickerDialog.show();
-    }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
