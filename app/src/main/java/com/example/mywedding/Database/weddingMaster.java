@@ -17,5 +17,8 @@ public class weddingMaster {
         public static final String COLUMN_NAME_AMOUNT = "amount";
 
 
+
     }
+
+
 }
