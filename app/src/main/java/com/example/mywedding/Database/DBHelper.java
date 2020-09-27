@@ -306,6 +306,15 @@ public class DBHelper extends SQLiteOpenHelper {
         return cursor.getCount();
     }
 
+    public int countCompletedBudgets(){
+        SQLiteDatabase db = getReadableDatabase();
+
+        String query = "SELECT * FROM " + BudgetMaster.Budget.TABLE_NAME;
+
+        Cursor cursor = db.rawQuery(query,null);
+        return cursor.getCount();
+    }
+
     //Listing all the budgets
     public List<BudgetModel> getAllBudgets(){
         List<BudgetModel> budget = new ArrayList();
