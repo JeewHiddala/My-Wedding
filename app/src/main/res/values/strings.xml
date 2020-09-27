@@ -151,4 +151,8 @@
     <string name="uninvited">Not Invited</string>
     <string name="stBtn">Sent</string>
     <string name="ntsent">Not Sent</string>
+    <string name="dashBoard">Task Completion Status</string>
+    <string name="dashBoardGuest">Guest Invitation Status</string>
+    <string name="dashBoardBudget">Budget Completion Status</string>
+    <string name="dashBoardVendor">Vendor Completion Status</string>
 </resources>
