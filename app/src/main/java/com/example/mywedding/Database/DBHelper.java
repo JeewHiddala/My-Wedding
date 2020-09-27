@@ -534,6 +534,14 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
+    //count tasks table records
+    public int countTasks(){
+        SQLiteDatabase db = getReadableDatabase();
+        String query = "SELECT * FROM " + TASK_TABLE_NAME;
+        Cursor cursor = db.rawQuery(query,null);
+        return cursor.getCount();
+    }
+
     //read all task values
     public Cursor readAllData() {
         String query = "SELECT * FROM " + TASK_TABLE_NAME;

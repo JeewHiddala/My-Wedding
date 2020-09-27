@@ -63,8 +63,30 @@
         android:textAlignment="center"
         android:textColor="@color/navPink"
         android:textSize="20sp"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:alpha="0.5"
         android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txtTasksCount"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="560dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        android:text="Tasks Count"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </RelativeLayout>
