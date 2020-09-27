@@ -2,8 +2,8 @@ package com.example.mywedding.Database;
 
 import android.provider.BaseColumns;
 
-public class WeddingMaster {
-    public WeddingMaster() {}
+public class weddingMaster {
+    public weddingMaster() {}
 
     //implementation of guest table
     public static class Guests implements BaseColumns{
