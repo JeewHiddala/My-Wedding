@@ -7,51 +7,6 @@
     android:background="@color/bgPalePink"
     tools:context=".AddTask">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/addSubButton"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:background="@drawable/icons8_plus_48"
-        android:backgroundTint="@color/justWhite"
-        android:clickable="true"
-        app:backgroundTint="@color/justWhite"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.923"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.885" />
-
-
-
-
-    <ImageButton
-        android:id="@+id/deleteButtonSub"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
-        android:backgroundTint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.734"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.884"
-        app:srcCompat="@drawable/ic_baseline_delete_outline_24" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sub Tasks"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.868" />
 
     <TextView
         android:id="@+id/textView"
@@ -106,6 +61,7 @@
                 android:layout_height="35dp"
                 android:background="@drawable/input_field"
                 android:ems="10"
+                android:hint="@string/taskNameHint"
                 android:inputType="textPersonName"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
@@ -143,8 +99,8 @@
                 android:layout_width="364dp"
                 android:layout_height="wrap_content"
                 android:background="@android:drawable/btn_dropdown"
-                android:hint="Select"
-                android:spinnerMode="dropdown"
+                android:prompt="@string/txtSpinTaskCategory"
+                android:spinnerMode="dialog"
                 tools:visibility="visible" />
         </LinearLayout>
 
@@ -185,7 +141,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:orientation="vertical"
@@ -211,7 +167,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/input_field"
-                android:hint=" 20 August 2020"
+                android:hint="@string/taskDateHint"
                 android:inputType="text"
                 android:textAlignment="textStart"
                 android:textColorHighlight="#A9A9A9" />
@@ -231,9 +187,58 @@
 
         </LinearLayout>
 
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="170dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="100dp"
+            android:background="@drawable/radio_group"
+            android:checkedButton="@+id/taskComplete"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextNotes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.44"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addguestPhone"
+            app:layout_constraintVertical_bias="0.53999996">
+
+            <RadioButton
+                android:id="@+id/taskComplete"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/radioBtnTasks"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/justBlack"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/taskPending"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/radioBtnTasks2"
+                android:textAlignment="center"
+                android:textColor="@color/justBlack"
+                android:textStyle="bold" />
+        </RadioGroup>
+
 
     </LinearLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

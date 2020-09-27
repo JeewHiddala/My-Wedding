@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -110,19 +111,32 @@ public class AddVender extends AppCompatActivity implements AdapterView.OnItemSe
             int selectedId = radioGroup.getCheckedRadioButtonId();
             radioButton = findViewById(selectedId);
 
-            //add vendor with db helper
-            DBHelper dbHelper = new DBHelper(this);
-
-            long val = dbHelper.addVendor(name.getText().toString(),contactno.getText().toString(),text,description.getText().toString(),radioButton.getText().toString(),amount.getText().toString());
-
-            if(val>0){
-                Toast.makeText(this,"Successfully Added", Toast.LENGTH_SHORT).show();   //toast msg
-                Intent intent = new Intent(AddVender.this,VenderList.class);        //transfer data to the vendor list page
-                startActivity(intent);
+            //checking whether budget amount and name is empty
+            if (TextUtils.isEmpty(name.getText())) {
+                Toast.makeText(this, "Please enter vendor payment", Toast.LENGTH_SHORT).show();   //show a toast with request validate data inputs
+                name.setError("Vendor Payment is required!");
+            } else if (TextUtils.isEmpty(contactno.getText())) {
+                Toast.makeText(this, "Please enter vendor name", Toast.LENGTH_SHORT).show();        //show a toast with request validate data inputs
+                contactno.setError("Vendor Name is required!");
+            } else if (TextUtils.isEmpty(amount.getText())) {
+                Toast.makeText(this, "Please enter vendor contact Number", Toast.LENGTH_SHORT).show();      //show a toast with request validate data inputs
+                amount.setError("Vendor Contact Number is required!");
             }else {
-                Toast.makeText(this,"Something went wrong", Toast.LENGTH_SHORT).show();     //toast msg
-                Intent intent = new Intent(AddVender.this,AddVender.class);         //redirect to same page
-                startActivity(intent);
+
+                //add vendor with db helper
+                DBHelper dbHelper = new DBHelper(this);
+
+                long val = dbHelper.addVendor(name.getText().toString(), contactno.getText().toString(), text, description.getText().toString(), radioButton.getText().toString(), amount.getText().toString());
+
+                if (val > 0) {
+                    Toast.makeText(this, "Successfully Added", Toast.LENGTH_SHORT).show();   //toast msg
+                    Intent intent = new Intent(AddVender.this, VenderList.class);        //transfer data to the vendor list page
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(this, "Something went wrong", Toast.LENGTH_SHORT).show();     //toast msg
+                    Intent intent = new Intent(AddVender.this, AddVender.class);         //redirect to same page
+                    startActivity(intent);
+                }
             }
 
 

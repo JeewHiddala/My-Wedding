@@ -9,138 +9,9 @@
     tools:context=".EditTask">
 
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/addSubButton2"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:background="@drawable/ic_baseline_add_24"
-        android:clickable="true"
-        android:tint="@color/navPink"
-        app:backgroundTint="@color/justWhite"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.931"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.7" />
 
-    <ImageButton
-        android:id="@+id/deleteButtonSub2"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
-        android:backgroundTint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.748"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.7"
-        app:srcCompat="@drawable/ic_baseline_delete_outline_24" />
 
-    <LinearLayout
-        android:id="@+id/subtask3Layout"
-        android:layout_width="390dp"
-        android:layout_height="50dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.992">
 
-        <ImageButton
-            android:id="@+id/checkONButton3"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="330dp"
-            android:layout_marginRight="10dp"
-            android:backgroundTint="#00FFFFFF"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.997"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.028"
-            app:srcCompat="@android:drawable/checkbox_off_background" />
-
-        <Button
-            android:id="@+id/subbutton3"
-            android:layout_width="320dp"
-            android:layout_height="36dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="-45dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="50dp"
-            android:backgroundTint="@color/bgPalePink"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:text="Purchasing Jewellery for family"
-            android:textAlignment="textStart"
-            android:textAllCaps="false"
-            android:textSize="18sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/subtask2Layout"
-        android:layout_width="390dp"
-        android:layout_height="50dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.891">
-
-        <ImageButton
-            android:id="@+id/checkONButton2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="330dp"
-            android:layout_marginRight="10dp"
-            android:backgroundTint="#00FFFFFF"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.997"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.028"
-            app:srcCompat="@android:drawable/checkbox_on_background" />
-
-        <Button
-            android:id="@+id/subbutton1"
-            android:layout_width="320dp"
-            android:layout_height="36dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="-45dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="50dp"
-            android:backgroundTint="@color/bgPalePink"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:text="Buying wedding rings"
-            android:textAlignment="textStart"
-            android:textAllCaps="false"
-            android:textSize="18sp" />
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sub Tasks"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.702" />
 
     <TextView
         android:id="@+id/textView"
@@ -197,7 +68,7 @@
                 android:layout_marginTop="-5dp"
                 android:background="@drawable/input_field"
                 android:ems="10"
-                android:hint="Jewellery Shopping"
+                android:hint="@string/taskNameHint"
                 android:inputType="textPersonName"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
@@ -230,14 +101,25 @@
                 android:textSize="20sp" />
 
 
-            <Spinner
-                android:id="@+id/editTaskCategory"
-                android:layout_width="364dp"
-                android:layout_height="wrap_content"
-                android:background="@android:drawable/btn_dropdown"
-                android:hint="Clothing and Accessories"
-                android:spinnerMode="dropdown"
-                tools:visibility="visible" />
+            <EditText
+                android:id="@+id/task_category"
+                android:layout_width="365dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="-5dp"
+                android:background="@color/bgPalePink"
+                android:editable="false"
+                android:ems="10"
+                android:hint="@string/taskCategoryHint"
+                android:inputType="none"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.482"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.116" />
         </LinearLayout>
 
         <LinearLayout
@@ -264,7 +146,7 @@
                 android:layout_marginTop="-5dp"
                 android:background="@drawable/input_field"
                 android:ems="10"
-                android:hint="For bride and her family"
+                android:hint="@string/taskNoteHint"
                 android:inputType="textPersonName"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
@@ -307,7 +189,7 @@
                 android:layout_marginTop="-5dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/input_field"
-                android:hint="  20 August 2020"
+                android:hint="@string/taskDateHint"
                 android:inputType="text"
                 android:textAlignment="textStart"
                 android:textColorHighlight="#A9A9A9"
@@ -329,52 +211,87 @@
 
         </LinearLayout>
 
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="170dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="100dp"
+            android:background="@drawable/radio_group"
+            android:checkedButton="@+id/taskStatus"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextNotes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.44"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addguestPhone"
+            app:layout_constraintVertical_bias="0.53999996">
+
+            <RadioButton
+                android:id="@+id/taskComplete2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/radioBtnTasks"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/justBlack"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/taskPending2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/radioBtnTasks2"
+                android:textAlignment="center"
+                android:textColor="@color/justBlack"
+                android:textStyle="bold" />
+        </RadioGroup>
+
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/subtask1Layout"
-        android:layout_width="390dp"
-        android:layout_height="50dp"
-        android:orientation="vertical"
+    <TextView
+        android:id="@+id/txtEditViewID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="task id"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintHorizontal_bias="0.738"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.79">
+        app:layout_constraintVertical_bias="0.025" />
 
-        <ImageButton
-            android:id="@+id/checkONButton1"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="330dp"
-            android:layout_marginRight="10dp"
-            android:backgroundTint="#00FFFFFF"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.997"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.028"
-            app:srcCompat="@android:drawable/checkbox_on_background" />
+    <ImageButton
+        android:id="@+id/deleteButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/bgPalePink"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.012"
+        app:srcCompat="@drawable/ic_baseline_delete_outline_24" />
 
-        <Button
-            android:id="@+id/subbutton1"
-            android:layout_width="320dp"
-            android:layout_height="36dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="-45dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="50dp"
-            android:backgroundTint="@color/bgPalePink"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:text="Buying wedding necklace"
-            android:textAlignment="textStart"
-            android:textAllCaps="false"
-            android:textSize="18sp" />
 
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

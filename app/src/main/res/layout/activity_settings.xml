@@ -25,40 +25,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.028" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="339dp"
-        android:layout_height="40dp"
-        android:background="@android:drawable/list_selector_background"
-        android:backgroundTint="#02FFFFFF"
-        android:fontFamily="@font/source_sans_pro_semibold"
-        android:text="Backup your data"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.115" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="339dp"
-        android:layout_height="40dp"
-        android:background="@android:drawable/list_selector_background"
-        android:backgroundTint="#02FFFFFF"
-        android:fontFamily="@font/source_sans_pro_semibold"
-        android:text="Restore"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.204" />
-
     <TextView
         android:id="@+id/textView8"
         android:layout_width="160dp"

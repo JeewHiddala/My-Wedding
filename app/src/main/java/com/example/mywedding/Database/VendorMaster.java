@@ -2,11 +2,10 @@ package com.example.mywedding.Database;
 
 import android.provider.BaseColumns;
 
-public class weddingMaster {
-    public weddingMaster(){}
-
+public class VendorMaster {
+    public VendorMaster(){}
     //column names by using static variables
-    public static class Vendors implements BaseColumns{
+    public static class Vendors implements BaseColumns {
         public static final String TABLE_NAME = "vendor";
         public static final String _ID = "_id";
         public static final String COLUMN_NAME_VNAME = "vendorname";
@@ -15,7 +14,6 @@ public class weddingMaster {
         public static final String COLUMN_NAME_DESCRIPTION = "description";
         public static final String COLUMN_NAME_STATUS= "status";
         public static final String COLUMN_NAME_AMOUNT = "amount";
-
 
     }
 }

@@ -5,36 +5,66 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+//import com.example.mywedding.Model.TaskModel;
+import java.util.ArrayList;
+import java.util.List;
 import android.text.Editable;
 
 import com.example.mywedding.Vender;
 import com.example.mywedding.VenderList;
 import com.example.mywedding.VendorModel;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_AMOUNT;
-import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_CATEGORY;
-import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_CONTACTNO;
-import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_DESCRIPTION;
-import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_STATUS;
-import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_VNAME;
-import static com.example.mywedding.Database.weddingMaster.Vendors.TABLE_NAME;
-import static com.example.mywedding.Database.weddingMaster.Vendors._ID;
+//import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_AMOUNT;
+//import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_CATEGORY;
+//import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_CONTACTNO;
+//import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_DESCRIPTION;
+//import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_STATUS;
+//import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_VNAME;
+//import static com.example.mywedding.Database.weddingMaster.Vendors.TABLE_NAME;
+//import static com.example.mywedding.Database.weddingMaster.Vendors._ID;
 
 import com.example.mywedding.Models.BudgetModel;
 import com.example.mywedding.Models.UserModel;
 
-import java.util.ArrayList;
-import java.util.List;
+
+
+import com.example.mywedding.Guest;
+
+
+
+//import static android.provider.BaseColumns._ID;
+//import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_ADDRESS;
+//import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_EMAIL;
+//import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_GENDER;
+//import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_GNAME;
+//import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_NOTES;
+//import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_PHONE;
+//import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_STATUS;
+//import static com.example.mywedding.Database.WeddingMaster.Guests.GTABLE_NAME;
+
+//import static com.example.mywedding.Database.WeddingMaster.Guests.TABLE_NAME;
 
 public class DBHelper extends SQLiteOpenHelper {
+    private Context context;
+    private static final int VERSION = 1;
     public static final String DATABASE_NAME = "MyWed.db";
+    private static final String TASK_TABLE_NAME = "tasks";
     private SQLiteDatabase db;
 
+    //tasks table column names
+    private static final String COLUMN_NAME_TASKID = "task_id";
+    private static final String COLUMN_NAME_TASKNAME = "task_name";
+    private static final String COLUMN_NAME_TASKCATEGORY = "task_category";
+    private static final String COLUMN_NAME_NOTE = "task_note";
+    private static final String COLUMN_NAME_TASKDATE = "task_date";
+    private static final String COLUMN_NAME_TASKSTATUS = "task_status";
+
     public DBHelper(Context context) {
-        super(context, DATABASE_NAME, null, 1);
+        super(context, DATABASE_NAME, null, VERSION);
+        this.context = context;
     }
 
     @Override
@@ -69,20 +99,45 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_ENTRIES2);
 
         String SQL_CREATE_ENTRIES =
-                "CREATE TABLE " + TABLE_NAME +  " (" +
-                        weddingMaster.Vendors._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-                        weddingMaster.Vendors.COLUMN_NAME_VNAME + " TEXT," +
-                        weddingMaster.Vendors.COLUMN_NAME_CATEGORY + " TEXT," +
-                        weddingMaster.Vendors.COLUMN_NAME_CONTACTNO + " TEXT," +
-                        weddingMaster.Vendors.COLUMN_NAME_DESCRIPTION + " TEXT," +
-                        weddingMaster.Vendors.COLUMN_NAME_STATUS + " INTEGER," +
-                        weddingMaster.Vendors.COLUMN_NAME_AMOUNT + " TEXT)";
+                "CREATE TABLE " + VendorMaster.Vendors.TABLE_NAME +  " (" +
+                        VendorMaster.Vendors._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                        VendorMaster.Vendors.COLUMN_NAME_VNAME + " TEXT," +
+                        VendorMaster.Vendors.COLUMN_NAME_CATEGORY + " TEXT," +
+                        VendorMaster.Vendors.COLUMN_NAME_CONTACTNO + " TEXT," +
+                        VendorMaster.Vendors.COLUMN_NAME_DESCRIPTION + " TEXT," +
+                        VendorMaster.Vendors.COLUMN_NAME_STATUS + " INTEGER," +
+                        VendorMaster.Vendors.COLUMN_NAME_AMOUNT + " TEXT)";
         db.execSQL(SQL_CREATE_ENTRIES);   //run query and  create table
+
+        //Creating tasks table
+        String SQL_query =
+                "CREATE TABLE " + TASK_TABLE_NAME + " (" +
+                COLUMN_NAME_TASKID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                COLUMN_NAME_TASKNAME + " TEXT," +
+                COLUMN_NAME_TASKCATEGORY + " TEXT," +
+                COLUMN_NAME_NOTE + " TEXT," +
+                COLUMN_NAME_TASKDATE + " TEXT," +
+                COLUMN_NAME_TASKSTATUS + " TEXT)";
+
+        db.execSQL(SQL_query);
+
+        //Guest Table
+        String SQL_CREATE_ENTRIES3 =
+                "CREATE TABLE " + GuestMaster.Guests.GTABLE_NAME + " (" +
+                        GuestMaster.Guests._ID + " INTEGER PRIMARY KEY," +
+                        GuestMaster.Guests.COLUMN_NAME_GNAME + " TEXT," +
+                        GuestMaster.Guests.COLUMN_NAME_GENDER + " TEXT," +
+                        GuestMaster.Guests.COLUMN_NAME_NOTES + " TEXT," +
+                        GuestMaster.Guests.COLUMN_NAME_STATUSS + " INTEGER," +
+                        GuestMaster.Guests.COLUMN_NAME_PHONE + " TEXT," +
+                        GuestMaster.Guests.COLUMN_NAME_ADDRESS + " TEXT," +
+                        GuestMaster.Guests.COLUMN_NAME_EMAIL + " TEXT)";
+        db.execSQL(SQL_CREATE_ENTRIES3);
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) { //helps to create a another new table
-        String DROP_TABLE_QUERY = "DROP TABLE IF EXISTS "+ TABLE_NAME;
+    public void onUpgrade(@Nullable SQLiteDatabase db, int oldVersion, int newVersion) { //helps to create a another new table
+        String DROP_TABLE_QUERY = "DROP TABLE IF EXISTS "+ VendorMaster.Vendors.TABLE_NAME;
         // Drop older table if existed
         db.execSQL(DROP_TABLE_QUERY);
         //Create tables again
@@ -95,22 +150,22 @@ public class DBHelper extends SQLiteOpenHelper {
 
         //create a new map of values,where column names the keys
         ContentValues values = new ContentValues();
-        values.put(weddingMaster.Vendors.COLUMN_NAME_VNAME,vendorName);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_CATEGORY,category);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_CONTACTNO,contactNo);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_DESCRIPTION,description);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_STATUS,status);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_AMOUNT,amount);
+        values.put(VendorMaster.Vendors.COLUMN_NAME_VNAME,vendorName);
+        values.put(VendorMaster.Vendors.COLUMN_NAME_CATEGORY,category);
+        values.put(VendorMaster.Vendors.COLUMN_NAME_CONTACTNO,contactNo);
+        values.put(VendorMaster.Vendors.COLUMN_NAME_DESCRIPTION,description);
+        values.put(VendorMaster.Vendors.COLUMN_NAME_STATUS,status);
+        values.put(VendorMaster.Vendors.COLUMN_NAME_AMOUNT,amount);
 
         //saving the new row, returning the primary key value of the new row
-        long newRowId = db.insert(TABLE_NAME,null,values);
+        long newRowId = db.insert(VendorMaster.Vendors.TABLE_NAME,null,values);
         return newRowId;
     }
 
     //count vendor table records
     public int countVendor(){
         SQLiteDatabase db = getReadableDatabase();
-        String query  = "SELECT * FROM "+ TABLE_NAME;
+        String query  = "SELECT * FROM "+ VendorMaster.Vendors.TABLE_NAME;
 
         //selection args use to declare where conditions
         //cursor get count gives the numbers of the rows in the database as integer value
@@ -123,7 +178,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
         List<VendorModel> Vendors = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
-        String query = "SELECT * FROM "+TABLE_NAME;
+        String query = "SELECT * FROM "+VendorMaster.Vendors.TABLE_NAME;
 
         Cursor cursor = db.rawQuery(query,null);
 
@@ -152,7 +207,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public void deleteVendor(int id){
 
         SQLiteDatabase db = getWritableDatabase();      //create new object for SQLite database object
-        db.delete(TABLE_NAME,"_id =?",new String[]{String.valueOf(id)});      //set delete query by getting id and convert id to integer
+        db.delete(VendorMaster.Vendors.TABLE_NAME,"_id =?",new String[]{String.valueOf(id)});      //set delete query by getting id and convert id to integer
         //db.close();  //close the database connection
     }
 
@@ -160,8 +215,8 @@ public class DBHelper extends SQLiteOpenHelper {
     public VendorModel getSingleVendor(int id) {
         SQLiteDatabase db = getWritableDatabase();          //create new object for SQLite database object
         //write database query and assign it to the cursor object
-        Cursor cursor = db.query(TABLE_NAME, new String[]{_ID, COLUMN_NAME_VNAME, COLUMN_NAME_CATEGORY, COLUMN_NAME_CONTACTNO, COLUMN_NAME_DESCRIPTION, COLUMN_NAME_STATUS, COLUMN_NAME_AMOUNT},
-                _ID + "= ?", new String[]{String.valueOf(id)}, null, null, null);
+        Cursor cursor = db.query(VendorMaster.Vendors.TABLE_NAME, new String[]{VendorMaster.Vendors._ID, VendorMaster.Vendors.COLUMN_NAME_VNAME, VendorMaster.Vendors.COLUMN_NAME_CATEGORY, VendorMaster.Vendors.COLUMN_NAME_CONTACTNO, VendorMaster.Vendors.COLUMN_NAME_DESCRIPTION, VendorMaster.Vendors.COLUMN_NAME_STATUS, VendorMaster.Vendors.COLUMN_NAME_AMOUNT},
+                VendorMaster.Vendors._ID + "= ?", new String[]{String.valueOf(id)}, null, null, null);
 
         VendorModel vendorModel;            //create model class (VendorModel) object
 
@@ -427,8 +482,8 @@ public class DBHelper extends SQLiteOpenHelper {
 
         SQLiteDatabase db = getWritableDatabase();          //create new object for SQLite database object
         //write database query and assign it to the cursor object
-        Cursor cursor = db.query(TABLE_NAME,new String[]{_ID,COLUMN_NAME_VNAME,COLUMN_NAME_CATEGORY,COLUMN_NAME_CONTACTNO,COLUMN_NAME_DESCRIPTION,COLUMN_NAME_STATUS,COLUMN_NAME_AMOUNT},
-                _ID + "= ?",new String[]{String.valueOf(id)},null,null,null);
+        Cursor cursor = db.query(VendorMaster.Vendors.TABLE_NAME,new String[]{VendorMaster.Vendors._ID,VendorMaster.Vendors.COLUMN_NAME_VNAME,VendorMaster.Vendors.COLUMN_NAME_CATEGORY,VendorMaster.Vendors.COLUMN_NAME_CONTACTNO,VendorMaster.Vendors.COLUMN_NAME_DESCRIPTION,VendorMaster.Vendors.COLUMN_NAME_STATUS,VendorMaster.Vendors.COLUMN_NAME_AMOUNT},
+                VendorMaster.Vendors._ID + "= ?",new String[]{String.valueOf(id)},null,null,null);
 
         VendorModel vendorModel;            //create model class (VendorModel) object
 
@@ -455,19 +510,196 @@ public class DBHelper extends SQLiteOpenHelper {
 
         //create a new map of values,where column names the keys
         ContentValues values = new ContentValues();
-        values.put(weddingMaster.Vendors.COLUMN_NAME_VNAME,vendorModel.getVendorname());
-        values.put(weddingMaster.Vendors.COLUMN_NAME_CATEGORY,vendorModel.getCategory());
-        values.put(weddingMaster.Vendors.COLUMN_NAME_CONTACTNO,vendorModel.getContactno());
-        values.put(weddingMaster.Vendors.COLUMN_NAME_DESCRIPTION,vendorModel.getDescription());
-        values.put(weddingMaster.Vendors.COLUMN_NAME_STATUS,vendorModel.getStatus());
-        values.put(weddingMaster.Vendors.COLUMN_NAME_AMOUNT,vendorModel.getAmount());
+        values.put(VendorMaster.Vendors.COLUMN_NAME_VNAME,vendorModel.getVendorname());
+        values.put(VendorMaster.Vendors.COLUMN_NAME_CATEGORY,vendorModel.getCategory());
+        values.put(VendorMaster.Vendors.COLUMN_NAME_CONTACTNO,vendorModel.getContactno());
+        values.put(VendorMaster.Vendors.COLUMN_NAME_DESCRIPTION,vendorModel.getDescription());
+        values.put(VendorMaster.Vendors.COLUMN_NAME_STATUS,vendorModel.getStatus());
+        values.put(VendorMaster.Vendors.COLUMN_NAME_AMOUNT,vendorModel.getAmount());
 
         //check affected no of rows.if status = 0,there is not affected rows.if status = 1, there is a affected row
-        int status = db.update(TABLE_NAME,values,_ID +" =?",
+        int status = db.update(VendorMaster.Vendors.TABLE_NAME,values,VendorMaster.Vendors._ID +" =?",
                 new String[]{String.valueOf(vendorModel.getId())});
 
         db.close();    //close database
         return status;
+    }
+
+    //insert all task values
+    public void insertNewTask(String task_name, String task_cate, String task_note, String task_date, String task_status) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_NAME_TASKNAME, task_name);
+        values.put(COLUMN_NAME_TASKCATEGORY, task_cate);
+        values.put(COLUMN_NAME_NOTE, task_note);
+        values.put(COLUMN_NAME_TASKDATE, task_date);
+        values.put(COLUMN_NAME_TASKSTATUS, task_status);
+        long result = db.insert(TASK_TABLE_NAME, null, values);
+        if(result == -1) {
+            Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(context, "Added Successfully!", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    //count tasks table records
+    public int countTasks(){
+        SQLiteDatabase db = getReadableDatabase();
+        String query = "SELECT * FROM " + TASK_TABLE_NAME;
+        Cursor cursor = db.rawQuery(query,null);
+        return cursor.getCount();
+    }
+
+    //read all task values
+    public Cursor readAllData() {
+        String query = "SELECT * FROM " + TASK_TABLE_NAME;
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        if(db != null) {
+            cursor = db.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
+    //update all task values
+    public void updateData(String row_id, String task_name, String task_cate, String task_note, String task_date, String task_status) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_NAME_TASKID, row_id);
+        values.put(COLUMN_NAME_TASKNAME, task_name);
+        values.put(COLUMN_NAME_TASKCATEGORY, task_cate);
+        values.put(COLUMN_NAME_NOTE, task_note);
+        values.put(COLUMN_NAME_TASKDATE, task_date);
+        values.put(COLUMN_NAME_TASKSTATUS, task_status);
+
+        long result = db.update(TASK_TABLE_NAME, values, "task_id=?", new String[]{row_id});
+        if(result == -1) {
+            Toast.makeText(context, "Failed to Update", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(context, "Successfully Updated!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    //delete one task row
+    public void deleteOneRow(String row_id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        long result = db.delete(TASK_TABLE_NAME, "task_id=?", new String[]{row_id});
+        if(result == -1) {
+            Toast.makeText(context, "Failed to Delete", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(context, "Successfully Deleted!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    //delete all task details row
+    public void deleteAllData() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("DELETE FROM " + TASK_TABLE_NAME);
+    }
+
+
+    //adding a guest to the table
+    public long addGuest(String guestName, String gender, String notes, String status, String phone, String address, String eMail) {
+
+        SQLiteDatabase db = getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(GuestMaster.Guests.COLUMN_NAME_GNAME,guestName);
+        values.put(GuestMaster.Guests.COLUMN_NAME_GENDER,gender);
+        values.put(GuestMaster.Guests.COLUMN_NAME_NOTES,notes);
+        values.put(GuestMaster.Guests.COLUMN_NAME_STATUSS,status);
+        values.put(GuestMaster.Guests.COLUMN_NAME_PHONE,phone);
+        values.put(GuestMaster.Guests.COLUMN_NAME_ADDRESS,address);
+        values.put(GuestMaster.Guests.COLUMN_NAME_EMAIL,eMail);
+
+        long newRowId = db.insert(GuestMaster.Guests.GTABLE_NAME,null,values);
+        return newRowId;
+
+    }
+    //the list view of guests' names
+    public List<Guest> getAllGuests(){
+
+        List<Guest> guests = new ArrayList();
+        SQLiteDatabase db = getReadableDatabase();
+        String query = "SELECT * FROM "+ GuestMaster.Guests.GTABLE_NAME;
+
+        Cursor cursor = db.rawQuery(query,null);
+
+        if(cursor.moveToFirst()){
+
+            do{
+                //create new Guest object
+                Guest guest = new Guest();
+
+                guest.setId((cursor.getInt(0)));
+                guest.setGuestName((cursor.getString(1)));
+                guest.setGender((cursor.getString(2)));
+                guest.setNotes((cursor.getString(3)));
+                guest.setStatus((cursor.getString(4)));
+                guest.setPhone((cursor.getString(5)));
+                guest.setAddress((cursor.getString(6)));
+                guest.seteMail((cursor.getString(7)));
+
+                guests.add(guest);
+
+            }while (cursor.moveToNext());
+
+        }
+        return guests;
+
+    }
+
+    //delete guests
+    public void deleteGuest(int id){
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete(GuestMaster.Guests.GTABLE_NAME, GuestMaster.Guests._ID +" =?", new String[]{String.valueOf(id)});
+        db.close();
+    }
+
+    //retrieve a single guest entry in the view page
+    public Guest getSingleGuest(int id) {
+        SQLiteDatabase db = getWritableDatabase();
+        Cursor cursor = db.query(GuestMaster.Guests.GTABLE_NAME, new String[]{GuestMaster.Guests._ID, GuestMaster.Guests.COLUMN_NAME_GNAME, GuestMaster.Guests.COLUMN_NAME_GENDER, GuestMaster.Guests.COLUMN_NAME_NOTES,
+                GuestMaster.Guests.COLUMN_NAME_STATUSS, GuestMaster.Guests.COLUMN_NAME_PHONE, GuestMaster.Guests.COLUMN_NAME_ADDRESS, GuestMaster.Guests.COLUMN_NAME_EMAIL}, GuestMaster.Guests._ID  +"= ?", new String[]{String.valueOf(id)}, null, null, null);
+
+        Guest guest;
+        if(cursor != null){
+            cursor.moveToFirst();
+            guest = new Guest(
+                    cursor.getInt(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getString(3),
+                    cursor.getString(4),
+                    cursor.getString(5),
+                    cursor.getString(6),
+                    cursor.getString(7)
+            );
+
+            return guest;
+        }
+        return null;
+    }
+    //update a single guest entry
+    public int singleGuest(Guest guest){
+        SQLiteDatabase db = getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+
+        values.put(GuestMaster.Guests.COLUMN_NAME_GNAME,guest.getGuestName());
+        values.put(GuestMaster.Guests.COLUMN_NAME_GENDER,guest.getGender());
+        values.put(GuestMaster.Guests.COLUMN_NAME_NOTES,guest.getNotes());
+        values.put(GuestMaster.Guests.COLUMN_NAME_STATUSS,guest.getStatus());
+        values.put(GuestMaster.Guests.COLUMN_NAME_PHONE,guest.getPhone());
+        values.put(GuestMaster.Guests.COLUMN_NAME_ADDRESS,guest.getAddress());
+        values.put(GuestMaster.Guests.COLUMN_NAME_EMAIL,guest.geteMail());
+
+        int stat = db.update(GuestMaster.Guests.GTABLE_NAME,values, GuestMaster.Guests._ID +" =?", new String[]{String.valueOf(guest.getId())});
+
+        db.close();
+        return stat;
     }
 
 }
