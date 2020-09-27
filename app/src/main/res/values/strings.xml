@@ -142,4 +142,13 @@
     </string-array>
 
 
+    <string-array name="guest_gender">
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+
+    <string name="invited">Invited</string>
+    <string name="uninvited">Not Invited</string>
+    <string name="stBtn">Sent</string>
+    <string name="ntsent">Not Sent</string>
 </resources>
