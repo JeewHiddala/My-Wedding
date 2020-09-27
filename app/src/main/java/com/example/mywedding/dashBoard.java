@@ -25,6 +25,7 @@ public class dashBoard extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.dboard);
 
+        //assigning fields
         txtTaskCompleted = findViewById(R.id.txtCompletedTasks);
         txtTaskIncomplete = findViewById(R.id.txtIncompletedTasks2);
         txtGuestInvited = findViewById(R.id.txtInvitedGuest);
@@ -38,6 +39,7 @@ public class dashBoard extends AppCompatActivity {
         int totalBudgets = dbHelper.countBudgets();
 
 
+        //setting values to the view
         txtTaskCompleted.setText("Completed : ");
         txtTaskIncomplete.setText("Incomplete : ");
         txtGuestInvited.setText("Invited : ");
