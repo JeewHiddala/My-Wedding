@@ -672,6 +672,7 @@ public class DBHelper extends SQLiteOpenHelper {
         }
         return null;
     }
+
     //update a single guest entry
     public int singleGuest(Guest guest){
         SQLiteDatabase db = getWritableDatabase();
@@ -692,4 +693,23 @@ public class DBHelper extends SQLiteOpenHelper {
         return stat;
     }
 
+    //count completed vendors using vendor table records
+    public int countCompletedVendor(){
+        SQLiteDatabase db = getReadableDatabase();
+
+        String query  = "SELECT * FROM " + VendorMaster.Vendors.TABLE_NAME
+                + " WHERE " + VendorMaster.Vendors.COLUMN_NAME_STATUS + "='Completed'";
+
+        //selection args use to declare where conditions
+        //cursor get count gives the numbers of the rows in the database as integer value
+        Cursor cursor = db.rawQuery(query,null);
+        return cursor.getCount();
+    }
+
+//    //count pending vendors using vendor table records
+//    public int countPendingVendor(int allStatus, int completed){
+//
+//        int pending = allStatus - completed;
+//        return pending;
+//    }
 }

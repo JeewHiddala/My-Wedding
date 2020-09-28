@@ -36,12 +36,12 @@ public class ExampleUnitTest {
         assertEquals(0, result, DELTA);
     }
 
-    @Test //test the balance payable value if the paid is greater than amount
+    @Test //test the pending budget count
     public void testPendingCount(){
         //invoking the function by giving dummy data
         int result = dashBoard.getPendingBudgets(8,2);
 
-        //checking the expected answer 0 with the result
+        //checking the expected answer 6 with the result
         assertEquals(6, result);
     }
 
@@ -53,4 +53,13 @@ public class ExampleUnitTest {
         //checking the expected answer 3 with the result
         assertEquals(3, result);
     }
+    @Test //test the pending vendor count
+    public void testPendingVendorCount(){
+        //invoking the function by giving dummy data
+        int result = dashBoard.getPendingVendor(10,6);
+
+        //checking the expected answer 4 with the result
+        assertEquals(4, result);
+    }
+
 }
