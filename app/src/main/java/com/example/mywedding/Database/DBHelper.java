@@ -706,10 +706,10 @@ public class DBHelper extends SQLiteOpenHelper {
         return cursor.getCount();
     }
 
-    //count pending vendors using vendor table records
-    public int countPendingVendor(int allStatus, int completed){
-
-        int pending = allStatus - completed;
-        return pending;
-    }
+//    //count pending vendors using vendor table records
+//    public int countPendingVendor(int allStatus, int completed){
+//
+//        int pending = allStatus - completed;
+//        return pending;
+//    }
 }

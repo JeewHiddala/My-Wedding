@@ -41,6 +41,8 @@
         <item>Flora</item>
         <item>Hotel</item>
         <item>Photography</item>
+        <item>Dress Maker</item>
+        <item>Catering Service</item>
     </string-array>
     <string name="sub_menu_btn_all">Budget List</string>
     <string name="sub_menu_btn_paid">Paid List</string>
