@@ -27,7 +27,7 @@ import com.example.mywedding.Database.DBHelper;
 public class addGuest extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     Spinner categorySpinner;
     RadioGroup myRadioGroup;
-    EditText etguestname,etgender,etnotes,etstatus,etphone,etaddress,etemail;
+    EditText etguestname, etgender, etnotes, etstatus, etphone, etaddress, etemail;
     String category;
     RadioButton radioButton;
 
@@ -41,17 +41,17 @@ public class addGuest extends AppCompatActivity implements AdapterView.OnItemSel
         getSupportActionBar().setTitle(R.string.guestadd);
 
         etguestname = findViewById(R.id.editTextGuestName);
-       // etgender = findViewById(R.id.editTextGender);
+        // etgender = findViewById(R.id.editTextGender);
 
         //spinner for gender
         categorySpinner = findViewById(R.id.editTextGender);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.guest_gender,android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.guest_gender, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         categorySpinner.setAdapter(adapter);
         categorySpinner.setOnItemSelectedListener(this);
 
         etnotes = findViewById(R.id.editTextNotes);
-      //  myRadioGroup = findViewById(R.id.radioGroup2);
+        //  myRadioGroup = findViewById(R.id.radioGroup2);
         etphone = findViewById(R.id.addguestPhone);
         etaddress = findViewById(R.id.addguestAddress);
         etemail = findViewById(R.id.addguestEmail);
@@ -63,13 +63,13 @@ public class addGuest extends AppCompatActivity implements AdapterView.OnItemSel
     }
 
     //validating email address
-    public boolean validateEmail(EditText etemail){
+    public boolean validateEmail(EditText etemail) {
         String emailInput = etemail.getText().toString();
 
-        if(!emailInput.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(emailInput).matches()){
+        if (!emailInput.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(emailInput).matches()) {
             Toast.makeText(this, "Email Address successfully validated", Toast.LENGTH_SHORT).show();
             return true;
-        }else{
+        } else {
             Toast.makeText(this, "Invalid Email", Toast.LENGTH_SHORT).show();
             return false;
         }
@@ -91,7 +91,7 @@ public class addGuest extends AppCompatActivity implements AdapterView.OnItemSel
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_save,menu);
+        inflater.inflate(R.menu.menu_save, menu);
         return true;
     }
 
@@ -100,21 +100,19 @@ public class addGuest extends AppCompatActivity implements AdapterView.OnItemSel
         int id = item.getItemId();
 
         if (id == R.id.done) {
-
             //taking the value of radiobutton
             int selectedId = myRadioGroup.getCheckedRadioButtonId();
             radioButton = findViewById(selectedId);
 
             //required fields validations
-           if (TextUtils.isEmpty(etguestname.getText())) {
+            if (TextUtils.isEmpty(etguestname.getText())) {
                 Toast.makeText(this, "Enter Guest Name", Toast.LENGTH_SHORT).show();
                 etguestname.setError("Guest Name is required");
             } else if (TextUtils.isEmpty(etphone.getText())) {
                 Toast.makeText(this, "Enter Phone Number", Toast.LENGTH_SHORT).show();
                 etphone.setError("Phone Number is Required");
             } else {
-               //creating database object
-                DBHelper dbhelper = new DBHelper(this);
+                DBHelper dbhelper = new DBHelper(this);  //creating database object
 
                 //inserting user inputs ,using database object
                 long val = dbhelper.addGuest(etguestname.getText().toString(), category, etnotes.getText().toString(), radioButton.getText().toString(), etphone.getText().toString(), etaddress.getText().toString(), etemail.getText().toString());
@@ -128,28 +126,21 @@ public class addGuest extends AppCompatActivity implements AdapterView.OnItemSel
                     Toast.makeText(this, "Data not inserted", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(addGuest.this, allGuests.class);
                     startActivity(intent);
-
                 }
 
             }
             //validateEmail(etemail);
-                // Intent intent = new Intent(addGuest.this,allGuests.class);
-                //  startActivity(intent);
 
-                //  Context context = getApplicationContext();
-                //   CharSequence message = "Guest Added";
-                //  int duration = Toast.LENGTH_SHORT;
-                //   Toast toast = Toast.makeText(context, message, duration);
-                //  toast.show();
-            }
 
             //back button
             if (id == android.R.id.home) {
                 Intent intent = new Intent(addGuest.this, allGuests.class);
                 startActivity(intent);
             }
-            return true;
+//            return true;
         }
+        return true;
+    }
 
 
         //public void addGuest(View view){
@@ -168,4 +159,6 @@ public class addGuest extends AppCompatActivity implements AdapterView.OnItemSel
 
         //}
 
-    }
+
+}
+

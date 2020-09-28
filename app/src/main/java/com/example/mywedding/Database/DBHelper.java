@@ -626,19 +626,20 @@ public class DBHelper extends SQLiteOpenHelper {
 
             }while (cursor.moveToNext());
         }
-        return guests;
+        return guests; //returns the arrayList
     }
 
-    //delete guests
+   //delete a single guest entry
     public void deleteGuest(int id){
         SQLiteDatabase db = getWritableDatabase();
         db.delete(GuestMaster.Guests.GTABLE_NAME, GuestMaster.Guests._ID +" =?", new String[]{String.valueOf(id)});
         db.close();
     }
 
-    //retrieve a single guest entry in the view page
+    //retrieve a single guest entry in the view page using the ID parameter
     public Guest getSingleGuest(int id) {
-        SQLiteDatabase db = getWritableDatabase();
+        SQLiteDatabase db = getWritableDatabase(); //create a database object
+        //take value of every column in a guest entry.
         Cursor cursor = db.query(GuestMaster.Guests.GTABLE_NAME, new String[]{GuestMaster.Guests._ID, GuestMaster.Guests.COLUMN_NAME_GNAME, GuestMaster.Guests.COLUMN_NAME_GENDER, GuestMaster.Guests.COLUMN_NAME_NOTES,
                 GuestMaster.Guests.COLUMN_NAME_STATUSS, GuestMaster.Guests.COLUMN_NAME_PHONE, GuestMaster.Guests.COLUMN_NAME_ADDRESS, GuestMaster.Guests.COLUMN_NAME_EMAIL}, GuestMaster.Guests._ID  +"= ?", new String[]{String.valueOf(id)}, null, null, null);
 
@@ -656,7 +657,7 @@ public class DBHelper extends SQLiteOpenHelper {
                     cursor.getString(7)
             );
 
-            return guest;
+            return guest; //if  there are values in an entry going to fetch that to Guest obejct
         }
         return null;
     }
@@ -664,7 +665,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public int singleGuest(Guest guest){
         SQLiteDatabase db = getWritableDatabase();
 
-        ContentValues values = new ContentValues();
+        ContentValues values = new ContentValues();  //structure the data according to column names and its values
 
         values.put(GuestMaster.Guests.COLUMN_NAME_GNAME,guest.getGuestName());
         values.put(GuestMaster.Guests.COLUMN_NAME_GENDER,guest.getGender());
@@ -674,10 +675,44 @@ public class DBHelper extends SQLiteOpenHelper {
         values.put(GuestMaster.Guests.COLUMN_NAME_ADDRESS,guest.getAddress());
         values.put(GuestMaster.Guests.COLUMN_NAME_EMAIL,guest.geteMail());
 
+        //update the data using update query
         int stat = db.update(GuestMaster.Guests.GTABLE_NAME,values, _ID +" =?", new String[]{String.valueOf(guest.getId())});
 
-        db.close();
-        return stat;
+        db.close(); //close the database connection
+        return stat;   //returns the number of affected rows
     }
 
+    //count the guest enrties in the database
+    public int countGuest(){
+        SQLiteDatabase db = getReadableDatabase(); //using the db object, reads the database
+        String query = "SELECT * FROM "+ GuestMaster.Guests.GTABLE_NAME;
+
+        Cursor cursor = db.rawQuery(query,null); //run the above query using rawquery function
+        return cursor.getCount(); // return the entries of guest table usinf cursor object
+    }
+
+    //count of guests who are invited
+    public int countSent(){
+        SQLiteDatabase db = getReadableDatabase();
+
+        String query = "SELECT * FROM " + GuestMaster.Guests.GTABLE_NAME + " WHERE " + GuestMaster.Guests.COLUMN_NAME_STATUSS + " = 'Sent'";
+
+        Cursor cursor = db.rawQuery(query,null );
+        return cursor.getCount();
+    }
+
+    /*
+    //new
+
+    public Cursor getListEvents(){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor data = db.rawQuery("SELECT * FROM " +GuestMaster.Guests.GTABLE_NAME,null);
+        return data;
+
+    }
+
+    //new
+
+     */
 }
