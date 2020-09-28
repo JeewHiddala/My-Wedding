@@ -37,6 +37,8 @@ public class dashBoard extends AppCompatActivity {
 
         int countPaidBudget = dbHelper.countPaidBudgets();
         int totalBudgets = dbHelper.countBudgets();
+        int totalVendors = dbHelper.countVendor();
+        int countCompleteVendor = dbHelper.countCompletedVendor();
 
 
         //setting values to the view
@@ -44,10 +46,10 @@ public class dashBoard extends AppCompatActivity {
         txtTaskIncomplete.setText("Incomplete : ");
         txtGuestInvited.setText("Invited : ");
         txtGuestNotInvited.setText("Not Invited : ");
-        txtBudgetPending.setText("Pending : " + getPendingBudgets(totalBudgets, dbHelper.countPaidBudgets()));
+        txtBudgetPending.setText("Pending : " + getPendingBudgets(totalBudgets, countPaidBudget));
         txtBudgetPaid.setText("Paid : " + countPaidBudget);
-        txtVendorPaid.setText("Paid : ");
-        txtVendorNotPaid.setText("Pending : ");
+        txtVendorPaid.setText("Completed : " + countCompleteVendor);
+        txtVendorNotPaid.setText("Pending : " + getPendingVendor(totalVendors, countCompleteVendor));
     }
 
 
