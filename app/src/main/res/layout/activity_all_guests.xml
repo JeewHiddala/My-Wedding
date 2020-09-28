@@ -81,16 +81,62 @@
         app:layout_constraintVertical_bias="0.925"
         app:srcCompat="@drawable/ic_baseline_add_24" />
 
-    <ListView
-        android:id="@+id/guestlist"
-        android:layout_width="414dp"
-        android:layout_height="510dp"
-        android:layout_marginBottom="670dp"
+    <!--<EditText
+        android:id="@+id/Esearch"
+        android:layout_width="318dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Search by category"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.029" /> -->
 
+    <TextView
+        android:id="@+id/guestcount"
+        android:layout_width="250dp"
+        android:layout_height="22dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        android:text="Guest Count"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ListView
+        android:id="@+id/guestlist"
+        android:layout_width="389dp"
+        android:layout_height="474dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <!--  orginal  <ListView
+                android:id="@+id/guestlist"
+                android:layout_width="414dp"
+                android:layout_height="510dp"
+                android:layout_marginBottom="670dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+     -->
 </androidx.constraintlayout.widget.ConstraintLayout>
