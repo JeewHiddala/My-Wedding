@@ -1,5 +1,6 @@
 package com.example.mywedding;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +8,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -62,6 +64,12 @@ public class VenderList extends AppCompatActivity {
         //get vendor counts from the table
         int countVendor = dbHelper.countVendor();
         count.setText("You have " +countVendor+" vendors");
+
+        //get Completed vendor counts from the table
+        int countCompletedVendor = dbHelper.countCompletedVendor();
+       // System.out.println(countCompletedVendor);
+//        //count.setText("You have " +countCompletedVendor+" vendors");
+
 
         //Initialized the Array list of vendor model class
         Vendors = new ArrayList<>();
@@ -142,5 +150,17 @@ public class VenderList extends AppCompatActivity {
                 startActivity(intent);
             }
         });*/
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if(id == android.R.id.home){
+            Intent intent = new Intent(VenderList.this, Home.class);
+            startActivity(intent);
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -3,6 +3,7 @@ package com.example.mywedding;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.sql.Date;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import android.app.Activity;
@@ -57,8 +58,6 @@ public class AddTask extends AppCompatActivity implements AdapterView.OnItemSele
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_task);
 
-        //btnSubAdd = findViewById(R.id.addSubButton);
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.header_add_task_name);
 
@@ -81,12 +80,13 @@ public class AddTask extends AppCompatActivity implements AdapterView.OnItemSele
 
         // Spinner Drop down elements
         List<String> categories = new ArrayList<String>();
-        categories.add("Select");
+        categories.add("");
         categories.add("Clothing and Accessories");
         categories.add("Decorations");
         categories.add("Health and Beauty");
         categories.add("Food and Beverages");
         categories.add("Transport");
+        categories.add("Music and Entertainment");
 
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
@@ -150,6 +150,9 @@ public class AddTask extends AppCompatActivity implements AdapterView.OnItemSele
             // find the radiobutton by returned id
             radioBtn1 = (RadioButton) findViewById(selectedId);
 
+
+            String spinnerValue = spinner.getSelectedItem().toString().trim();
+
             //checking whether task name and date is empty
             if(TextUtils.isEmpty(txtnewTask.getText())){
                 Toast.makeText(this, "Please Enter Task Name", Toast.LENGTH_SHORT).show();
@@ -157,8 +160,10 @@ public class AddTask extends AppCompatActivity implements AdapterView.OnItemSele
             } else if(TextUtils.isEmpty(txtDate.getText())){
                 Toast.makeText(this, "Please Enter Task Date", Toast.LENGTH_SHORT).show();
                 txtDate.setError("Task Date is required!");
-            } else {
+            } else if(TextUtils.isEmpty(spinnerValue)) {
+                Toast.makeText(this, "Please Select Task Category", Toast.LENGTH_SHORT).show();
 
+            } else {
                 //get string values of tasks data from table
                 DBHelper myDB = new DBHelper(AddTask.this);
                 myDB.insertNewTask(txtnewTask.getText().toString().trim(),

@@ -40,8 +40,9 @@ public class BudgetList extends AppCompatActivity {
 
         listView = findViewById(R.id.budgetList);
         btn_add = findViewById(R.id.btn_add_budget);
-//        nav = findViewById(R.id.btn_nav);
         count = findViewById(R.id.txtBudgetCount);
+
+
         dbHelper = new DBHelper(this);
 
         budgets = new ArrayList<>(); //allocating memory

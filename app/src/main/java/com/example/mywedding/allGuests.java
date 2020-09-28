@@ -87,8 +87,6 @@ public class allGuests extends AppCompatActivity {
                // }
             }
         });*/
-
-      // populateListview();
     }
 
     public void addGuest(View view){
@@ -105,66 +103,13 @@ public class allGuests extends AppCompatActivity {
 
 
         if(id == android.R.id.home){
-            Intent intent = new Intent(allGuests.this,Home.class);
+            Intent intent = new Intent(allGuests.this, Home.class);
             startActivity(intent);
         }
 
         return true;
     }
 
-    //new
-    /*
-    private void populateListview(){
-
-        ListView evenlist = findViewById(R.id.guestlist);
-        dbhelper = new DBHelper(this);
-
-        //
-
-        guests = new ArrayList<>();
-        Cursor data = dbhelper.getListEvents();
-
-        if (data.getCount() == 0) {
-
-            Toast.makeText(allGuests.this, "event list is empty", Toast.LENGTH_LONG).show();
-        }else
-            while (data.moveToNext()) {
-
-                //guests.add(data.getString(1));
-                guests = dbhelper.getAllGuests();
-                gadap = new GuestAdapter(this, android.R.layout.simple_list_item_1, guests);
-
-                evenlist.setAdapter(gadap);
-
-
-
-                theFilter = findViewById(R.id.Esearch);
-
-                theFilter.addTextChangedListener(new TextWatcher() {
-                    @Override
-                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-                    }
-
-                    @Override
-                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                        (allGuests.this).gadap.getFilter().filter(charSequence);
-                    }
-
-                    @Override
-                    public void afterTextChanged(Editable editable) {
-
-                    }
-                });
-
-
-            }
-
-    }
-
-    //new
-
-     */
 
 
 }

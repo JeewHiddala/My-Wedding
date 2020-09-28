@@ -62,7 +62,7 @@ public class viewGuest extends AppCompatActivity {
 
         //etGuestName.setText()
 
-    btnedit.setOnClickListener(new View.OnClickListener() {
+    /*btnedit.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
 
@@ -77,11 +77,8 @@ public class viewGuest extends AppCompatActivity {
         toast.setGravity(Gravity.BOTTOM|Gravity.CENTER, 0, 10);
         myIntent.putExtra("MAIN_EXTRA", myExtra);
         startActivity(myIntent);
-    }
-});
-
-
-
+        }
+    });*/
 
 
 
@@ -97,15 +94,38 @@ public class viewGuest extends AppCompatActivity {
     }
 
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
+        int Hid = item.getItemId();
 
-        if (id == R.id.edit){
-            Intent intent = new Intent(viewGuest.this,editGuest.class);
-            startActivity(intent);
+        if (Hid == R.id.edit){
+            /*Intent intent = new Intent(viewGuest.this,editGuest.class);
+            startActivity(intent);*/
+
+
+            //Additional
+            final String Gid = getIntent().getStringExtra("id");
+            final Guest Iguest = dbhelper.getSingleGuest(Integer.parseInt(Gid));
+
+
+
+            Intent myIntent = new Intent(viewGuest.this, editGuest.class);
+            myIntent.putExtra("id",String.valueOf(Iguest.getId()));
+            Context context = getApplicationContext();
+            CharSequence text = "edit";
+            int duration = Toast.LENGTH_LONG;
+            Toast toast = Toast.makeText(context,text,duration);
+            toast.show();
+
+            toast.setGravity(Gravity.BOTTOM|Gravity.CENTER, 0, 10);
+            myIntent.putExtra("MAIN_EXTRA", myExtra);
+            startActivity(myIntent);
+
+
+
+
         }
 
 
-        if(id == android.R.id.home){
+        if(Hid == android.R.id.home){
             Intent intent = new Intent(viewGuest.this,allGuests.class);
             startActivity(intent);
         }
