@@ -150,12 +150,12 @@ public class DBHelper extends SQLiteOpenHelper {
 
         //create a new map of values,where column names the keys
         ContentValues values = new ContentValues();
-        values.put(weddingMaster.Vendors.COLUMN_NAME_VNAME,vendorName);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_CATEGORY,category);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_CONTACTNO,contactNo);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_DESCRIPTION,description);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_STATUS,status);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_AMOUNT,amount);
+        values.put(VendorMaster.Vendors.COLUMN_NAME_VNAME,vendorName);
+        values.put(VendorMaster.Vendors.COLUMN_NAME_CATEGORY,category);
+        values.put(VendorMaster.Vendors.COLUMN_NAME_CONTACTNO,contactNo);
+        values.put(VendorMaster.Vendors.COLUMN_NAME_DESCRIPTION,description);
+        values.put(VendorMaster.Vendors.COLUMN_NAME_STATUS,status);
+        values.put(VendorMaster.Vendors.COLUMN_NAME_AMOUNT,amount);
 
         //saving the new row, returning the primary key value of the new row
         long newRowId = db.insert(VendorMaster.Vendors.TABLE_NAME,null,values);
@@ -665,6 +665,7 @@ public class DBHelper extends SQLiteOpenHelper {
         }
         return null;
     }
+
     //update a single guest entry
     public int singleGuest(Guest guest){
         SQLiteDatabase db = getWritableDatabase();
@@ -685,4 +686,23 @@ public class DBHelper extends SQLiteOpenHelper {
         return stat;
     }
 
+    //count completed vendors using vendor table records
+    public int countCompletedVendor(){
+        SQLiteDatabase db = getReadableDatabase();
+
+        String query  = "SELECT * FROM " + VendorMaster.Vendors.TABLE_NAME
+                + " WHERE " + VendorMaster.Vendors.COLUMN_NAME_STATUS + "='Completed'";
+
+        //selection args use to declare where conditions
+        //cursor get count gives the numbers of the rows in the database as integer value
+        Cursor cursor = db.rawQuery(query,null);
+        return cursor.getCount();
+    }
+
+    //count pending vendors using vendor table records
+    public int countPendingVendor(int allStatus, int completed){
+
+        int pending = allStatus - completed;
+        return pending;
+    }
 }
