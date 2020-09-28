@@ -61,6 +61,7 @@
                 android:layout_height="35dp"
                 android:background="@drawable/input_field"
                 android:ems="10"
+                android:hint="@string/taskNameHint"
                 android:inputType="textPersonName"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
@@ -98,8 +99,8 @@
                 android:layout_width="364dp"
                 android:layout_height="wrap_content"
                 android:background="@android:drawable/btn_dropdown"
-                android:hint="Select"
-                android:spinnerMode="dropdown"
+                android:prompt="@string/txtSpinTaskCategory"
+                android:spinnerMode="dialog"
                 tools:visibility="visible" />
         </LinearLayout>
 
@@ -166,7 +167,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/input_field"
-                android:hint=" 20 August 2020"
+                android:hint="@string/taskDateHint"
                 android:inputType="text"
                 android:textAlignment="textStart"
                 android:textColorHighlight="#A9A9A9" />

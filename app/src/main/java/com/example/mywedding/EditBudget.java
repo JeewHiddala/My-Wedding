@@ -112,7 +112,7 @@ public class EditBudget extends AppCompatActivity implements AdapterView.OnItemS
             }
         });
 
-        //printing values to the view
+        //setting values to the view
         et_name.setText(budgetModel.getBudgetName());
         et_amount.setText(String.valueOf(budgetModel.getAmount()));
         et_notes.setText(budgetModel.getNotes());
@@ -168,15 +168,6 @@ public class EditBudget extends AppCompatActivity implements AdapterView.OnItemS
                 startActivity(intent);
             }
 
-//            startActivity(new Intent(EditBudget.this, BudgetList.class));
-//            Intent intent = new Intent(EditBudget.this,ViewBudget.class);
-//            startActivity(intent);
-//
-//            Context context = getApplicationContext();
-//            CharSequence message = "Changes Saved";
-//            int duration = Toast.LENGTH_SHORT;
-//            Toast toast = Toast.makeText(context, message, duration);
-//            toast.show();
         }
 
         if(itemIdNav == android.R.id.home){

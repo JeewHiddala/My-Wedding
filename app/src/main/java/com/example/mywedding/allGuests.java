@@ -88,7 +88,7 @@ public class allGuests extends AppCompatActivity {
 
 
         if(id == android.R.id.home){
-            Intent intent = new Intent(allGuests.this,guestPage1.class);
+            Intent intent = new Intent(allGuests.this, Home.class);
             startActivity(intent);
         }
 

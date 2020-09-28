@@ -71,7 +71,7 @@ public class editGuest extends AppCompatActivity {
         upAdd=(EditText)findViewById(R.id.editguestAddress);
         upEmail=(EditText)findViewById(R.id.editguestEmail);
 
-        btn = (ImageButton) findViewById(R.id.updateRet);
+//        btn = (ImageButton) findViewById(R.id.updateRet);
 
         upGname.setText(guest.getGuestName());
         upGen.setText(guest.getGender());
@@ -86,7 +86,7 @@ public class editGuest extends AppCompatActivity {
 
 
 
-    @Override
+    /*@Override
     protected void onResume() {
         super.onResume();
         btn = (ImageButton) findViewById(R.id.updateRet);
@@ -121,7 +121,7 @@ public class editGuest extends AppCompatActivity {
             }
         });
 
-    }
+    }*/
 
 
 
@@ -173,10 +173,42 @@ public class editGuest extends AppCompatActivity {
             toast.show();
 
              */
+
+
+            int selectedId = radioGroup.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedId);
+            final String Gid = getIntent().getStringExtra("id");
+
+            //int selectedId = myRadioGroup.getCheckedRadioButtonId();
+            // radioButton = findViewById(selectedId);
+
+            String guestName = upGname.getText().toString();
+            String guestGen = upGen.getText().toString();
+            String guesNotes = upNotes.getText().toString();
+            // String stat = radioGroup.getText().getString();
+            String guestPhone = upPhone.getText().toString();
+            String guestAdd = upAdd.getText().toString();
+            String guestEmail = upEmail.getText().toString();
+            String state1 = radioButton.getText().toString();
+            Guest guest = new Guest(Integer.parseInt(Gid), guestName, guestGen, guesNotes, state1, guestPhone, guestAdd, guestEmail);
+            int state = dbhelper.singleGuest(guest);
+
+            if (state>0) {
+                //startActivity(new Intent(context,allGuests.class));
+                Toast.makeText(editGuest.this, "Data successfully Updated", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(editGuest.this, allGuests.class);
+                startActivity(new Intent(editGuest.this,allGuests.class));
+            }
+
+
+
+
+
+
         }
 
         if(id == android.R.id.home){
-            Intent intent = new Intent(editGuest.this,allGuests.class);
+            Intent intent = new Intent(editGuest.this, allGuests.class);
             startActivity(intent);
         }
         return true;
