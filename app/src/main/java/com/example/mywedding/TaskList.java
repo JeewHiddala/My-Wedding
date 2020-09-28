@@ -37,7 +37,7 @@ public class TaskList extends AppCompatActivity {
     FloatingActionButton btn_addTask;
     TaskAdapter tasksAdapter;
     ImageView emptyImage;
-    TextView txtNoData;
+    TextView txtNoData, tasksCount;
 
     DBHelper myDB;
     ArrayList<String> task_id, task_name, task_cate, task_note, task_date, task_status;
@@ -48,12 +48,17 @@ public class TaskList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_list);
 
+        //app menu bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.header_tasklist_name);
 
-
         tasksRecyclerView = findViewById(R.id.tasksRecyclerView);
+
+        //add tasks floating button
         btn_addTask = findViewById(R.id.btn_add_task);
+
+        //task count
+        tasksCount = findViewById(R.id.txtTasksCount);
 
         //empty data
         emptyImage = findViewById(R.id.empty_imageView);
@@ -73,10 +78,14 @@ public class TaskList extends AppCompatActivity {
         tasksRecyclerView.setAdapter(tasksAdapter);
         tasksRecyclerView.setLayoutManager(new LinearLayoutManager(TaskList.this));
 
-        //btn_viewTask = findViewById(R.id.button1);
+
+        //invoking method to count the tasks
+        int countTasks = myDB.countTasks();
+        tasksCount.setText("You have added " + countTasks + " tasks");
 
     }
 
+    //store tasks data in array
     void storeDataInArrays() {
         Cursor cursor = myDB.readAllData();
         if(cursor.getCount() == 0) {
@@ -98,18 +107,7 @@ public class TaskList extends AppCompatActivity {
         }
     }
 
-   /* private void loadTaskList() {
-        ArrayList<String> taskList = dbHelper.getTaskList();
-        if(mAdapter==null) {
-            mAdapter = ArrayAdapter<String>(this,R.layout.row,R.id.task_title,taskList);
-            taskListView.setAdapter(mAdapter);
-        }
-        else {
-            mAdapter.clear();
-            mAdapter.addAll(taskList);
-            mAdapter.notifyDataSetChanged();
-        }
-    }*/
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -118,6 +116,7 @@ public class TaskList extends AppCompatActivity {
         return true;
     }
 
+    //handle menu bar buttons
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -125,7 +124,6 @@ public class TaskList extends AppCompatActivity {
         if(id == R.id.delete_all){
             Toast.makeText(this, "Delete All", Toast.LENGTH_SHORT).show();
             confirmDialog();
-
         }
 
         if(id == android.R.id.home){

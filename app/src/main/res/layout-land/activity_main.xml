@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/register_btn"
         android:fontFamily="@font/source_sans_pro_semibold"
-        android:text="@string/main_btn"
+        android:text="@string/mainPage_btn"
         android:textAllCaps="false"
         android:textColor="@color/justBlack"
         android:textSize="18sp"
