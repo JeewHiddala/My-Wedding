@@ -45,6 +45,14 @@ public class ExampleUnitTest {
         assertEquals(6, result);
     }
 
+    @Test //test the pending tasks count
+    public void testPendingTasksCount(){
+        //invoking the function by giving dummy data
+        int result = dashBoard.getPendingTask(5,2);
+
+        //checking the expected answer 3 with the result
+        assertEquals(3, result);
+    }
     @Test //test the pending vendor count
     public void testPendingVendorCount(){
         //invoking the function by giving dummy data
