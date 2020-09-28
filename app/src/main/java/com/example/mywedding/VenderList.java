@@ -65,6 +65,12 @@ public class VenderList extends AppCompatActivity {
         int countVendor = dbHelper.countVendor();
         count.setText("You have " +countVendor+" vendors");
 
+        //get Completed vendor counts from the table
+        int countCompletedVendor = dbHelper.countCompletedVendor();
+       // System.out.println(countCompletedVendor);
+//        //count.setText("You have " +countCompletedVendor+" vendors");
+
+
         //Initialized the Array list of vendor model class
         Vendors = new ArrayList<>();
         //call the List<VendorModel> getAllVendors() method from db helper class

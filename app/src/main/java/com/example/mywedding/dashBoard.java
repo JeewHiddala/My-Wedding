@@ -37,17 +37,23 @@ public class dashBoard extends AppCompatActivity {
 
         int countPaidBudget = dbHelper.countPaidBudgets();
         int totalBudgets = dbHelper.countBudgets();
+        int countCompletedTasks = dbHelper.countCompletedTasks();
+        int totalTasks = dbHelper.countTasks();
+        int totalVendors = dbHelper.countVendor();
+        int countCompleteVendor = dbHelper.countCompletedVendor();
+        int totalGuests = dbHelper.countGuest();
+        int sentGuest = dbHelper.countSent();
 
 
         //setting values to the view
-        txtTaskCompleted.setText("Completed : ");
-        txtTaskIncomplete.setText("Incomplete : ");
-        txtGuestInvited.setText("Invited : ");
-        txtGuestNotInvited.setText("Not Invited : ");
-        txtBudgetPending.setText("Pending : " + getPendingBudgets(totalBudgets, dbHelper.countPaidBudgets()));
+        txtTaskCompleted.setText("Completed : " + countCompletedTasks);
+        txtTaskIncomplete.setText("Incomplete : " + getPendingTask(totalTasks, countCompletedTasks));
+        txtGuestInvited.setText("Invited : " + sentGuest);
+        txtGuestNotInvited.setText("Not Invited : " + getNotSent(totalGuests, sentGuest));
+        txtBudgetPending.setText("Pending : " + getPendingBudgets(totalBudgets, countPaidBudget));
         txtBudgetPaid.setText("Paid : " + countPaidBudget);
-        txtVendorPaid.setText("Paid : ");
-        txtVendorNotPaid.setText("Pending : ");
+        txtVendorPaid.setText("Completed : " + countCompleteVendor);
+        txtVendorNotPaid.setText("Pending : " + getPendingVendor(totalVendors, countCompleteVendor));
     }
 
 

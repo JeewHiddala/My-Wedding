@@ -533,6 +533,14 @@ public class DBHelper extends SQLiteOpenHelper {
         return cursor.getCount();
     }
 
+    //count completed tasks
+    public int countCompletedTasks(){
+        SQLiteDatabase db = getReadableDatabase();
+        String query = "SELECT * FROM " + TASK_TABLE_NAME + " WHERE " + COLUMN_NAME_TASKSTATUS + " = 'Completed'";
+        Cursor cursor = db.rawQuery(query,null );
+        return cursor.getCount();
+    }
+
     //read all task values
     public Cursor readAllData() {
         String query = "SELECT * FROM " + TASK_TABLE_NAME;
@@ -614,8 +622,7 @@ public class DBHelper extends SQLiteOpenHelper {
             do{
                 //create new Guest object
                 Guest guest = new Guest();
-
-                guest.setId((cursor.getInt(0)));
+                guest.setId((cursor.getInt(0))); //set values for guest object using setters
                 guest.setGuestName((cursor.getString(1)));
                 guest.setGender((cursor.getString(2)));
                 guest.setNotes((cursor.getString(3)));
@@ -629,18 +636,17 @@ public class DBHelper extends SQLiteOpenHelper {
             }while (cursor.moveToNext());
 
         }
-        return guests;
-
+        return guests; //returns the arrayList
     }
 
-    //delete guests
+   //delete a single guest entry
     public void deleteGuest(int id){
         SQLiteDatabase db = getWritableDatabase();
         db.delete(GuestMaster.Guests.GTABLE_NAME, GuestMaster.Guests._ID +" =?", new String[]{String.valueOf(id)});
         db.close();
     }
 
-    //retrieve a single guest entry in the view page
+    //retrieve a single guest entry in the view page using the ID parameter
     public Guest getSingleGuest(int id) {
         SQLiteDatabase db = getWritableDatabase();
         Cursor cursor = db.query(GuestMaster.Guests.GTABLE_NAME, new String[]{GuestMaster.Guests._ID, GuestMaster.Guests.COLUMN_NAME_GNAME, GuestMaster.Guests.COLUMN_NAME_GENDER, GuestMaster.Guests.COLUMN_NAME_NOTES,
@@ -660,10 +666,11 @@ public class DBHelper extends SQLiteOpenHelper {
                     cursor.getString(7)
             );
 
-            return guest;
+            return guest; //if  there are values in an entry going to fetch that to Guest obejct
         }
         return null;
     }
+
     //update a single guest entry
     public int singleGuest(Guest guest){
         SQLiteDatabase db = getWritableDatabase();
@@ -680,8 +687,46 @@ public class DBHelper extends SQLiteOpenHelper {
 
         int stat = db.update(GuestMaster.Guests.GTABLE_NAME,values, GuestMaster.Guests._ID +" =?", new String[]{String.valueOf(guest.getId())});
 
-        db.close();
-        return stat;
+        db.close(); //close the database connection
+        return stat;   //returns the number of affected rows
     }
 
+    //count the guest enrties in the database
+    public int countGuest(){
+        SQLiteDatabase db = getReadableDatabase(); //using the db object, reads the database
+        String query = "SELECT * FROM "+ GuestMaster.Guests.GTABLE_NAME;
+
+        Cursor cursor = db.rawQuery(query,null); //run the above query using rawquery function
+        return cursor.getCount(); // return the entries of guest table usinf cursor object
+    }
+
+    //count of guests who are invited
+    public int countSent(){
+        SQLiteDatabase db = getReadableDatabase();
+
+        String query = "SELECT * FROM " + GuestMaster.Guests.GTABLE_NAME + " WHERE " + GuestMaster.Guests.COLUMN_NAME_STATUSS + " = 'Sent'";
+
+        Cursor cursor = db.rawQuery(query,null );
+        return cursor.getCount();
+    }
+
+    //count completed vendors using vendor table records
+    public int countCompletedVendor(){
+        SQLiteDatabase db = getReadableDatabase();
+
+        String query  = "SELECT * FROM " + VendorMaster.Vendors.TABLE_NAME
+                + " WHERE " + VendorMaster.Vendors.COLUMN_NAME_STATUS + "='Completed'";
+
+        //selection args use to declare where conditions
+        //cursor get count gives the numbers of the rows in the database as integer value
+        Cursor cursor = db.rawQuery(query,null);
+        return cursor.getCount();
+    }
+
+//    //count pending vendors using vendor table records
+//    public int countPendingVendor(int allStatus, int completed){
+//
+//        int pending = allStatus - completed;
+//        return pending;
+//    }
 }

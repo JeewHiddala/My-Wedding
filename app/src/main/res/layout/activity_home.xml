@@ -17,12 +17,12 @@
 
         <TextView
             android:id="@+id/brideName1"
-            android:layout_width="301dp"
+            android:layout_width="302dp"
             android:layout_height="37dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:paddingStart="1dp"
-            android:paddingTop="5dp"
+            android:paddingTop="2dp"
             android:paddingEnd="5dp"
             android:paddingBottom="5dp"
             android:text="Bride and Groom"
