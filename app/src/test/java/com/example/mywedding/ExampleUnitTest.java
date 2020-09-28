@@ -9,6 +9,7 @@ public class ExampleUnitTest {
     private ViewBudget viewBudget;
     private static final double DELTA = 1e-15;
 
+
     @Before //execute before all the test cases we write
     public void setup(){
         //initializing the class to settle the environment

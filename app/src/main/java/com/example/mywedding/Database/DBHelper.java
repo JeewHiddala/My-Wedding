@@ -17,35 +17,11 @@ import com.example.mywedding.Vender;
 import com.example.mywedding.VenderList;
 import com.example.mywedding.VendorModel;
 
-//import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_AMOUNT;
-//import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_CATEGORY;
-//import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_CONTACTNO;
-//import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_DESCRIPTION;
-//import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_STATUS;
-//import static com.example.mywedding.Database.weddingMaster.Vendors.COLUMN_NAME_VNAME;
-//import static com.example.mywedding.Database.weddingMaster.Vendors.TABLE_NAME;
-//import static com.example.mywedding.Database.weddingMaster.Vendors._ID;
-
 import com.example.mywedding.Models.BudgetModel;
 import com.example.mywedding.Models.UserModel;
 
-
-
 import com.example.mywedding.Guest;
 
-
-
-//import static android.provider.BaseColumns._ID;
-//import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_ADDRESS;
-//import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_EMAIL;
-//import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_GENDER;
-//import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_GNAME;
-//import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_NOTES;
-//import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_PHONE;
-//import static com.example.mywedding.Database.WeddingMaster.Guests.COLUMN_NAME_STATUS;
-//import static com.example.mywedding.Database.WeddingMaster.Guests.GTABLE_NAME;
-
-//import static com.example.mywedding.Database.WeddingMaster.Guests.TABLE_NAME;
 
 public class DBHelper extends SQLiteOpenHelper {
     private Context context;
@@ -542,6 +518,14 @@ public class DBHelper extends SQLiteOpenHelper {
         return cursor.getCount();
     }
 
+    //count completed tasks
+    public int countCompletedTasks(){
+        SQLiteDatabase db = getReadableDatabase();
+        String query = "SELECT * FROM " + TASK_TABLE_NAME + " WHERE " + COLUMN_NAME_TASKSTATUS + " = 'Completed'";
+        Cursor cursor = db.rawQuery(query,null );
+        return cursor.getCount();
+    }
+
     //read all task values
     public Cursor readAllData() {
         String query = "SELECT * FROM " + TASK_TABLE_NAME;
@@ -692,5 +676,7 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
         return stat;
     }
+
+
 
 }
