@@ -12,16 +12,16 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 import android.text.Editable;
-
 import com.example.mywedding.Vender;
 import com.example.mywedding.VenderList;
 import com.example.mywedding.VendorModel;
-
 import com.example.mywedding.Models.BudgetModel;
 import com.example.mywedding.Models.UserModel;
-
 import com.example.mywedding.Guest;
 
+
+
+//import static com.example.mywedding.Database.WeddingMaster.Guests.TABLE_NAME;
 
 public class DBHelper extends SQLiteOpenHelper {
     private Context context;
@@ -235,6 +235,8 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public UserModel getUserDetails(int id){
         SQLiteDatabase db = getWritableDatabase();
+
+        //Only one user is in the app. Therefore the checking user id always 1
         Cursor cursor = db.query(UserMaster.User.TABLE_NAME, new String[]{
                 UserMaster.User._ID,
                 UserMaster.User.COLUMN_NAME_USERNAME,
@@ -331,11 +333,24 @@ public class DBHelper extends SQLiteOpenHelper {
     public int countBudgets(){
         SQLiteDatabase db = getReadableDatabase();
 
+        //query to select all rows from the tables
         String query = "SELECT * FROM " + BudgetMaster.Budget.TABLE_NAME;
 
         Cursor cursor = db.rawQuery(query,null);
         return cursor.getCount();
     }
+
+    //count paid budgets
+    public int countPaidBudgets(){
+        SQLiteDatabase db = getReadableDatabase();
+
+        //query to select all rows from the tables where status is paid
+        String query = "SELECT * FROM " + BudgetMaster.Budget.TABLE_NAME + " WHERE " + BudgetMaster.Budget.COLUMN_NAME_STATUS + " = 'Paid'";
+
+        Cursor cursor = db.rawQuery(query,null );
+        return cursor.getCount();
+    }
+
 
     //Listing all the budgets
     public List<BudgetModel> getAllBudgets(){
@@ -373,7 +388,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public void deleteBudget(int id){
         SQLiteDatabase db = getWritableDatabase();
         db.delete(BudgetMaster.Budget.TABLE_NAME, BudgetMaster.Budget._ID + " =?", new String[]{String.valueOf(id)});
-        db.close();
+        db.close(); //closing the database connection
     }
 
     //selecting an item from the budget
@@ -676,7 +691,5 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
         return stat;
     }
-
-
 
 }
