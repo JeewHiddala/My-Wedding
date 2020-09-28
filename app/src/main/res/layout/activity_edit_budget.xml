@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditBudget"
     android:background="@color/bgPalePink"
-    android:padding="5dp">
+    android:padding="5dp"
+    tools:context=".EditBudget">
 
     <TextView
         android:id="@+id/textView7"
@@ -25,87 +25,101 @@
         app:layout_constraintVertical_bias="0.012" />
 
     <EditText
-        android:id="@+id/edit_budget_name"
+        android:id="@+id/txt_BudgetName"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="Budget For Refreshments"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.116" />
 
     <EditText
-        android:id="@+id/edit_budget_amount"
+        android:id="@+id/txt_BudgetAmount"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="65000"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.222" />
 
     <EditText
-        android:id="@+id/edit_specialNote"
+        android:id="@+id/txt_specialNote"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="Only for soft drinks"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.349" />
 
-    <EditText
-        android:id="@+id/edit_specialNote3"
+    <!--<EditText
+        android:id="@+id/edit_category"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="Refreshments"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.473" />
+        app:layout_constraintVertical_bias="0.473" />-->
+
+    <Spinner
+        android:id="@+id/spCategory"
+        android:layout_width="325dp"
+        android:layout_height="35dp"
+        android:background="@drawable/input_field"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.475" />
 
     <EditText
-        android:id="@+id/edit_paidAmount"
+        android:id="@+id/txt_paidAmount"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="25000"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:inputType="number"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -114,56 +128,22 @@
         app:layout_constraintVertical_bias="0.683" />
 
     <EditText
-        android:id="@+id/edit_LastPaymentDate"
+        android:id="@+id/txt_LastPaymentDate"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="12 May 2020"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:inputType="date"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.801" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/source_sans_pro_semibold"
-        android:text="@string/add_budget_details_balance"
-        android:textColor="@color/justBlack"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.908" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/register_btn"
-        android:fontFamily="@font/source_sans_pro_semibold"
-        android:paddingLeft="15dp"
-        android:paddingTop="5dp"
-        android:paddingRight="15dp"
-        android:paddingBottom="5dp"
-        android:text="LKR.40000"
-        android:textColor="@color/justBlack"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.765"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.908" />
 
     <TextView
         android:id="@+id/textView11"
@@ -194,7 +174,7 @@
         app:layout_constraintVertical_bias="0.174" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/TaskLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/source_sans_pro_semibold"
@@ -263,5 +243,47 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.563" />
+
+    <RadioGroup
+        android:id="@+id/radStatusEdit"
+        android:layout_width="319dp"
+        android:layout_height="34dp"
+        android:background="@drawable/radio_group"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.92">
+
+        <RadioButton
+            android:id="@+id/radPendingEdit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/btn_Pending"
+            android:textColor="@color/justBlack" />
+
+        <RadioButton
+            android:id="@+id/radPaidEdit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/btn_paid"
+            android:textColor="@color/justBlack" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ViewBudget"
     android:background="@color/bgPalePink"
-    android:padding="5dp">
+    android:padding="5dp"
+    tools:context=".ViewBudget">
 
     <TextView
         android:id="@+id/textView7"
@@ -25,109 +25,117 @@
         app:layout_constraintVertical_bias="0.012" />
 
     <TextView
-        android:id="@+id/edit_budget_name"
+        android:id="@+id/txt_BudgetName"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:text="Budget For Refreshments"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"
         android:paddingTop="8dp"
-        android:textSize="14sp"
+        android:paddingRight="10dp"
+        android:textColor="@color/justBlack"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.116" />
 
     <TextView
-        android:id="@+id/edit_budget_amount"
+        android:id="@+id/txt_BudgetAmount"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:text="65000"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"
         android:paddingTop="8dp"
-        android:textSize="14sp"
+        android:paddingRight="10dp"
+        android:textColor="@color/justBlack"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.222" />
 
     <TextView
-        android:id="@+id/edit_specialNote"
+        android:id="@+id/txt_specialNote"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:text="Only for soft drinks"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"
         android:paddingTop="8dp"
-        android:textSize="14sp"
+        android:paddingRight="10dp"
+        android:textColor="@color/justBlack"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.349" />
 
     <TextView
-        android:id="@+id/edit_specialNote2"
+        android:id="@+id/txt_category"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:text="Refreshments"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"
         android:paddingTop="8dp"
-        android:textSize="14sp"
+        android:paddingRight="10dp"
+        android:textColor="@color/justBlack"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.473" />
 
     <TextView
-        android:id="@+id/edit_paidAmount"
+        android:id="@+id/txt_paidAmount"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:text="25000"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"
         android:paddingTop="8dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/justBlack"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.683" />
 
     <TextView
-        android:id="@+id/edit_LastPaymentDate"
+        android:id="@+id/txt_LastPaymentDate"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="12 May 2020"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"
         android:paddingTop="8dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/justBlack"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.801" />
@@ -142,13 +150,13 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintHorizontal_bias="0.151"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.908" />
+        app:layout_constraintVertical_bias="0.884" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/txt_Balance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/register_btn"
@@ -157,15 +165,12 @@
         android:paddingTop="5dp"
         android:paddingRight="15dp"
         android:paddingBottom="5dp"
-        android:text="LKR.40000"
         android:textColor="@color/justBlack"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.765"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.908" />
+        app:layout_constraintHorizontal_bias="0.761"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView11"
@@ -196,7 +201,7 @@
         app:layout_constraintVertical_bias="0.174" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/TaskLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/source_sans_pro_semibold"
@@ -265,5 +270,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.563" />
+
+    <TextView
+        android:id="@+id/txt_Status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        android:text="Status"
+        android:textColor="@color/navPink"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

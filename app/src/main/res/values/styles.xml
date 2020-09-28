@@ -4,8 +4,11 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/navPink</item>
         <item name="colorPrimaryDark">@color/fontPink</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/navPink</item>
+
     </style>
+
+
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>

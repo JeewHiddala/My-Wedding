@@ -33,7 +33,7 @@
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -41,7 +41,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.097" />
 
-    <EditText
+  <!--  <EditText
         android:id="@+id/editTextGender"
         android:layout_width="290dp"
         android:layout_height="38dp"
@@ -58,6 +58,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.196" />
+        -->
+    <Spinner
+        android:id="@+id/editTextGender"
+        android:layout_width="290dp"
+        android:layout_height="38dp"
+        android:background="@drawable/input_field"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.196" />
 
     <EditText
         android:id="@+id/editTextNotes"
@@ -70,7 +83,7 @@
         android:inputType="text"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,10 +123,11 @@
         android:background="@drawable/input_field"
         android:ems="10"
         android:hint="Phone Number"
-        android:inputType="text"
+        android:inputType="number"
+        android:maxLength="10"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.413"
@@ -145,7 +159,7 @@
         android:inputType="text"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.413"
@@ -163,7 +177,7 @@
         android:inputType="text"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.413"
@@ -172,7 +186,7 @@
         app:layout_constraintVertical_bias="0.787" />
 
     <RadioGroup
-        android:id="@+id/radioGroup2"
+        android:id="@+id/radioGroupst"
         android:layout_width="170dp"
         android:layout_height="44dp"
         android:background="@drawable/radio_group"
@@ -186,6 +200,7 @@
         app:layout_constraintVertical_bias="0.53999996">
 
         <RadioButton
+            android:id="@+id/sent"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="1dp"
@@ -195,7 +210,7 @@
             android:background="@drawable/radio_selector"
             android:button="@null"
             android:gravity="center"
-            android:text="Sent"
+            android:text="@string/stBtn"
             android:textColor="@color/justBlack" />
 
         <RadioButton
@@ -209,7 +224,7 @@
             android:background="@drawable/radio_selector"
             android:button="@null"
             android:gravity="center"
-            android:text="Not Sent"
+            android:text="@string/ntsent"
             android:textColor="@color/justBlack" />
     </RadioGroup>
 

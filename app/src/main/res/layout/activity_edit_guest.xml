@@ -33,7 +33,7 @@
         android:inputType="textPersonName"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -51,7 +51,7 @@
         android:inputType="text"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -70,7 +70,7 @@
         android:inputType="text"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,10 +110,10 @@
         android:background="@drawable/input_field"
         android:ems="10"
         android:hint=" 07775665432"
-        android:inputType="text"
+        android:inputType="number"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.413"
@@ -137,7 +137,7 @@
         app:layout_constraintVertical_bias="0.561" />
 
     <EditText
-        android:id="@+id/editguestEmail"
+        android:id="@+id/editguestAddress"
         android:layout_width="290dp"
         android:layout_height="38dp"
         android:background="@drawable/input_field"
@@ -146,7 +146,7 @@
         android:inputType="text"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.413"
@@ -155,7 +155,7 @@
         app:layout_constraintVertical_bias="0.723" />
 
     <EditText
-        android:id="@+id/editguestAddress"
+        android:id="@+id/editguestEmail"
         android:layout_width="290dp"
         android:layout_height="38dp"
         android:background="@drawable/input_field"
@@ -164,7 +164,7 @@
         android:inputType="text"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.413"
@@ -173,7 +173,7 @@
         app:layout_constraintVertical_bias="0.81" />
 
     <RadioGroup
-        android:id="@+id/radioGroup2"
+        android:id="@+id/radioGroupst"
         android:layout_width="162dp"
         android:layout_height="43dp"
         android:background="@drawable/radio_group"
@@ -187,8 +187,9 @@
         app:layout_constraintVertical_bias="0.49">
 
         <RadioButton
+            android:id="@+id/bri"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="33dp"
             android:layout_marginLeft="1dp"
             android:layout_marginTop="1dp"
             android:layout_marginBottom="1dp"
@@ -213,4 +214,5 @@
             android:text="Not Sent"
             android:textColor="@color/justBlack" />
     </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

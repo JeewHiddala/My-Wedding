@@ -21,13 +21,15 @@ public class Vender extends AppCompatActivity {
 
         //Back Button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        //App bar name
+        getSupportActionBar().setTitle(R.string.appbar_name_vendor);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
 
-        //
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

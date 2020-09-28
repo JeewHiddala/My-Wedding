@@ -4,32 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Registration"
     android:background="@color/bgPalePink"
-    android:padding="5dp">
+    android:padding="5dp"
+    tools:context=".Registration">
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/et_userName"
         android:layout_width="290dp"
         android:layout_height="38dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_field"
         android:ems="10"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:hint="@string/register_form_details_name"
         android:inputType="textPersonName"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.07" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/et_userEmail"
         android:layout_width="290dp"
         android:layout_height="38dp"
         android:layout_marginStart="16dp"
@@ -37,20 +38,21 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_field"
         android:ems="10"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:hint="@string/register_form_details_email"
         android:inputType="text"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/et_userName"
         app:layout_constraintVertical_bias="0.012" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/et_userContact"
         android:layout_width="290dp"
         android:layout_height="38dp"
         android:layout_marginStart="16dp"
@@ -58,143 +60,156 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_field"
         android:ems="10"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:hint="@string/register_form_details_contact"
         android:inputType="number"
+        android:maxLength="10"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+        app:layout_constraintTop_toBottomOf="@+id/et_userEmail"
         app:layout_constraintVertical_bias="0.011" />
 
     <EditText
-        android:id="@+id/editTextNumber2"
+        android:id="@+id/et_pName"
         android:layout_width="290dp"
         android:layout_height="38dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_field"
         android:ems="10"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:hint="@string/register_form_details_name"
-        android:inputType="number"
+        android:inputType="text"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.44" />
+        app:layout_constraintVertical_bias="0.451" />
 
     <EditText
-        android:id="@+id/editTextNumber5"
+        android:id="@+id/et_wedName"
         android:layout_width="290dp"
         android:layout_height="38dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_field"
         android:ems="10"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:hint="@string/register_form_details_name"
-        android:inputType="number"
+        android:inputType="text"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.819" />
+        app:layout_constraintVertical_bias="0.84" />
 
     <EditText
-        android:id="@+id/editTextNumber3"
+        android:id="@+id/et_pEmail"
         android:layout_width="290dp"
         android:layout_height="38dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_field"
         android:ems="10"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:hint="@string/register_form_details_email"
-        android:inputType="number"
+        android:inputType="text"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.52" />
+        app:layout_constraintVertical_bias="0.534" />
 
     <EditText
-        android:id="@+id/editTextNumber4"
+        android:id="@+id/et_pContact"
         android:layout_width="290dp"
         android:layout_height="38dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_field"
         android:ems="10"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:hint="@string/register_form_details_contact"
         android:inputType="number"
+        android:maxLength="10"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.601" />
+        app:layout_constraintVertical_bias="0.617" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/et_wedDate"
         android:layout_width="290dp"
         android:layout_height="38dp"
         android:background="@drawable/input_field"
         android:ems="10"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:hint="Date"
-        android:inputType="date"
+        android:inputType="text"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textSize="12dp"
+        android:textColorLink="#FFFFFF"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber5"
-        app:layout_constraintVertical_bias="0.111" />
+        app:layout_constraintTop_toBottomOf="@+id/et_wedName"
+        app:layout_constraintVertical_bias="0.121" />
+
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:fontFamily="@font/source_sans_pro_semibold"
         android:text="@string/register_form_name_details"
         android:textColor="@color/justBlack"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/et_userName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.304" />
 
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/source_sans_pro_semibold"
         android:text="@string/register_form_partner_details"
         android:textColor="@color/justBlack"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumber2"
+        app:layout_constraintBottom_toTopOf="@+id/et_pName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintHorizontal_bias="0.037"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
@@ -203,49 +218,108 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:fontFamily="@font/source_sans_pro_semibold"
         android:text="@string/register_form_wedding_details"
         android:textColor="@color/justBlack"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.744" />
+        app:layout_constraintVertical_bias="0.772" />
 
-    <Button
-        android:id="@+id/groom1"
-        android:layout_width="89dp"
+
+    <RadioGroup
+        android:id="@+id/radPStatus"
+        android:layout_width="319dp"
         android:layout_height="34dp"
-        android:background="@drawable/btn_groom_bride"
-        android:text="@string/btn_groom"
-        android:textAllCaps="false"
-        android:textSize="12sp"
+        android:background="@drawable/radio_group"
+        android:checkedButton="@+id/radPGroom"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.378"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.318" />
+        app:layout_constraintVertical_bias="0.704">
 
-    <Button
-        android:id="@+id/bride1"
-        android:layout_width="89dp"
+        <RadioButton
+            android:id="@+id/radPBride"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/btn_bride"
+            android:textColor="@color/justBlack" />
+
+        <RadioButton
+            android:id="@+id/radPGroom"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/btn_groom"
+            android:textColor="@color/justBlack" />
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:id="@+id/radUserStatus"
+        android:layout_width="319dp"
         android:layout_height="34dp"
-        android:background="@drawable/btn_groom_bride"
-        android:text="@string/btn_bride"
-        android:textAllCaps="false"
-        android:textSize="12sp"
+        android:background="@drawable/radio_group"
+        android:checkedButton="@+id/radUserBride"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.655"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.319" />
+        app:layout_constraintVertical_bias="0.314">
+
+        <RadioButton
+            android:id="@+id/radUserBride"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/btn_bride"
+            android:textColor="@color/justBlack" />
+
+        <RadioButton
+            android:id="@+id/radUserGroom"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/btn_groom"
+            android:textColor="@color/justBlack" />
+    </RadioGroup>
 
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_update"
         android:layout_width="88dp"
         android:layout_height="35dp"
         android:layout_marginTop="5dp"
@@ -259,37 +333,6 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.98" />
-
-    <Button
-        android:id="@+id/groom2"
-        android:layout_width="89dp"
-        android:layout_height="34dp"
-        android:background="@drawable/btn_groom_bride"
-        android:text="@string/btn_groom"
-        android:textAllCaps="false"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.378"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.683" />
-
-    <Button
-        android:id="@+id/bride2"
-        android:layout_width="89dp"
-        android:layout_height="34dp"
-        android:background="@drawable/btn_groom_bride"
-        android:text="@string/btn_bride"
-        android:textAllCaps="false"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.655"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.681" />
-
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,11 +1,19 @@
 <resources>
+    <!--welcome page string values-->
     <string name="app_name">My Wedding</string>
-    <string name="app_name_addBudget">Add Budget</string>
-    <string name="app_name_editBudget">Edit Budget</string>
-    <string name="app_name_viewBudget">View Budget</string>
-    <string name="app_name_Budget">Budget</string>
-    <string name="app_name_budgetList">Budget List</string>
+    <string name="main_logo_des">The Wedding Planner</string>
+    <string name="main_des">Plan the most colorful event of your life</string>
+    <string name="main_tap_here">Tap here to start your journey</string>
+    <string name="main_btn">Register Here</string>
+    <string name="mainPage_btn">Proceed</string>
+
+    <!--settings page string values-->
     <string name="app_name_settings">Settings</string>
+    <string name="about">Copyright @ My Wedding</string>
+    <string name="about_line2">The Wedding Planner All rights reserved</string>
+    <string name="about_line3">Team Droid(G5.10)</string>
+
+    <!--registration and profile management pages string values-->
     <string name="app_name_profileManagement">Profile Management</string>
     <string name="app_name_registration">Create Profile</string>
     <string name="app_name_paidList">Paid List</string>
@@ -17,16 +25,24 @@
     <string name="register_form_details_name">Name</string>
     <string name="register_form_details_email">Email</string>
     <string name="register_form_details_contact">Contact Number</string>
-    <string name="main_logo_des">The Wedding Planner</string>
-    <string name="main_des">Plan the most colorful event of your life</string>
-    <string name="main_tap_here">Tap here to start your journey</string>
-    <string name="main_btn">Register Here</string>
+    <string name="radio_Bride">Bride</string>
+    <string name="radio_Groom">Groom</string>
+
+    <!--Budget function string values-->
+    <string name="app_name_addBudget">Add Budget</string>
+    <string name="app_name_editBudget">Edit Budget</string>
+    <string name="app_name_viewBudget">View Budget</string>
+    <string name="app_name_Budget">Budget</string>
+    <string name="app_name_budgetList">Budget List</string>
+
     <string-array name="names">
         <item>Beautician</item>
         <item>Entertainments</item>
         <item>Flora</item>
         <item>Hotel</item>
         <item>Photography</item>
+        <item>Dress Maker</item>
+        <item>Catering Service</item>
     </string-array>
     <string name="sub_menu_btn_all">Budget List</string>
     <string name="sub_menu_btn_paid">Paid List</string>
@@ -41,26 +57,40 @@
         <item>Reception</item>
         <item>Jewellery</item>
         <item>Music and Entertainment</item>
+        <item>Other</item>
     </string-array>
+
     <string name="add_budget_details_balance">Balance Payable</string>
     <string name="add_payment_details">Payments Made</string>
     <string name="add_payment_details_amount">Paid Amount</string>
     <string name="add_payment_details_date">Last Payment Date</string>
-    <string name="about">Copyright @ My Wedding</string>
-    <string name="about_line2">The Wedding Planner All rights reserved</string>
-    <string name="about_line3">Team Droid(G5.10)</string>
     <string name="budget_menu_des">See all the budget plans here!</string>
     <string name="budget_menu_des2">See all the paid budgets here!</string>
 
+    <!--vendors function string values-->
+    <string name="vendor_menu_jh1">All Vendors are waiting for You!</string>
+    <string name="vendor_menu_jh2">See all Completed task here!</string>
+    <string name="appbar_name_vendor">Vendor</string>
+    <string name="appbar_name_vendor_list">Vendor List</string>
+    <string name="appbar_name_add_vendor">Add Vendor</string>
+    <string name="appbar_name_paid_vendor_list">Paid Vendor List</string>
+    <string name="appbar_name_view_vendor">View Vendor</string>
+    <string name="appbar_name_edit_vendor">Edit Vendor</string>
+    <string name="vendorpending">Pending</string>
+    <string name="vendorcompleted">Completed</string>
 
+    <string name="btn_Pending">Pending</string>
+    <string name="btn_paid">Paid</string>
+
+    <!--Guests function string values-->
     <string name="guestpageadd">Guests</string>
     <string name="viewguest">View Guest</string>
     <string name="editguest">Edit Guest</string>
-    <string name="dboard">Dashboard</string>
+
     <string name="guestadd">Add Guest</string>
     <string name="allguests">All Guests</string>
     <string name="unguests">Uninvited Guests</string>
-
+    <string name="guestpage1">Guests</string>
 
     <string name="capOnepgadd">Details of Guests</string>
     <string name="stateInvitaionpgadd">State of the Invitation</string>
@@ -73,4 +103,58 @@
     <string name="uninvitedpg1">Uninvited Guests</string>
     <string name="univitedsubcappg1">See all the pending invitations here!</string>
 
+    <string name="dboard">Dashboard</string>
+
+
+
+    <!-- Home Page tring values-->
+    <string name="btnTasks">Tasks</string>
+    <string name="btnGuests">Guests</string>
+    <string name="btnBudget">Budget</string>
+    <string name="btnVendors">Vendors</string>
+    <string name="btnDashboard">Dashboard</string>
+
+    <!--Tasks function string values-->
+    <string name="header_viewtask_name">View Task</string>
+    <string name="header_edittask_name">Edit Task</string>
+    <string name="header_taskmenu_name">Tasks</string>
+    <string name="header_tasklist_name">Task List</string>
+    <string name="header_popup1_name">Add Sub Task</string>
+    <string name="header_popup2_name">Edit Sub Task</string>
+    <string name="header_complete_tasklist_name">Complete Task List</string>
+    <string name="header_add_task_name">Add Task</string>
+    <string name="txtTasklistTitle">Task List</string>
+    <string name="radioBtnTasks">Completed</string>
+    <string name="radioBtnTasks2">Pending</string>
+    <string name="taskNameHint">Task Name</string>
+    <string name="taskNoteHint">Task Note</string>
+    <string name="taskCategoryHint">Task Category</string>
+    <string name="taskDateHint">DD/MM/YYYY</string>
+    <string name="taskStatusHint">Task Status</string>
+    <string name="txtSpinTaskCategory">Select Task Category</string>
+    <string name="txtAllTask">See all the tasks here.</string>
+    <string name="txtCompleteTasks">See all the completed tasks.</string>
+
+    <string-array name="task_categories">
+        <item>Refreshments</item>
+        <item>Flowers and Decors</item>
+        <item>Reception</item>
+        <item>Jewellery</item>
+        <item>Music and Entertainment</item>
+    </string-array>
+
+
+    <string-array name="guest_gender">
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+
+    <string name="invited">Invited</string>
+    <string name="uninvited">Not Invited</string>
+    <string name="stBtn">Sent</string>
+    <string name="ntsent">Not Sent</string>
+    <string name="dashBoard">Task Completion Status</string>
+    <string name="dashBoardGuest">Guest Invitation Status</string>
+    <string name="dashBoardBudget">Budget Completion Status</string>
+    <string name="dashBoardVendor">Vendor Completion Status</string>
 </resources>

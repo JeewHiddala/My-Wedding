@@ -7,4 +7,238 @@
     android:background="@color/bgPalePink"
     tools:context=".AddTask">
 
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task Details"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.012" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bgPalePink"
+        android:orientation="vertical"
+        android:paddingTop="-100dp"
+        android:paddingBottom="-100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.251">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical"
+            android:paddingTop="-10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/taskName1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Name"
+                android:textColor="#808080"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/task_name"
+                android:layout_width="365dp"
+                android:layout_height="35dp"
+                android:background="@drawable/input_field"
+                android:ems="10"
+                android:hint="@string/taskNameHint"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.482"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.116" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/taskCategory1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Category"
+                android:textColor="#808080"
+                android:textSize="20sp" />
+
+
+            <Spinner
+                android:id="@+id/editTaskCategory"
+                android:layout_width="364dp"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:prompt="@string/txtSpinTaskCategory"
+                android:spinnerMode="dialog"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/spNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Special Note"
+                android:textColor="#808080"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_field"
+                android:gravity="top|left"
+                android:hint=" Add a note here."
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:scrollHorizontally="false"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColorHint="#A9A9A9" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical"
+            android:paddingTop="-10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/date1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Date"
+                android:textColor="#808080"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editDate"
+                android:layout_width="265dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/input_field"
+                android:hint="@string/taskDateHint"
+                android:inputType="text"
+                android:textAlignment="textStart"
+                android:textColorHighlight="#A9A9A9" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="64dp"
+                android:layout_height="45dp"
+                android:layout_alignBottom="@+id/in_date"
+                android:layout_marginLeft="280dp"
+                android:layout_marginTop="-62dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toEndOf="@+id/in_date"
+                android:layout_toRightOf="@+id/in_date"
+                android:backgroundTint="#FFFFFF"
+                app:srcCompat="@android:drawable/ic_menu_today" />
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="170dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="100dp"
+            android:background="@drawable/radio_group"
+            android:checkedButton="@+id/taskComplete"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextNotes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.44"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addguestPhone"
+            app:layout_constraintVertical_bias="0.53999996">
+
+            <RadioButton
+                android:id="@+id/taskComplete"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/radioBtnTasks"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/justBlack"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/taskPending"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/radioBtnTasks2"
+                android:textAlignment="center"
+                android:textColor="@color/justBlack"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

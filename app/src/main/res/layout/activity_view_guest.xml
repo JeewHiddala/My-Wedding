@@ -8,7 +8,7 @@
     tools:context=".viewGuest">
 
     <TextView
-        android:id="@+id/edit_Guest_phone2"
+        android:id="@+id/edit_Guest_email"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
@@ -16,24 +16,23 @@
         android:paddingLeft="10dp"
         android:paddingTop="8dp"
         android:paddingRight="10dp"
-        android:text="76,Knady Road,Kelaniya"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.924" />
+        app:layout_constraintVertical_bias="0.901" />
 
     <TextView
-        android:id="@+id/edit_LastPaymentDate2"
+        android:id="@+id/edit_Guest_add"
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:background="@drawable/input_field"
         android:ems="10"
-        android:hint="dewmini@gmail.com"
         android:paddingLeft="10dp"
         android:paddingTop="8dp"
         android:paddingRight="10dp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
@@ -50,7 +49,7 @@
         android:paddingLeft="10dp"
         android:paddingTop="8dp"
         android:paddingRight="10dp"
-        android:text="0777676543"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -67,10 +66,10 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.867" />
+        app:layout_constraintVertical_bias="0.844" />
 
     <TextView
         android:id="@+id/textView35"
@@ -111,7 +110,7 @@
         android:paddingTop="8dp"
         android:paddingRight="10dp"
         android:text="Sent"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.523"
@@ -124,7 +123,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/source_sans_pro_semibold"
-        android:text="Status of the Invitation"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -142,8 +140,7 @@
         android:paddingLeft="10dp"
         android:paddingTop="8dp"
         android:paddingRight="10dp"
-        android:text="Two Invitees"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -176,7 +173,7 @@
         android:paddingTop="8dp"
         android:paddingRight="10dp"
         android:text="Female"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -207,8 +204,7 @@
         android:paddingLeft="10dp"
         android:paddingTop="8dp"
         android:paddingRight="10dp"
-        android:text="Dewmini Wickramasena"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.482"
@@ -229,6 +225,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.072" />
+
 
     <TextView
         android:id="@+id/editGuestDetails"
@@ -259,5 +256,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.563" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
