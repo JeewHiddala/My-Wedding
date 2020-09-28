@@ -150,12 +150,12 @@ public class DBHelper extends SQLiteOpenHelper {
 
         //create a new map of values,where column names the keys
         ContentValues values = new ContentValues();
-        values.put(weddingMaster.Vendors.COLUMN_NAME_VNAME,vendorName);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_CATEGORY,category);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_CONTACTNO,contactNo);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_DESCRIPTION,description);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_STATUS,status);
-        values.put(weddingMaster.Vendors.COLUMN_NAME_AMOUNT,amount);
+        values.put(VendorMaster.Vendors.COLUMN_NAME_VNAME,vendorName);
+        values.put(VendorMaster.Vendors.COLUMN_NAME_CATEGORY,category);
+        values.put(VendorMaster.Vendors.COLUMN_NAME_CONTACTNO,contactNo);
+        values.put(VendorMaster.Vendors.COLUMN_NAME_DESCRIPTION,description);
+        values.put(VendorMaster.Vendors.COLUMN_NAME_STATUS,status);
+        values.put(VendorMaster.Vendors.COLUMN_NAME_AMOUNT,amount);
 
         //saving the new row, returning the primary key value of the new row
         long newRowId = db.insert(VendorMaster.Vendors.TABLE_NAME,null,values);
