@@ -47,7 +47,7 @@ public class ViewBudget extends AppCompatActivity {
         txtpayableAmount = findViewById(R.id.txt_Balance);
         txtStatus = findViewById(R.id.txt_Status);
 
-        //printing values to the view
+        //setting values to the view
         txtName.setText(budgetModel.getBudgetName());
         txtAmount.setText(String.valueOf(budgetModel.getAmount()));
         txtNotes.setText(budgetModel.getNotes());
