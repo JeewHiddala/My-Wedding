@@ -110,7 +110,7 @@
         android:background="@drawable/input_field"
         android:ems="10"
         android:hint=" 07775665432"
-        android:inputType="text"
+        android:inputType="number"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:textSize="16sp"

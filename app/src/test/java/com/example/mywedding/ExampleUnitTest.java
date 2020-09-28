@@ -53,6 +53,7 @@ public class ExampleUnitTest {
         //checking the expected answer 3 with the result
         assertEquals(3, result);
     }
+
     @Test //test the pending vendor count
     public void testPendingVendorCount(){
         //invoking the function by giving dummy data
@@ -60,6 +61,15 @@ public class ExampleUnitTest {
 
         //checking the expected answer 4 with the result
         assertEquals(4, result);
+    }
+
+    @Test //test the not sent guest count
+    public void testNotSentGuestCount(){
+        //invoking the function by giving dummy data
+        int result = dashBoard.getNotSent(8,6);
+
+        //checking the expected answer 2 with the result
+        assertEquals(2, result);
     }
 
 }
