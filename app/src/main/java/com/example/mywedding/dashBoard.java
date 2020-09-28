@@ -37,11 +37,13 @@ public class dashBoard extends AppCompatActivity {
 
         int countPaidBudget = dbHelper.countPaidBudgets();
         int totalBudgets = dbHelper.countBudgets();
+        int countCompletedTasks = dbHelper.countCompletedTasks();
+        int totalTasks = dbHelper.countTasks();
 
 
         //setting values to the view
-        txtTaskCompleted.setText("Completed : ");
-        txtTaskIncomplete.setText("Incomplete : ");
+        txtTaskCompleted.setText("Completed : " + countCompletedTasks);
+        txtTaskIncomplete.setText("Incomplete : " + getPendingTask(totalTasks, countCompletedTasks));
         txtGuestInvited.setText("Invited : ");
         txtGuestNotInvited.setText("Not Invited : ");
         txtBudgetPending.setText("Pending : " + getPendingBudgets(totalBudgets, dbHelper.countPaidBudgets()));
